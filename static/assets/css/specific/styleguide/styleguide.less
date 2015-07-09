@@ -1,0 +1,123 @@
+//This stylesheet is used to design the styleguide.php, this should not be included in the website itself
+@import url("../../lessglobals/global.less");
+
+#contents {
+
+	code {
+		margin-right: 10px;
+	}
+
+	.breadcrumb-wrapper {
+		.breadcrumb li {
+			a,
+			&.active {
+				color: @red;
+			}
+		}
+	}
+
+	.style-guide-link-contents {
+		margin-top: 40px;
+		margin-bottom: 40px;
+		ul {
+			.reset-list;
+			li {
+				margin-bottom: 5px;
+				a {
+					font-size: 14px;
+					font-weight: 400;
+					color: @base-color;
+				}
+			}
+		}
+	}
+
+	.heading {
+		font-family: @arial-font;
+		color: @black;
+		margin-bottom: 20px;
+		font-size: 44px;
+		line-height: normal;
+		font-weight: normal;
+		text-transform: none;
+	}
+
+	.style-caption {
+		font-family: @arial-font;
+		font-size: 14px;
+		margin: 5px 0 6px;
+		color: #969696;
+		a {
+			color: #969696;
+			font-weight: 400;
+		} 
+	}
+
+	.guide-block {
+		margin-bottom: 20px;
+	}
+
+	.grid-block {
+		height: 154px;
+	}
+
+	.color-block {
+		height: 70px;
+		margin-bottom: 5px;
+	}
+
+	.button-row {
+		.btn {
+			margin-right: 12px;
+		}
+	}
+
+	.tooltip-wrapper {
+		margin-bottom: 20px;
+	}
+
+	.icon-list {
+		background: #e9e9e9;
+		padding: 20px;
+		.icon {
+			margin-right: 5px;
+			margin-bottom: 10px;
+			float: none !important;
+		}
+	}
+
+	.button-padding {
+		padding: 27px 24px 1px;
+		margin-bottom: 30px;
+	}
+
+	.filter-wrapper {
+		text-align: left;
+		padding-left: 0;
+	}
+
+	.share-this ul {
+		float: left;
+	}
+	
+	.footer-widget {
+		.widget {
+			padding-top: 15px;
+			padding-bottom: 15px;
+			.widget-title {
+				border-bottom: none;
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.sidebar {
+		margin-top: 0;
+	}
+
+	.grey-padding {
+		padding-top: 20px;
+		background-color: #e7e7e7;
+	}
+
+}

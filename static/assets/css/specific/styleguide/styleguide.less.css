@@ -1,0 +1,94 @@
+#contents code {
+  margin-right: 10px;
+}
+#contents .breadcrumb-wrapper .breadcrumb li a,
+#contents .breadcrumb-wrapper .breadcrumb li.active {
+  color: #a01f12;
+}
+#contents .style-guide-link-contents {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+#contents .style-guide-link-contents ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+#contents .style-guide-link-contents ul li {
+  margin-bottom: 5px;
+}
+#contents .style-guide-link-contents ul li a {
+  font-size: 14px;
+  font-weight: 400;
+  color: #111111;
+}
+#contents .heading {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: #000000;
+  margin-bottom: 20px;
+  font-size: 44px;
+  line-height: normal;
+  font-weight: normal;
+  text-transform: none;
+}
+#contents .style-caption {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 14px;
+  margin: 5px 0 6px;
+  color: #969696;
+}
+#contents .style-caption a {
+  color: #969696;
+  font-weight: 400;
+}
+#contents .guide-block {
+  margin-bottom: 20px;
+}
+#contents .grid-block {
+  height: 154px;
+}
+#contents .color-block {
+  height: 70px;
+  margin-bottom: 5px;
+}
+#contents .button-row .btn {
+  margin-right: 12px;
+}
+#contents .tooltip-wrapper {
+  margin-bottom: 20px;
+}
+#contents .icon-list {
+  background: #e9e9e9;
+  padding: 20px;
+}
+#contents .icon-list .icon {
+  margin-right: 5px;
+  margin-bottom: 10px;
+  float: none !important;
+}
+#contents .button-padding {
+  padding: 27px 24px 1px;
+  margin-bottom: 30px;
+}
+#contents .filter-wrapper {
+  text-align: left;
+  padding-left: 0;
+}
+#contents .share-this ul {
+  float: left;
+}
+#contents .footer-widget .widget {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+#contents .footer-widget .widget .widget-title {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+#contents .sidebar {
+  margin-top: 0;
+}
+#contents .grey-padding {
+  padding-top: 20px;
+  background-color: #e7e7e7;
+}

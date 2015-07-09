@@ -1,0 +1,3 @@
+[submodule "static/sticker"]
+	path = static/sticker
+	url = https://github.com/pixl8/sticker.git
