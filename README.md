@@ -5,6 +5,9 @@ CSS Framework of Preside - Pixl8
 ## Getting started
 
 Download and install [CommandBox](http://www.ortussolutions.com/products/commandbox).
+
+Add the submodule [Sticker](https://github.com/pixl8/sticker) to static/sticker.
+
 Copy the box.exe to static folder and run startserver.bat.
 
 ## Plugins
