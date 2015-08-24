@@ -28,3 +28,8 @@ Media Query: [Respond.js](https://github.com/scottjehl/Respond)
 
 * Datepicker plugin
 * Retina support plugin
+
+## Notes and References
+
+* Use rem as font size unit and px as fallback.
+* Responsive Table - https://css-tricks.com/responsive-data-tables/

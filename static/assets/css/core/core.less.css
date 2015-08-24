@@ -946,6 +946,9 @@ img.aligned-left {
     padding-bottom: 20px;
   }
 }
+.sidebar .widget.widget-video .video-details .video-description {
+  display: none !important;
+}
 @media  only screen and (max-width: 991px) {
   .sidebar {
     margin-top: 15px;
@@ -1351,6 +1354,76 @@ img.aligned-left {
 .widget.sub-navigation .widget-content ul li .submenu li.has-submenu > a:after {
   background-position: -129px -193px;
 }
+.widget.widget-video {
+  position: relative;
+}
+.widget.widget-video > a {
+  display: block;
+}
+.widget.widget-video .video-details {
+  color: #ffffff;
+  width: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
+  position: absolute;
+  z-index: 3;
+  bottom: 25px;
+  left: 0;
+}
+.widget.widget-video .video-details a {
+  color: #ffffff;
+}
+.widget.widget-video .video-details .video-title {
+  display: table;
+  margin-bottom: 0;
+}
+.widget.widget-video .video-details .video-title .arrow {
+  display: table-cell;
+  width: 44px;
+  position: relative;
+  z-index: 1;
+  vertical-align: top;
+}
+.widget.widget-video .video-details .video-title .arrow .icon-arrow {
+  background: #2c7fc2;
+  display: block;
+  width: 43px;
+  height: 43px;
+  line-height: 43px;
+  padding: 0;
+  text-align: center;
+}
+.widget.widget-video .video-details .video-title .arrow .icon-arrow:before {
+  background-image: url("/assets/img/icons.png");
+  background-repeat: no-repeat;
+  background-position: -9px -215px;
+  width: 15px;
+  height: 19px;
+  content: "";
+  display: inline-block;
+  text-indent: -999em;
+}
+.widget.widget-video .video-details .video-title .title {
+  display: table-cell;
+  background: #0f67b3;
+  padding: 7px 12px;
+}
+.widget.widget-video .video-details .video-description {
+  -webkit-transition: max-height 300ms padding 200ms;
+  -moz-transition: max-height 300ms padding 200ms;
+  -ms-transition: max-height 300ms padding 200ms;
+  -o-transition: max-height 300ms padding 200ms;
+  transition: max-height 300ms padding 200ms;
+  background: #2c7fc2;
+  padding: 15px;
+  display: none;
+  overflow: hidden;
+}
+@media  only screen and (max-width: 767px) {
+  .widget.widget-video .video-details .video-description {
+    display: none !important;
+  }
+}
 .collapsible {
   margin-bottom: 30px;
 }
@@ -1567,17 +1640,6 @@ img.aligned-left {
   max-width: 435px;
   margin: 20px auto;
 }
-.magnific-popup .white-popup-content {
-  -webkit-box-shadow: 0px 1px 3px 1px #e0d8d8;
-  -moz-box-shadow: 0px 1px 3px 1px #e0d8d8;
-  box-shadow: 0px 1px 3px 1px #e0d8d8;
-  background: #ffffff;
-}
-.magnific-popup .mfp-close {
-  top: 30px;
-  right: 45px;
-  font-size: 40px;
-}
 .magnific-popup form header {
   background: #ffffff;
   padding: 20px 65px 20px 30px;
@@ -1630,4 +1692,62 @@ img.aligned-left {
 }
 .magnific-popup form .form-row .col-2 {
   padding: 0 6px;
+}
+.magnific-popup .white-popup-content {
+  -webkit-box-shadow: 0px 1px 3px 1px #e0d8d8;
+  -moz-box-shadow: 0px 1px 3px 1px #e0d8d8;
+  box-shadow: 0px 1px 3px 1px #e0d8d8;
+  background: #ffffff;
+}
+.magnific-popup .mfp-close {
+  top: 30px;
+  right: 45px;
+  font-size: 40px;
+}
+.magnific-popup.mfp-video-popup {
+  max-width: 865px;
+}
+.magnific-popup.mfp-video-popup .mfp-iframe-scaler {
+  position: relative;
+}
+.magnific-popup.mfp-video-popup .white-popup-content {
+  padding-bottom: 20px;
+}
+.magnific-popup.mfp-video-popup header {
+  padding: 25px 40px 5px 40px;
+}
+.magnific-popup.mfp-video-popup header h3 {
+  color: #000000;
+  margin-bottom: 0;
+}
+.magnific-popup.mfp-video-popup header .mfp-close {
+  position: static;
+  float: right;
+  display: inline-block;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  width: auto;
+  height: auto;
+  opacity: 1;
+  color: #000000;
+  font-family: 'Avenir', Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1.125em;
+  /* 18/16 */
+  line-height: normal;
+}
+.magnific-popup.mfp-video-popup header .mfp-close .icon {
+  margin-left: 5px;
+  vertical-align: middle;
+}
+.magnific-popup.mfp-video-popup .body {
+  padding: 10px 40px;
+}
+@media  only screen and (max-width: 767px) {
+  .magnific-popup.mfp-video-popup header {
+    padding: 20px 20px 0px 20px;
+  }
+  .magnific-popup.mfp-video-popup .body {
+    padding: 10px 20px;
+  }
 }

@@ -3,7 +3,6 @@
 *****************************************************************/
 
 #masthead {
-
 	background: @header-bg;
 	color: @white;
 	height: 120px;
@@ -12,82 +11,60 @@
 	z-index: 10;
 
 	a {
-	
 		color: @white;
-	
 	}
 
 	@media @sm {
-
 		height: auto;
-
 	}
 
 	@media @xs {
-
 		max-height: 100%;
 		overflow: auto;
-
 	}
 
 	.site-logo {
-
 		padding-top: 26px;
 		margin-bottom: 0;
 
 		@media @xs {
-
 			padding-top: 20px;
 			padding-bottom: 20px;
-
 		}
 
 	}
 
 	.site-nav-wrapper {
-
 		position: static;
-
 	}
 
 	.site-nav {
-
 		margin-left: -85px;
 
 		@media @md {
-			
 			margin-left: -30px;
-
 		}
 
 		@media @sm {
-			
 			margin-left: 0;
 			padding-top: 5px;
-
 		}
 
 		@media @xs {
-			
 			display: none;
-
 		}
 
 		@media @sm-min {
-
 			display: block !important;
-
 		}
 
 		> ul {
-
 			.clearfix();
 			.reset-list();
 			font-size: 0;
 			text-align: center;
 
 			li {
-
 			    font-size: 18px;
 			    font-size: 1.8rem;
 				display: inline-block;
@@ -98,19 +75,15 @@
 				vertical-align: top;
 
 				a {
-					
 					color: @white;
-
+					
 					&:hover {
-
 						text-decoration: none;
-						
 					}
 
 				}
 
 				.dropdown-trigger {
-
 					.sprite-icon(14px, 14px, -158px -129px);
 					display: none;
 					position: absolute;
@@ -118,17 +91,13 @@
 					top: 15px;
 
 					@media @xs {
-
 						display: inline-block;
-
 					}
 
 				}
 
 				@media @md {
-					
 					margin: 0 7px;
-
 				}
 
 				@media @sm-min {
@@ -136,10 +105,8 @@
 					&:hover {
 
 						ul {
-
 							visibility: visible;
 							opacity: 1;
-
 						}
 
 					}
@@ -147,16 +114,13 @@
 				}
 
 				@media @sm {
-
 					height: auto;
 					padding-top: 10px;
 					padding-bottom: 10px;
 					margin: 0 10px;
-
 				}
 
 				@media @xs {
-
 					padding: 10px 15px;
 					position: relative;
 					max-width: 100%;
@@ -165,9 +129,7 @@
 					&.active {
 
 						.dropdown-trigger {
-
 							background-position: -158px -158px;
-
 						}
 
 					}
@@ -176,7 +138,6 @@
 			}
 
 			.dropdown-menu {
-
 				.reset-list();
 				.transition(all 200ms);
 				border-top: 1px solid @grey;
@@ -190,27 +151,20 @@
 				opacity: 0;
 
 				li {
-
 					padding-top: 10px;
 					padding-bottom: 10px;
 					height: auto;
-
 				}
 
 				@media @sm-min {
-
 					display: block !important;
-
 				}
 
 				@media @sm {
-
 					padding-right: 0;
-					
 				}
 
 				@media @xs {
-
 					.transition(none);
 					background: transparent;
 					border-top: none;
@@ -221,10 +175,8 @@
 					visibility: visible;
 
 					li {
-
 						padding: 10px 0;
 						margin: 0;
-
 					}
 					
 				}
@@ -232,19 +184,15 @@
 			}
 
 			@media @xs {
-
 				text-align: left;
 				margin: 0 -15px;
 
 				li {
-
 					display: block;
 					margin-bottom: 0;
 
 					a {
-
 						display: block;
-
 					}
 
 				}
@@ -256,44 +204,35 @@
 	}
 
 	.header-buttons {
-
 		font-size: 0;
 		margin-left: -45px;
 		padding-top: 36px;
 
 		.btn {
-
 			font-size: 18px;
 			font-size: 1.8rem;
 			margin: 0 15px;
 			min-width: 105px;
-
 		}
 
 		@media @md {
-
 			text-align: right;
 
 			.btn {
-
 				min-width: 100px;
 				margin: 0 5px;
-
 			}
 
 		}
 
 		@media @xs {
-
 			text-align: center;
 			margin-left: 0;
 			padding-top: 10px;
 			padding-bottom: 20px;
 
 			.btn {
-
 				margin: 0 10px;
-
 			}
 			
 		}
@@ -301,25 +240,21 @@
 	}
 
 	.menu-trigger {
-
 		padding-top: 20px;
 		text-align: right;
 
 		a {
-
 			color: @white;
 			text-align: center;
 			display: inline-block;
 			text-decoration: none;
 			
 			span {
-
 				display: block;
 				font-size: 10px;
 				font-size: 1.0rem;
 				letter-spacing: 0.5px;
 				text-transform: uppercase;
-
 			}
 
 		}
@@ -329,9 +264,7 @@
 			a {
 
 				span {
-				
 					display: none;
-				
 				}
 
 			}

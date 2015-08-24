@@ -10,21 +10,16 @@
 	&.sub-navigation {
 
 		.widget-title {
-
 			padding: 18px 18px 14px;
-
 		}
 
 		.widget-content {
-
 			padding: 0;
 
 			ul {
-
 				.reset-list();
 
 				li {
-
 					font-size: 2.0rem;
 					font-size: 20px;
 					border-top: 1px solid @grey-2;
@@ -32,29 +27,23 @@
 					font-weight: 700;
 
 					&:first-child {
-
 						border-top: none;
-
 					}
 
 					a {
-
 						.transition(all 200ms ease-in);
 						display: block;
 						padding: 10px 21px;
 						text-decoration: none;
-
 					}
 
 					&:hover,
 					&.active {
 
 						> a {
-
 							position: relative;
 							background: @red;
 							color: @white;
-
 						}
 
 					}
@@ -62,18 +51,15 @@
 					&.has-submenu {
 
 						> a {
-
 							position: relative;
 
 							&:after {
-
 								.sprite-icon(11px, 8px, -160px -193px);
 								content: "v";
 								position: absolute;
 								right: 21px;
 								top: 50%;
 								margin-top: -4px;
-
 							}
 
 						}
@@ -84,9 +70,7 @@
 							> a {
 
 								&:after {
-
 									background-position: -129px -193px;
-
 								}
 
 							}
@@ -96,29 +80,23 @@
 					}
 
 					.submenu {
-
 						background: darken(@red, 10%);
 						display: none;
 
 						li {
-
 							font-size: 1em;
 							font-weight: 400;
 							border-top: none;
 
 							a {
-
 								color: @white;
-
 							}
 
 							&:hover,
 							&.active {
 
 								> a {
-
 									background: darken(@red, 20%);
-
 								}
 
 							}
@@ -128,9 +106,7 @@
 								> a {
 
 									&:after {
-
 										background-position: -129px -193px;
-
 									}
 
 								}
@@ -141,6 +117,80 @@
 
 					}
 
+				}
+
+			}
+
+		}
+
+	}
+
+	&.widget-video {
+		position: relative;
+
+		> a {
+			display: block;
+		}
+
+		.video-details {
+			color: @white;
+			width: 100%;
+			padding-left: 25px;
+			padding-right: 25px;
+			position: absolute;
+			z-index: 3;
+			bottom: 25px;
+			left: 0;
+
+			a {
+				color: @white;
+			}
+
+			.video-title{
+				display: table;
+				margin-bottom: 0;
+
+				.arrow {
+					display: table-cell;
+					width: 44px;
+					position: relative;
+					z-index: 1;
+					vertical-align: top;
+
+					.icon-arrow {
+						background: @video-arrow;
+						display: block;
+						width: 43px;
+						height: 43px;
+						line-height: 43px;
+						padding: 0;
+						text-align: center;
+
+						&:before {
+							.sprite-icon(15px, 19px, -9px -215px);
+						}
+
+					}
+
+				}
+
+				.title {
+					display: table-cell;
+					background: @video-title;
+					padding: 7px 12px;
+				}
+
+			}
+
+			.video-description {
+				.transition(max-height 300ms padding 200ms);
+				background: @video-arrow;
+				padding: 15px;
+				display: none;
+				overflow: hidden;
+
+				@media @xs {
+					display: none !important;
 				}
 
 			}
@@ -469,21 +519,6 @@
 	max-width: 435px;
 	margin: 20px auto;
 
-	.white-popup-content {
-
-		.box-shadow(0px 1px 3px 1px @grey);
-		background: @white;
-
-	}
-
-	.mfp-close {
-
-		top: 30px;
-		right: 45px;
-		font-size: 40px;
-
-	}
-
 	form {
 
 		header {
@@ -558,6 +593,99 @@
 			.col-2 {
 
 				padding: 0 6px;
+
+			}
+
+		}
+
+	}
+
+	.white-popup-content {
+
+		.box-shadow(0px 1px 3px 1px @grey);
+		background: @white;
+
+	}
+
+	.mfp-close {
+
+		top: 30px;
+		right: 45px;
+		font-size: 40px;
+
+	}
+
+	&.mfp-video-popup {
+
+		max-width: 865px;
+
+		.mfp-iframe-scaler {
+
+			position: relative;
+
+		}
+
+		.white-popup-content {
+
+			padding-bottom: 20px;
+
+		}
+
+		header {
+
+			padding: 25px 40px 5px 40px;
+
+			h3 {
+
+				color: @black;
+				margin-bottom: 0;
+
+			}
+
+			.mfp-close {
+
+				position: static;
+				float: right;
+				display: inline-block;
+				margin-top: 5px;
+				margin-left: 10px;
+				margin-bottom: 10px;
+				width: auto;
+				height: auto;
+				opacity: 1;
+				color: @black;
+				font-family: @base-font;
+				font-size: 1.125em; /* 18/16 */
+				line-height: normal;
+
+				.icon {
+
+					margin-left: 5px;
+					vertical-align: middle;
+
+				}
+
+			}
+
+		}
+
+		.body {
+
+			padding: 10px 40px;
+
+		}
+
+		@media @xs {
+
+			header {
+
+				padding: 20px 20px 0px 20px;
+
+			}
+
+			.body {
+
+				padding: 10px 20px;
 
 			}
 

@@ -185,6 +185,48 @@ var FRAMEWORK = function() {
 
     }
 
+    // Video Widget
+    var videoWidgetHandler = function() {
+        $(".widget-video").each(function() {
+            if ($(this).find(".video-description").length) {
+                $(this).on("mouseenter", function() {
+                    $(this).find(".video-description").stop().slideDown();
+                }).on("mouseleave", function() {
+                    $(this).find(".video-description").stop().slideUp();
+                });
+            }
+        });
+
+        $("body").on("click", ".mfp-video-popup .mfp-close .icon", function() {
+            $.magnificPopup.close();
+        });
+
+        $(".widget-video > a").magnificPopup({
+            type: 'iframe',
+            callbacks: {
+                markupParse: function(template, values, item) {
+                    $(template).find("header h3").text($(item.el).attr("data-video-title"));
+                }
+            },
+            iframe: {
+                markup: '<div class="magnific-popup mfp-video-popup">
+                    <div class="white-popup-content">
+                        <header>
+                            <button type="button" class="mfp-close">Close &times;</button>
+                            <h3></h3>
+                        </header>
+                        <section class="body">
+                            <div class="mfp-iframe-scaler">
+                                <iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </section>
+                    </div>
+                </div>'
+            },
+            closeMarkup: '<button type="button" class="mfp-close">Close <span class="icon icon-close"></span></button>'
+        });
+    }
+
     var ie8Handler = function () {
 
         $("input[type='radio'], input[type='checkbox']").each(function() {
@@ -219,6 +261,7 @@ var FRAMEWORK = function() {
             collapsibleHandler();
             toggleTabsHandler();
             subnavigationWidgetHandler();
+            videoWidgetHandler();
 
             if ( this.isIE8 ) {
 
