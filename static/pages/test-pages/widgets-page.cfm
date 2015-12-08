@@ -1,10 +1,10 @@
 <cfscript>
-	body_class = "homepage";
+	body_class = "widgets-page";
 </cfscript>
 
 <cfinclude template="/header.cfm" />
 
-	<section id="contents" >
+	<section class="contents" >
 
 		<div class="main-content">
 
@@ -20,20 +20,20 @@
 
 						<div class="collapsible">
 							<div class="collapsible-item">
-								<h4 class="collapsible-header"><a href="#">Collapsible 1</a></h4>
-								<div class="collapsible-content">
+								<h4 class="collapsible-item-header"><a href="#">Collapsible 1</a></h4>
+								<div class="collapsible-item-content">
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc hendrerit at neque sit amet porta. Fusce condimentum tristique pharetra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer ut</p>
 								</div>
 							</div>
 							<div class="collapsible-item">
-								<h4 class="collapsible-header"><a href="#">Collapsible 2</a></h4>
-								<div class="collapsible-content">
+								<h4 class="collapsible-item-header"><a href="#">Collapsible 2</a></h4>
+								<div class="collapsible-item-content">
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc hendrerit at neque sit amet porta. Fusce condimentum tristique pharetra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer ut</p>
 								</div>
 							</div>
 							<div class="collapsible-item">
-								<h4 class="collapsible-header"><a href="#">Collapsible 3</a></h4>
-								<div class="collapsible-content">
+								<h4 class="collapsible-item-header"><a href="#">Collapsible 3</a></h4>
+								<div class="collapsible-item-content">
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc hendrerit at neque sit amet porta. Fusce condimentum tristique pharetra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer ut</p>
 								</div>
 							</div>
@@ -45,20 +45,20 @@
 
 						<div class="collapsible arrow-on-right">
 							<div class="collapsible-item">
-								<h4 class="collapsible-header"><a href="#">Collapsible 1</a></h4>
-								<div class="collapsible-content">
+								<h4 class="collapsible-item-header"><a href="#">Collapsible 1</a></h4>
+								<div class="collapsible-item-content">
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc hendrerit at neque sit amet porta. Fusce condimentum tristique pharetra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer ut</p>
 								</div>
 							</div>
 							<div class="collapsible-item">
-								<h4 class="collapsible-header"><a href="#">Collapsible 2</a></h4>
-								<div class="collapsible-content">
+								<h4 class="collapsible-item-header"><a href="#">Collapsible 2</a></h4>
+								<div class="collapsible-item-content">
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc hendrerit at neque sit amet porta. Fusce condimentum tristique pharetra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer ut</p>
 								</div>
 							</div>
 							<div class="collapsible-item">
-								<h4 class="collapsible-header"><a href="#">Collapsible 3</a></h4>
-								<div class="collapsible-content">
+								<h4 class="collapsible-item-header"><a href="#">Collapsible 3</a></h4>
+								<div class="collapsible-item-content">
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc hendrerit at neque sit amet porta. Fusce condimentum tristique pharetra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer ut</p>
 								</div>
 							</div>
@@ -70,20 +70,20 @@
 
 						<div class="collapsible accordion">
 							<div class="collapsible-item open">
-								<h4 class="collapsible-header"><a href="#">Collapsible 1</a></h4>
-								<div class="collapsible-content">
+								<h4 class="collapsible-item-header"><a href="#">Collapsible 1</a></h4>
+								<div class="collapsible-item-content">
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc hendrerit at neque sit amet porta. Fusce condimentum tristique pharetra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer ut</p>
 								</div>
 							</div>
 							<div class="collapsible-item">
-								<h4 class="collapsible-header"><a href="#">Collapsible 2</a></h4>
-								<div class="collapsible-content">
+								<h4 class="collapsible-item-header"><a href="#">Collapsible 2</a></h4>
+								<div class="collapsible-item-content">
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc hendrerit at neque sit amet porta. Fusce condimentum tristique pharetra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer ut</p>
 								</div>
 							</div>
 							<div class="collapsible-item">
-								<h4 class="collapsible-header"><a href="#">Collapsible 3</a></h4>
-								<div class="collapsible-content">
+								<h4 class="collapsible-item-header"><a href="#">Collapsible 3</a></h4>
+								<div class="collapsible-item-content">
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc hendrerit at neque sit amet porta. Fusce condimentum tristique pharetra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer ut</p>
 								</div>
 							</div>
@@ -93,26 +93,26 @@
 
 						<div class="collapsible">
 							<div class="collapsible-item">
-								<h4 class="collapsible-header"><a href="#">Collapsible 1</a></h4>
-								<div class="collapsible-content">
+								<h4 class="collapsible-item-header"><a href="#">Collapsible 1</a></h4>
+								<div class="collapsible-item-content">
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc hendrerit at neque sit amet porta. Fusce condimentum tristique pharetra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer ut</p>
 									<p>Below is an accordion inside a collapsible panel</p>
 									<div class="collapsible accordion">
 										<div class="collapsible-item">
-											<h4 class="collapsible-header"><a href="#">Collapsible 1</a></h4>
-											<div class="collapsible-content">
+											<h4 class="collapsible-item-header"><a href="#">Collapsible 1</a></h4>
+											<div class="collapsible-item-content">
 												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc hendrerit at neque sit amet porta. Fusce condimentum tristique pharetra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer ut</p>
 											</div>
 										</div>
 										<div class="collapsible-item">
-											<h4 class="collapsible-header"><a href="#">Collapsible 2</a></h4>
-											<div class="collapsible-content">
+											<h4 class="collapsible-item-header"><a href="#">Collapsible 2</a></h4>
+											<div class="collapsible-item-content">
 												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc hendrerit at neque sit amet porta. Fusce condimentum tristique pharetra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer ut</p>
 											</div>
 										</div>
 										<div class="collapsible-item">
-											<h4 class="collapsible-header"><a href="#">Collapsible 3</a></h4>
-											<div class="collapsible-content">
+											<h4 class="collapsible-item-header"><a href="#">Collapsible 3</a></h4>
+											<div class="collapsible-item-content">
 												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc hendrerit at neque sit amet porta. Fusce condimentum tristique pharetra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer ut</p>
 											</div>
 										</div>
@@ -120,19 +120,19 @@
 								</div>
 							</div>
 							<div class="collapsible-item">
-								<h4 class="collapsible-header"><a href="#">Collapsible 2</a></h4>
-								<div class="collapsible-content">
+								<h4 class="collapsible-item-header"><a href="#">Collapsible 2</a></h4>
+								<div class="collapsible-item-content">
 									<p>Below are collapsible arrow on right panels.</p>
 									<div class="collapsible arrow-on-right">
 										<div class="collapsible-item open">
-											<h4 class="collapsible-header"><a href="#">Collapsible 1</a></h4>
-											<div class="collapsible-content">
+											<h4 class="collapsible-item-header"><a href="#">Collapsible 1</a></h4>
+											<div class="collapsible-item-content">
 												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc hendrerit at neque sit amet porta. Fusce condimentum tristique pharetra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer ut</p>
 											</div>
 										</div>
 										<div class="collapsible-item">
-											<h4 class="collapsible-header"><a href="#">Collapsible 2</a></h4>
-											<div class="collapsible-content">
+											<h4 class="collapsible-item-header"><a href="#">Collapsible 2</a></h4>
+											<div class="collapsible-item-content">
 												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc hendrerit at neque sit amet porta. Fusce condimentum tristique pharetra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer ut</p>
 											</div>
 										</div>
@@ -140,8 +140,8 @@
 								</div>
 							</div>
 							<div class="collapsible-item">
-								<h4 class="collapsible-header"><a href="#">Collapsible 3</a></h4>
-								<div class="collapsible-content">
+								<h4 class="collapsible-item-header"><a href="#">Collapsible 3</a></h4>
+								<div class="collapsible-item-content">
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc hendrerit at neque sit amet porta. Fusce condimentum tristique pharetra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer ut</p>
 								</div>
 							</div>
@@ -149,95 +149,27 @@
 
 						<h3>Toggle tabs</h3>
 
-						<div class="tabs-wrapper">
+						<div class="toggle-tabs">
 
-                            <div class="nav-tabs-wrapper">
+	                        <div class="toggle-tabs-nav">
 
-								<ul class="nav-tabs" role="tablist">
-								  	<li class="active"><a href="#tab-2014" role="tab" >2014</a></li>
-								  	<li><a href="#tab-2013" role="tab" >2013</a></li>
-								  	<li><a href="#tab-2012" role="tab" >2012</a></li>
-								</ul><!-- .nav-tabs -->
-
-							</div>
-
-							<div class="tab-content">
-
-							  	<div class="tab-pane active" id="tab-2014">
-
-							  		<a href="#" class="mobile-accordion-header">2014</a>
-
-							  		<div class="mobile-accordion-content">
-
-							  			<p>Contents here.</p>
-
-							  		</div>
-
-						  		</div>
-
-							  	<div class="tab-pane" id="tab-2013">
-
-							  		<a href="#" class="mobile-accordion-header">2013</a>
-
-							  		<div class="mobile-accordion-content">
-
-							  			<p>Contents here.</p>
-
-							  		</div>
-
-						  		</div>
-
-							  	<div class="tab-pane" id="tab-2012">
-
-							  		<a href="#" class="mobile-accordion-header">2012</a>
-
-							  		<div class="mobile-accordion-content">
-
-							  			<p>Contents here.</p>
-
-							  		</div>
-
-						  		</div>
-
-					  		</div>
-
-						</div> <!-- /.tabs-wrapper -->
-
-						<h3>Toggle tabs (Turns into accordion in mobile.)</h3>
-
-						<p>Add class <code>.mobile-accordion</code> to tabs-wrapper</p>
-
-						<div class="tabs-wrapper mobile-accordion">
-
-                            <div class="nav-tabs-wrapper">
-
-								<ul class="nav-tabs" role="tablist">
-								  	<li class="active"><a href="#tab-1" role="tab" >Tab 1</a></li>
+								<ul>
+								  	<li class="is-active"><a href="#tab-1" role="tab" >Tab 1</a></li>
 								  	<li><a href="#tab-2" role="tab" >Tab 2</a></li>
 								  	<li><a href="#tab-3" role="tab" >Tab 3</a></li>
-								</ul><!-- .nav-tabs -->
+								</ul>
 
 							</div>
 
-							<div class="tab-content">
+							<div class="toggle-tabs-panel">
 
-							  	<div class="tab-pane active" id="tab-1">
+						  		<div class="toggle-tabs-panel-item is-active" id="tab-1">
 
-							  		<a href="#" class="mobile-accordion-header">Tab 1</a>
+						  			<a href="#" class="toggle-tabs-panel-item-header">Tab 1</a>
 
-							  		<div class="mobile-accordion-content">
+						  			<div class="toggle-tabs-panel-item-content">
 
-							  			<p>Contents here.</p>
-
-							  		</div>
-
-						  		</div>
-
-							  	<div class="tab-pane" id="tab-2">
-
-							  		<a href="#" class="mobile-accordion-header">Tab 2</a>
-
-							  		<div class="mobile-accordion-content">
+						  				<h5>Tab 1</h5>
 
 							  			<p>Contents here.</p>
 
@@ -245,11 +177,27 @@
 
 						  		</div>
 
-							  	<div class="tab-pane" id="tab-3">
+						  		<div class="toggle-tabs-panel-item is-active" id="tab-2">
 
-							  		<a href="#" class="mobile-accordion-header">Tab 3</a>
+						  			<a href="#" class="toggle-tabs-panel-item-header">Tab 2</a>
 
-							  		<div class="mobile-accordion-content">
+						  			<div class="toggle-tabs-panel-item-content">
+
+						  				<h5>Tab 2</h5>
+
+							  			<p>Contents here.</p>
+
+							  		</div>
+
+						  		</div>
+
+						  		<div class="toggle-tabs-panel-item is-active" id="tab-3">
+
+						  			<a href="#" class="toggle-tabs-panel-item-header">Tab 3</a>
+
+						  			<div class="toggle-tabs-panel-item-content">
+
+						  				<h5>Tab 3</h5>
 
 							  			<p>Contents here.</p>
 
@@ -259,7 +207,135 @@
 
 					  		</div>
 
-						</div> <!-- /.tabs-wrapper -->
+						</div> <!-- /.toggle-tabs -->
+
+						<h3>Toggle tabs (turns into accordion in mobile).</h3>
+
+						<p>Add class <code>.mod-mobile-accordion</code> to <code>.toggle-tabs</code></p>
+
+						<div class="toggle-tabs mod-mobile-accordion">
+
+	                        <div class="toggle-tabs-nav">
+
+								<ul>
+								  	<li class="is-active"><a href="#tab-accordion-1" role="tab" >Accordion Tab 1</a></li>
+								  	<li><a href="#tab-accordion-2" role="tab" >Accordion Tab 2</a></li>
+								  	<li><a href="#tab-accordion-3" role="tab" >Accordion Tab 3</a></li>
+								</ul>
+
+							</div>
+
+							<div class="toggle-tabs-panel">
+
+						  		<div class="toggle-tabs-panel-item is-active" id="tab-accordion-1">
+
+						  			<a href="#" class="toggle-tabs-panel-item-header">Accordion Tab 1</a>
+
+						  			<div class="toggle-tabs-panel-item-content">
+
+						  				<h5>Accordion Tab 1</h5>
+
+							  			<p>Contents here.</p>
+
+							  		</div>
+
+						  		</div>
+
+						  		<div class="toggle-tabs-panel-item is-active" id="tab-accordion-2">
+
+						  			<a href="#" class="toggle-tabs-panel-item-header">Accordion Tab 2</a>
+
+						  			<div class="toggle-tabs-panel-item-content">
+
+						  				<h5>Accordion Tab 2</h5>
+
+							  			<p>Contents here.</p>
+
+							  		</div>
+
+						  		</div>
+
+						  		<div class="toggle-tabs-panel-item is-active" id="tab-accordion-3">
+
+						  			<a href="#" class="toggle-tabs-panel-item-header">Accordion Tab 3</a>
+
+						  			<div class="toggle-tabs-panel-item-content">
+
+						  				<h5>Accordion Tab 3</h5>
+
+							  			<p>Contents here.</p>
+
+							  		</div>
+
+						  		</div>
+
+					  		</div>
+
+						</div> <!-- /.toggle-tabs -->
+
+						<h3>Toggle tabs with float left tabs.</h3>
+
+						<p>Add class <code>.mod-float-left</code> to <code>.toggle-tabs-nav</code></p>
+
+						<div class="toggle-tabs mod-mobile-accordion">
+
+	                        <div class="toggle-tabs-nav mod-float-left">
+
+								<ul>
+								  	<li class="is-active"><a href="#tab-float-1" role="tab" >Float Tab 1</a></li>
+								  	<li><a href="#tab-float-2" role="tab" >Float Tab 2</a></li>
+								  	<li><a href="#tab-float-3" role="tab" >Float Tab 3</a></li>
+								</ul>
+
+							</div>
+
+							<div class="toggle-tabs-panel">
+
+						  		<div class="toggle-tabs-panel-item is-active" id="tab-float-1">
+
+						  			<a href="#" class="toggle-tabs-panel-item-header">Float Tab 1</a>
+
+						  			<div class="toggle-tabs-panel-item-content">
+
+						  				<h5>Float Tab 1</h5>
+
+							  			<p>Contents here.</p>
+
+							  		</div>
+
+						  		</div>
+
+						  		<div class="toggle-tabs-panel-item is-active" id="tab-float-2">
+
+						  			<a href="#" class="toggle-tabs-panel-item-header">Float Tab 2</a>
+
+						  			<div class="toggle-tabs-panel-item-content">
+
+						  				<h5>Float Tab 2</h5>
+
+							  			<p>Contents here.</p>
+
+							  		</div>
+
+						  		</div>
+
+						  		<div class="toggle-tabs-panel-item is-active" id="tab-float-3">
+
+						  			<a href="#" class="toggle-tabs-panel-item-header">Float Tab 3</a>
+
+						  			<div class="toggle-tabs-panel-item-content">
+
+						  				<h5>Float Tab 3</h5>
+
+							  			<p>Contents here.</p>
+
+							  		</div>
+
+						  		</div>
+
+					  		</div>
+
+						</div> <!-- /.toggle-tabs -->
 
 					</div>
 
@@ -276,11 +352,11 @@
 						   <li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</li>
 						</ul>
 
-						<div class="widget sub-navigation">
+						<div class="widget mod-sub-navigation">
 
 							<div class="widget-content">
 								<ul>
-									<li class="has-submenu active">
+									<li class="has-submenu is-active">
 										<a href="#example-section">Example Section</a>
 										<ul class="submenu">
 											<li class="has-submenu">

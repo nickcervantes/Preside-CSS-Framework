@@ -2,7 +2,7 @@
 	Contains footer styles
 *****************************************************************/
 
-#subhead {
+.site-footer {
 	border-top: 1px solid @grey;
 	padding-top: 30px;
 	padding-bottom: 20px;
@@ -11,9 +11,11 @@
 		color: @base-color;
 	}
 
-	.footer-nav {
+	&-nav {
+		.clearfix();
 
 		ul {
+			.clearfix();
 			.reset-list();
 
 			li {
@@ -29,20 +31,13 @@
 					padding-left: 0;
 				}
 
-				@media @sm {
-					float: none;
-					margin-left: 0;
-					border-left: none;
-					padding-left: 0;
-				}
-
 			}
 
 		}
 
 	}
 
-	.developer {
+	&-developer {
 		text-align: right;
 
 		p {
@@ -51,11 +46,6 @@
 
 		img {
 			vertical-align: baseline;
-		}
-
-		@media @xs {
-			text-align: left;
-			margin-top: 20px;
 		}
 
 	}

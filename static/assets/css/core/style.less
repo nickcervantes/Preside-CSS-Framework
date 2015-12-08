@@ -12,7 +12,7 @@ html {
 
 body {
 
-	font-family: @base-font;
+	font-family: @primary-font;
 	font-size: 16px;
 	font-weight: 300;
 	color: @base-color;
@@ -28,7 +28,7 @@ a {
 
 	&:hover {
 		color: @link-color;
-		text-decoration: underline;
+		text-decoration: none;
 	}
 
 	&:focus {
@@ -56,7 +56,7 @@ p {
 }
 
 blockquote {
-	
+
 	border-left-color: @red;
 
 }
@@ -295,28 +295,25 @@ table,
 }
 
 .line-bold {
-
     .line-break;
     border-top: 3px solid @red;
-
 }
 
 .breadcrumb {
 	.reset-list();
 	.clearfix();
 	background-color: transparent;
-	margin-bottom: 23px;
+	font-size: 13px;
+	font-size: 1.3rem;
+	font-weight: 300;
+	margin-bottom: 0;
 
 	li {
 		margin-bottom: 0;
 		float: left;
-		
-		a {
-			color: @white;
-		}
 
 		&.active {
-			color: @white;
+			color: @base-color;
 		}
 
 		&:first-child:before {
@@ -325,10 +322,19 @@ table,
 
 	}
 
+	> li + li:before {
+		content: '>';
+		color: @base-color;
+	}
+
 	@media @xs {
 
 		> li {
 			display: none;
+
+			a {
+			    vertical-align: middle;
+			}
 
 			&:before {
 				display: none;
@@ -336,12 +342,31 @@ table,
 
 			&:nth-last-child(2) {
 				display: inline-block;
+				&:before {
+					content: '<';
+					display: inline-block;
+				    padding: 0 5px;
+					vertical-align: middle;
+				}
 			}
 
 		}
 
 	}
 
+}
+
+.intro-text {
+	font-size: 18px;
+	font-size: 1.8rem;
+	margin-bottom: 40px;
+}
+
+.subtitle {
+	color: @grey;
+	font-size: 12px;
+	font-size: 1.2rem;
+	text-transform: uppercase;
 }
 
 .result-summary {
@@ -363,87 +388,33 @@ table,
 }
 
 // Background colours
-.red {
-
+.bg-red {
 	background: @red;
-
 }
 
-.grey {
-
+.bg-grey {
 	background: @grey;
-
 }
 
-// Icon classes
+.bg-black {
+	background: @black;
+}
+
+// Icon classes for sprite icons
 .icon {
 	text-indent: -999em;
 	display: inline-block;
 
-	@media @xs {
-
-		&.mobile-icon {
-			background-size: 270px 150px;
-		}
-		
-	}
-
-	&.icon-menu {
-		text-indent: 0;
-
-		&:before {
-			.sprite-icon(30px, 18px, -105px -156px);
-		}
-
-		&.close:before {
-			background-position: -105px -127px;
-		}
-
-	}
-
 	&.icon-file {
 		.sprite-icon(100px, 100px, -250px -12px);
-
-		@media @xs {
-
-			&.mobile-icon {
-				background-position: -125px -6px;
-				width: 50px;
-				height: 50px;
-			}
-
-		}
-
 	}
-	
+
 	&.icon-question {
 		.sprite-icon(100px, 100px, -11px -11px);
-
-		@media @xs {
-
-			&.mobile-icon {
-				background-position: -5px -5px;
-				width: 50px;
-				height: 50px;
-			}
-
-		}
-
 	}
-	
+
 	&.icon-history {
 		.sprite-icon(100px, 100px, -130px -11px);
-
-		@media @xs {
-
-			&.mobile-icon {
-				background-position: -65px -5px;
-				width: 50px;
-				height: 50px;
-			}
-
-		}
-
 	}
 
 	&.icon-tooltip {
@@ -459,60 +430,23 @@ table,
 // Button style
 .btn {
 	.button();
+	.button-color(@white, @red);
+
+	&.bg-grey {
+		.button-color(@black, @grey);
+	}
+
+	&.bg-black {
+		.button-color(@white, @black);
+	}
 
 	&.btn-lg {
 		padding: 20px 30px;
 	}
 
-	&.btn-control {
-		padding: 18px 30px 19px;
-		vertical-align: middle;
+	&.btn-long {
+		width: 120px;
 	}
-
-	&.btn-search {
-		background-image: url("/assets/img/icon-search.png");
-		background-repeat: no-repeat;
-		background-position: center center;
-		text-indent: -999em;
-	}
-
-	&.black {
-
-		&:hover {
-	        background-color: lighten(@black-2, 10%);
-		}
-
-	}
-
-	&.grey {
-		color: @base-color;
-
-		&:hover {
-	        color: @base-color;
-	        background-color: lighten(@grey, 10%);
-	        text-decoration: none;
-		}
-
-	}
-
-}
-
-// Background colours
-.red {
-
-	background: @red;
-
-}
-
-.black {
-
-	background: @black-2;
-
-}
-
-.grey {
-
-	background: @grey;
 
 }
 
@@ -520,85 +454,130 @@ table,
 input,
 textarea,
 .form-control {
-
 	.placeholders(@placeholder-color);
-
 }
 
 textarea {
-
 	resize: vertical;
+}
+
+fieldset + fieldset {
+	margin-top: 20px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	position: absolute !important;
+	left: -999em;
+
+	+ label {
+		cursor: pointer;
+		display: inline;
+		font-family: @primary-font;
+		font-size: 18px;
+		font-size: 1.8rem;
+		margin-bottom: 0;
+		padding-left: 30px !important;
+		position: relative;
+		text-transform: none;
+		vertical-align: middle;
+
+		&:before {
+			.sprite-icon(22px, 22px, -34px -185px);
+			margin-right: 10px;
+			position: absolute;
+			vertical-align: middle;
+			top: 0;
+			left: 0;
+		}
+
+	}
+
+	&:checked {
+
+		+ label:before {
+			content: ","; // IE8 Fix, force repaint of before
+			background-position: -5px -185px;
+		}
+
+	}
 
 }
 
-label {
+input[type="radio"] {
 
-	font-weight: 300;
-	margin: 0;
+	+ label {
+		padding-left: 40px !important;
+		padding-top: 4px;
+
+		&:before {
+			.sprite-icon(28px, 28px, -61px -211px);
+		}
+
+	}
+
+	&:checked {
+
+		+ label:before {
+			background-position: -30px -211px;
+		}
+
+	}
 
 }
 
-.required {
+.radio + .radio,
+.checkbox + .checkbox {
+	margin-top: 0;
+}
 
+.form-control {
+	.border-radius(0);
+	.box-shadow(none);
+	background: @form-control-bg;
+	color: @black;
+	border: none;
+	font-size: 22px;
+	font-size: 2.2rem;
+	height: 62px;
+
+	&.md {
+		max-width: 300px;
+	}
+
+	@media @xs {
+		font-size: 20px;
+		font-size: 2.0rem;
+	}
+
+}
+
+.asterisk {
 	color: @red;
-	
 }
 
 .form-group {
-
 	margin-bottom: 30px;
 
-	label {
-		margin-bottom: 20px;
-	}
-
-	&.note {
-
-		.icon {
-			margin-right: 10px;
-			vertical-align: middle;
-		}
-
-		a {
-			text-decoration: none;
-		}
-
-	}
-
-	&.form-buttons {
-		.clearfix();
-		margin-top: 50px;
-		margin-bottom: 0;
+	&.mod-2-column {
 
 		@media @xs {
-			margin-top: 20px;
-		}
 
-	}
+			.row > div {
+				margin-top: 20px;
 
-	.buttons {
-		float: left;
+				&:first-child {
+					margin-top: 0;
+				}
 
-		@media @xs {
-			float: none;
-
-			.btn {
-				width: 100%;
 			}
 
 		}
 
 	}
 
-	.side-note {
-		float: right;
-		padding-top: 20px;
-
-		@media @xs {
-			float: none;
-			padding-top: 15px;
-		}
-
+	label {
+		margin-bottom: 20px;
 	}
 
 	.form-field {
@@ -632,13 +611,6 @@ label {
 			padding-bottom: 0;
 		}
 
-		.show-tooltip {
-			position: absolute;
-			right: -40px;
-			top: 50%;
-			margin-top: -15px;
-		}
-
 		.alert.error {
 			margin-top: 10px;
 			position: relative;
@@ -655,39 +627,11 @@ label {
 
 		}
 
-		&.with-tooltip-middle {
-
-			.form-control {
-				width: 100%;
-				max-width: 490px;
-
-				@media @md {
-					max-width: 365px;
-				}
-
-				@media @sm {
-					max-width: 445px;
-				}
-
-				@media @xs {
-					max-width: none;
-					margin-bottom: 20px;
-				}
-
-			}
-
-			.show-tooltip {
-				position: static;
-				margin: 0 10px;
-			}
-
-		}
-
 	}
 
 	.form-inline {
-		
-		.radio, 
+
+		.radio,
 		.checkbox {
 			margin-left: 20px;
 
@@ -695,7 +639,7 @@ label {
 				margin-left: 0;
 			}
 
-		} 
+		}
 
 	}
 
@@ -709,72 +653,6 @@ label {
 	}
 
 }
-
-.form-control {
-	.border-radius(0);
-	.box-shadow(none);
-	background: @form-control-bg;
-	color: @black;
-	border: none;
-	font-size: 22px;
-	font-size: 2.2rem;
-	height: 62px;
-
-	&.md {
-		max-width: 300px;
-	}
-
-	@media @xs {
-		font-size: 20px;
-		font-size: 2.0rem;
-	}
-
-}
-
-.input-group-btn {
-	.hardware-accelerate();
-
-	> .btn {
-		height: 62px;
-		width: 62px;
-	}
-
-}
-
-input[type="checkbox"] {
-	position: absolute !important;
-	left: -999em;
-
-	+ label {
-		cursor: pointer;
-		font-size: 18px;
-		font-size: 1.8rem;
-		display: inline;
-		margin-bottom: 0;
-		padding-left: 0;
-		position: relative;
-		vertical-align: middle;
-
-		&:before {
-			.sprite-icon(22px, 22px, -34px -185px);
-			margin-right: 10px;
-			position: relative;
-			vertical-align: middle;
-			top: -2px;
-		}
-
-	}
-
-	&:checked {
-		
-		+ label:before {
-			content: ","; // IE8 Fix, force repaint of before
-			background-position: -5px -185px;
-		}
-
-	}
-
-} 
 
 // Alerts
 .alert {

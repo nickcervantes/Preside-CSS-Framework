@@ -1,90 +1,64 @@
 /*****************************************************************
-	Contains helper classes and layout styles
+	Contains helper utility classes
 *****************************************************************/
 
 // Helper classes
-.underline {
-
+.u-underline {
 	text-decoration: underline;
-
 }
 
-.round-borders {
-
+.u-round-borders {
 	.border-radius();
-
 }
 
-.perfect-round {
-
+.u-perfect-round {
 	.border-radius(100px);
-
 }
 
-.aligned-center {
-
+.u-aligned-center {
 	text-align: center;
-
 }
 
-.aligned-right {
-
+.u-aligned-right {
 	text-align: right;
-
 }
 
-.aligned-left {
-
+.u-aligned-left {
 	text-align: left;
-
 }
 
-.aligned-justify {
-
+.u-aligned-justify {
 	text-align: justify;
-
 }
 
-.uppercase {
-
+.u-uppercase {
 	text-transform: uppercase;
-
 }
 
-.lowercase {
-
+.u-lowercase {
 	text-transform: lowercase;
-
 }
 
-.centered {
-
+.u-centered {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-
 }
 
-.full-width {
+.u-full-width {
+	width: 100%;
+}
 
+.display-table {
+	display: table;
+	height: 100%;
 	width: 100%;
 
-}
-
-.intro-text {
-
-	font-size: 18px;
-	font-size: 1.8rem;
-	margin-bottom: 40px;
-
-}
-
-.subtitle {
-
-	color: @grey;
-	font-size: 12px;
-	font-size: 1.2rem;
-	text-transform: uppercase;
+	&-cell {
+		display: table-cell;
+		height: 100%;
+		vertical-align: middle;
+	}
 
 }
 
@@ -97,7 +71,7 @@
 	-webkit-column-count: 2;
 	-webkit-column-gap: 30px;
 	-webkit-margin-bottom-collapse: separate;
-	
+
 	@media @xs {
 		column-count: 1 !important;
 		column-gap: 0 !important;
@@ -132,7 +106,6 @@
 .no-csscolumns {
 
 	.force-two-columns {
-
 		.clearfix();
 		margin-left: -10px;
 		margin-right: -10px;
@@ -182,7 +155,7 @@
 
 img {
 
-	&.aligned-right {
+	&.u-aligned-right {
 		float: right;
 		margin-left: 20px;
 
@@ -193,59 +166,13 @@ img {
 
 	}
 
-	&.aligned-left {
+	&.u-aligned-left {
 		float: left;
 		margin-right: 20px;
 
 		@media @xs {
 			float: none;
 			margin-right: 0;
-		}
-
-	}
-
-}
-
-// General Layout Styles
-.main-wrapper {
-	
-}
-
-.main-content {
-	padding-top: 50px;
-	padding-bottom: 40px;
-	min-height: 300px;
-
-	@media @xs {
-		padding-top: 30px;
-		padding-bottom: 20px;
-	}
-
-}
-
-.sidebar {
-
-	.widget {
-
-		&.widget-video {
-
-			.video-details {
-
-				.video-description {
-					display: none !important;
-				}
-
-			}
-
-		}
-
-	}
-
-	@media @sm {
-		margin-top: 15px;
-
-		&.pull-right {
-			margin-top: 0;
 		}
 
 	}

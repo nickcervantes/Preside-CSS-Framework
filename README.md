@@ -31,5 +31,5 @@ Media Query: [Respond.js](https://github.com/scottjehl/Respond)
 
 ## Notes and References
 
-* Use rem as font size unit and px as fallback.
+* Use rem as font size unit and px for fallback.
 * Responsive Table - https://css-tricks.com/responsive-data-tables/

@@ -4,7 +4,7 @@
 
 <cfinclude template="/header.cfm" />
 
-	<section id="contents" >
+	<section class="contents" >
 
 		<div class="main-content">
 
