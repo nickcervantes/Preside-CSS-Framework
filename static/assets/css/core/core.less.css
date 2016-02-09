@@ -4,6 +4,13 @@
 /*****************************************************************
 	Contains font-face decalaration
 *****************************************************************/
+@font-face {
+  font-family: 'icomoon';
+  src: url('/assets/css/fonts/icomoon/icomoon.eot?l4bkco');
+  src: url('/assets/css/fonts/icomoon/icomoon.eot?l4bkco#iefix') format('embedded-opentype'), url('/assets/css/fonts/icomoon/icomoon.ttf?l4bkco') format('truetype'), url('/assets/css/fonts/icomoon/icomoon.woff?l4bkco') format('woff'), url('/assets/css/fonts/icomoon/icomoon.svg?l4bkco#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 /*****************************************************************
 	Contains helper utility classes
 *****************************************************************/
@@ -17,17 +24,14 @@
   -moz-background-clip: padding;
   border-radius: 0;
   background-clip: padding-box;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
 }
 .u-perfect-round {
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
-  background-clip: padding-box;
   -webkit-border-radius: 100px;
+  -webkit-background-clip: padding-box;
   -moz-border-radius: 100px;
+  -moz-background-clip: padding;
   border-radius: 100px;
+  background-clip: padding-box;
 }
 .u-aligned-center {
   text-align: center;
@@ -239,9 +243,6 @@ code {
   -moz-background-clip: padding;
   border-radius: 0;
   background-clip: padding-box;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
   color: #2f5878;
   background: #eeeeee;
   padding: 2px 9px;
@@ -508,6 +509,10 @@ table > tbody > tr:nth-child(even) > td,
     margin-bottom: 20px;
   }
 }
+.information-icon {
+  font-size: 30px;
+  font-size: 3.0rem;
+}
 .bg-red {
   background: #a01f12;
 }
@@ -572,15 +577,14 @@ table > tbody > tr:nth-child(even) > td,
   text-indent: -999em;
 }
 .btn {
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
-  background-clip: padding-box;
   -webkit-border-radius: 0;
+  -webkit-background-clip: padding-box;
   -moz-border-radius: 0;
+  -moz-background-clip: padding;
   border-radius: 0;
+  background-clip: padding-box;
   -webkit-transition: background-color 250ms ease-in;
   -moz-transition: background-color 250ms ease-in;
-  -ms-transition: background-color 250ms ease-in;
   -o-transition: background-color 250ms ease-in;
   transition: background-color 250ms ease-in;
   border: none;
@@ -720,12 +724,12 @@ input[type="radio"]:checked + label:before {
   margin-top: 0;
 }
 .form-control {
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
-  background-clip: padding-box;
   -webkit-border-radius: 0;
+  -webkit-background-clip: padding-box;
   -moz-border-radius: 0;
+  -moz-background-clip: padding;
   border-radius: 0;
+  background-clip: padding-box;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -816,12 +820,12 @@ input[type="radio"]:checked + label:before {
   margin-left: 0;
 }
 .alert {
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
-  background-clip: padding-box;
   -webkit-border-radius: 0;
+  -webkit-background-clip: padding-box;
   -moz-border-radius: 0;
+  -moz-background-clip: padding;
   border-radius: 0;
+  background-clip: padding-box;
   border: none;
   position: relative;
   padding: 13px;
@@ -1076,7 +1080,6 @@ input[type="radio"]:checked + label:before {
 .widget.mod-sub-navigation .widget-content ul li a {
   -webkit-transition: all 200ms ease-in;
   -moz-transition: all 200ms ease-in;
-  -ms-transition: all 200ms ease-in;
   -o-transition: all 200ms ease-in;
   transition: all 200ms ease-in;
   display: block;
@@ -1187,7 +1190,6 @@ input[type="radio"]:checked + label:before {
 .widget.mod-video .video-details-description {
   -webkit-transition: max-height 300ms padding 200ms;
   -moz-transition: max-height 300ms padding 200ms;
-  -ms-transition: max-height 300ms padding 200ms;
   -o-transition: max-height 300ms padding 200ms;
   transition: max-height 300ms padding 200ms;
   background: #2c7fc2;
@@ -1369,7 +1371,6 @@ input[type="radio"]:checked + label:before {
 .toggle-tabs.mod-mobile-accordion .toggle-tabs-panel-item-header {
   -webkit-transition: all 300ms;
   -moz-transition: all 300ms;
-  -ms-transition: all 300ms;
   -o-transition: all 300ms;
   transition: all 300ms;
   background: transparent;

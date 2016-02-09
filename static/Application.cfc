@@ -12,6 +12,7 @@ component output=false {
 			   .include( assetId="jq-core-placeholders"             )
 			   .include( assetId="/js/core/"                        )
 			   .include( assetId="css-bootstrap"                    )
+			   .include( assetId="css-icomoon"                      )
 			   .include( assetId="/css/core/"                       )
 			   .include( assetId="css-ie8"                          )
 			   .include( assetId="js-modernizr"       , group="top" )

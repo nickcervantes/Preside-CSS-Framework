@@ -241,16 +241,16 @@
 							<h1 class="heading" id="tooltips">Tooltips</h1>
 
 							<div class="tooltip-wrapper">
-								<a href="#" class="icon icon-tooltip js-show-tooltip" title="Example tooltip information mattis elementum ligula id, commodo molestie neque" data-position="left" ></a>
+								<a href="#" class="font-icon font-icon-info-circle information-icon js-show-tooltip" title="Example tooltip information mattis elementum ligula id, commodo molestie neque" data-position="left" ></a>
 							</div>
 							<div class="tooltip-wrapper">
-								<a href="#" class="icon icon-tooltip js-show-tooltip" title="Example tooltip information mattis elementum ligula id, commodo molestie neque" data-position="top" ></a>
+								<a href="#" class="font-icon font-icon-info-circle information-icon js-show-tooltip" title="Example tooltip information mattis elementum ligula id, commodo molestie neque" data-position="top" ></a>
 							</div>
 							<div class="tooltip-wrapper">
-								<a href="#" class="icon icon-tooltip js-show-tooltip" title="Example tooltip information mattis elementum ligula id, commodo molestie neque" data-position="bottom" ></a>
+								<a href="#" class="font-icon font-icon-info-circle information-icon js-show-tooltip" title="Example tooltip information mattis elementum ligula id, commodo molestie neque" data-position="bottom" ></a>
 							</div>
 							<div class="tooltip-wrapper">
-								<a href="#" class="icon icon-tooltip js-show-tooltip" title="Example tooltip information mattis elementum ligula id, commodo molestie neque" data-position="right" ></a>
+								<a href="#" class="font-icon font-icon-info-circle information-icon js-show-tooltip" title="Example tooltip information mattis elementum ligula id, commodo molestie neque" data-position="right" ></a>
 							</div>
 
 						</div>

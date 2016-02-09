@@ -1,0 +1,58 @@
+[class^="font-icon-"], [class*=" font-icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.font-icon-search:before {
+    content: "\f002";
+}
+.font-icon-close:before {
+    content: "\f00d";
+}
+.font-icon-remove:before {
+    content: "\f00d";
+}
+.font-icon-times:before {
+    content: "\f00d";
+}
+.font-icon-check-square-o:before {
+    content: "\f046";
+}
+.font-icon-play:before {
+    content: "\f04b";
+}
+.font-icon-chevron-left:before {
+    content: "\f053";
+}
+.font-icon-chevron-right:before {
+    content: "\f054";
+}
+.font-icon-info-circle:before {
+    content: "\f05a";
+}
+.font-icon-chevron-up:before {
+    content: "\f077";
+}
+.font-icon-chevron-down:before {
+    content: "\f078";
+}
+.font-icon-square-o:before {
+    content: "\f096";
+}
+.font-icon-circle-o:before {
+    content: "\f10c";
+}
+.font-icon-dot-circle-o:before {
+    content: "\f192";
+}
+
