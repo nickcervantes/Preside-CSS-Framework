@@ -6,8 +6,8 @@
 *****************************************************************/
 @font-face {
   font-family: 'icomoon';
-  src: url('/assets/css/fonts/icomoon/icomoon.eot?l4bkco');
-  src: url('/assets/css/fonts/icomoon/icomoon.eot?l4bkco#iefix') format('embedded-opentype'), url('/assets/css/fonts/icomoon/icomoon.ttf?l4bkco') format('truetype'), url('/assets/css/fonts/icomoon/icomoon.woff?l4bkco') format('woff'), url('/assets/css/fonts/icomoon/icomoon.svg?l4bkco#icomoon') format('svg');
+  src: url('/assets/css/fonts/icomoon/icomoon.eot?x0di15');
+  src: url('/assets/css/fonts/icomoon/icomoon.eot?x0di15#iefix') format('embedded-opentype'), url('/assets/css/fonts/icomoon/icomoon.ttf?x0di15') format('truetype'), url('/assets/css/fonts/icomoon/icomoon.woff?x0di15') format('woff'), url('/assets/css/fonts/icomoon/icomoon.svg?x0di15#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -481,7 +481,7 @@ table > tbody > tr:nth-child(even) > td,
     vertical-align: middle;
   }
 }
-.intro-text {
+.intro {
   font-size: 18px;
   font-size: 1.8rem;
   margin-bottom: 40px;
@@ -522,39 +522,29 @@ table > tbody > tr:nth-child(even) > td,
 .bg-black {
   background: #000000;
 }
+.font-icon {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+.font-icon.sm {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+.font-icon.md {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+.font-icon.lg {
+  font-size: 35px;
+  font-size: 3.5rem;
+}
+.font-icon.xl {
+  font-size: 46px;
+  font-size: 4.6rem;
+}
 .icon {
   text-indent: -999em;
   display: inline-block;
-}
-.icon.icon-file {
-  background-image: url("/assets/img/icons.png");
-  background-repeat: no-repeat;
-  background-position: -250px -12px;
-  width: 100px;
-  height: 100px;
-  content: "";
-  display: inline-block;
-  text-indent: -999em;
-}
-.icon.icon-question {
-  background-image: url("/assets/img/icons.png");
-  background-repeat: no-repeat;
-  background-position: -11px -11px;
-  width: 100px;
-  height: 100px;
-  content: "";
-  display: inline-block;
-  text-indent: -999em;
-}
-.icon.icon-history {
-  background-image: url("/assets/img/icons.png");
-  background-repeat: no-repeat;
-  background-position: -130px -11px;
-  width: 100px;
-  height: 100px;
-  content: "";
-  display: inline-block;
-  text-indent: -999em;
 }
 .icon.icon-tooltip {
   background-image: url("/assets/img/icons.png");
@@ -588,6 +578,7 @@ table > tbody > tr:nth-child(even) > td,
   -o-transition: background-color 250ms ease-in;
   transition: background-color 250ms ease-in;
   border: none;
+  cursor: pointer;
   display: inline-block;
   font-size: 18px;
   font-size: 1.8rem;
@@ -606,6 +597,7 @@ table > tbody > tr:nth-child(even) > td,
 .btn[disabled] {
   opacity: 0.5;
   filter: alpha(opacity=50);
+  pointer-events: none;
 }
 .btn:focus {
   color: #ffffff;
@@ -613,6 +605,11 @@ table > tbody > tr:nth-child(even) > td,
 .btn:hover {
   color: #ffffff;
   background-color: #ce2817;
+}
+.btn.disabled:hover,
+.btn[disabled]:hover {
+  background-color: #a01f12;
+  color: #ffffff;
 }
 .btn.bg-grey {
   background-color: #e0d8d8;
@@ -625,6 +622,11 @@ table > tbody > tr:nth-child(even) > td,
   color: #000000;
   background-color: #f7f4f4;
 }
+.btn.bg-grey.disabled:hover,
+.btn.bg-grey[disabled]:hover {
+  background-color: #e0d8d8;
+  color: #000000;
+}
 .btn.bg-black {
   background-color: #000000;
   color: #ffffff;
@@ -635,6 +637,11 @@ table > tbody > tr:nth-child(even) > td,
 .btn.bg-black:hover {
   color: #ffffff;
   background-color: #1a1a1a;
+}
+.btn.bg-black.disabled:hover,
+.btn.bg-black[disabled]:hover {
+  background-color: #000000;
+  color: #ffffff;
 }
 .btn.btn-lg {
   padding: 20px 30px;
@@ -1166,6 +1173,8 @@ input[type="radio"]:checked + label:before {
 .widget.mod-video .video-details-title .arrow .icon-arrow {
   background: #2c7fc2;
   display: block;
+  font-size: 20px;
+  font-size: 2.0rem;
   width: 43px;
   height: 43px;
   line-height: 43px;
@@ -1173,14 +1182,37 @@ input[type="radio"]:checked + label:before {
   text-align: center;
 }
 .widget.mod-video .video-details-title .arrow .icon-arrow:before {
-  background-image: url("/assets/img/icons.png");
-  background-repeat: no-repeat;
-  background-position: -9px -215px;
-  width: 15px;
-  height: 19px;
-  content: "";
-  display: inline-block;
-  text-indent: -999em;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 24px;
+  font-size: 2.4rem;
+  content: "\f04b";
+  font-size: 20px;
+  font-size: 2.0rem;
+}
+.widget.mod-video .video-details-title .arrow .icon-arrow:before.sm {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+.widget.mod-video .video-details-title .arrow .icon-arrow:before.md {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+.widget.mod-video .video-details-title .arrow .icon-arrow:before.lg {
+  font-size: 35px;
+  font-size: 3.5rem;
+}
+.widget.mod-video .video-details-title .arrow .icon-arrow:before.xl {
+  font-size: 46px;
+  font-size: 4.6rem;
 }
 .widget.mod-video .video-details-title .title {
   display: table-cell;
@@ -1329,7 +1361,7 @@ input[type="radio"]:checked + label:before {
 .toggle-tabs-nav ul > li a {
   background: transparent;
   color: #111111;
-  display: inline-block;
+  display: block;
   padding: 12px 28px;
   position: relative;
   text-align: left;

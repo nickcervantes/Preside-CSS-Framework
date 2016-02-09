@@ -65,29 +65,29 @@
 
 					<div class="guide-block row">
 
-	                	<div class="col-xs-12 col-md-12 col-sm-12">
+						<div class="col-xs-12 col-md-12 col-sm-12">
 							<p class="style-caption">Large (Desktop): 1170px 12 columns 70px - 11 gutters at 30px</p>
 							<p class="style-caption">Default (Desktop &amp; Landscape Tablet): 980px 12 columns 60px - 11 gutters at 20px</p>
 							<p class="style-caption">Tablet (Portrait): 768px 12 columns 42px - 11 gutters at 20px</p>
 							<p class="style-caption">Smart Phone: 320px 1 columns 280px - 2 gutters at 20px</p>
-	                    </div>
+						</div>
 
-	                </div>
+					</div>
 
 					<div class="guide-block row">
 
 						<div class="col-xs-12 col-md-12 col-sm-12">
 
-		                	<h1 class="heading" id="typography">Typography</h1>
+							<h1 class="heading" id="typography">Typography</h1>
 							<h1>Heading 1 (40px)</h1>
 							<h2>Heading 2 (30px)</h2>
 							<h3>Heading 3 (24px)</h3>
 							<h4>Heading 4 (20px)</h4>
 							<p class="style-caption">Arial Font</p>
 
-	                	</div>
+						</div>
 
-	            	</div>
+					</div>
 
 					<div class="guide-block row">
 
@@ -193,10 +193,10 @@
 
 						<div class="col-xs-12 col-md-12 col-sm-12">
 
-                            <blockquote>
-                                <h2>This is a quote</h2>
-                                <p class="quote-author">Quote Author</p>
-                            </blockquote>
+							<blockquote>
+								<h2>This is a quote</h2>
+								<p class="quote-author">Quote Author</p>
+							</blockquote>
 							<p class="style-caption">Block quote</p>
 
 						</div>
@@ -207,10 +207,10 @@
 
 						<div class="col-xs-12 col-md-12 col-sm-12">
 
-	                		<h1 class="heading" id="icons">Icons</h1>
+							<h1 class="heading" id="icons">Icons</h1>
 
-	                		<div class="icon-list">
-	                			<img src="/assets/img/icons.png" alt="">
+							<div class="icon-list">
+								<img src="/assets/img/icons.png" alt="">
 							</div>
 
 						</div>
@@ -224,7 +224,7 @@
 							<h1 class="heading" id="breadcrumbs">Breadcrumbs</h1>
 							<div class="breadcrumb-wrapper">
 								<ol class="breadcrumb">
-								  	<li><a href="#">Home</a></li>
+									<li><a href="#">Home</a></li>
 									<li class="active">Register</li>
 								</ol>
 							</div>
@@ -265,9 +265,9 @@
 
 							<div class="result-summary u-aligned-right">
 
-		                        (123 results)
+								(123 results)
 
-		                    </div>
+							</div>
 
 							<p class="style-caption">Display results and RSS link</p>
 
@@ -279,9 +279,9 @@
 
 						<div class="col-xs-12 col-md-12 col-sm-12">
 
-                        	<div class="view-more u-aligned-center">
-                                <a href="#" class="btn btn-maroon">View More</a>
-                            </div>
+							<div class="view-more u-aligned-center">
+								<a href="#" class="btn btn-maroon">View More</a>
+							</div>
 
 							<p class="style-caption">Load more results pagination</p>
 
@@ -539,8 +539,8 @@
 					<div class="guide-block row">
 
 						<div class="col-xs-12 col-md-12 col-sm-12">
-	                		<h1 class="heading" id="colour-pallete">Colour pallete</h1>
-	                	</div>
+							<h1 class="heading" id="colour-pallete">Colour pallete</h1>
+						</div>
 
 						<div class="col-md-4 col-sm-4">
 							<div class="bg-red color-block u-round-borders">
@@ -630,11 +630,11 @@
 
 						<div class="col-sm-12 col-md-12">
 
-					        <p>
+							<p>
 
-					            <a href="#"><span class="hidden-xs">&lt;</span> Return to login</a>
+								<a href="#"><span class="hidden-xs">&lt;</span> Return to login</a>
 
-					        </p>
+							</p>
 
 							<p class="style-caption">Go back link</p>
 
@@ -648,7 +648,7 @@
 							<h1 id="alerts-and-popups" class="heading">Alerts &amp; Popups</h1>
 						</div>
 
-	                	<div class="col-xs-12 col-md-12 col-sm-12">
+						<div class="col-xs-12 col-md-12 col-sm-12">
 							<div class="alert alert-success">Your form submission was successful</div>
 							<div class="alert alert-danger collapsible">
 								Please enter valid email address
@@ -793,22 +793,22 @@
 
 	</section>
 
-    <div id="sample-popup" class="magnific-popup mfp-hide">
-        <div class="white-popup-content">
-            <form action="#" method="get" class="label-inline">
-                <header>
-                    <h3>Header</h3>
-                </header>
-                <section class="body">
-                    <p>Sample Content</p>
-                </section>
-                <footer>
-                	<div class="form-row u-aligned-right">
-                		<a href="#" class="btn btn-black close" >Close</a>
-                    </div>
-                </footer>
-            </form>
-        </div>
-    </div>
+	<div id="sample-popup" class="magnific-popup mfp-hide">
+		<div class="white-popup-content">
+			<form action="#" method="get" class="label-inline">
+				<header>
+					<h3>Header</h3>
+				</header>
+				<section class="body">
+					<p>Sample Content</p>
+				</section>
+				<footer>
+					<div class="form-row u-aligned-right">
+						<a href="#" class="btn btn-black close" >Close</a>
+					</div>
+				</footer>
+			</form>
+		</div>
+	</div>
 
 <cfinclude template="/footer.cfm" />

@@ -331,7 +331,7 @@ table,
 
 }
 
-.intro-text {
+.intro {
 	font-size: 18px;
 	font-size: 1.8rem;
 	margin-bottom: 40px;
@@ -380,22 +380,37 @@ table,
 	background: @black;
 }
 
+// Font icon
+.font-icon {
+	font-size: 24px;
+	font-size: 2.4rem;
+
+	&.sm {
+		font-size: 16px;
+		font-size: 1.6rem;
+	}
+
+	&.md {
+		font-size: 24px;
+		font-size: 2.4rem;
+	}
+
+	&.lg {
+		font-size: 35px;
+		font-size: 3.5rem;
+	}
+
+	&.xl {
+		font-size: 46px;
+		font-size: 4.6rem;
+	}
+
+}
+
 // Icon classes for sprite icons
 .icon {
 	text-indent: -999em;
 	display: inline-block;
-
-	&.icon-file {
-		.sprite-icon(100px, 100px, -250px -12px);
-	}
-
-	&.icon-question {
-		.sprite-icon(100px, 100px, -11px -11px);
-	}
-
-	&.icon-history {
-		.sprite-icon(100px, 100px, -130px -11px);
-	}
 
 	&.icon-tooltip {
 		.sprite-icon(30px, 30px, -60px -150px);

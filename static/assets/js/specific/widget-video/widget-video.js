@@ -13,7 +13,7 @@
 			            $me.find( ".video-details-description" ).stop().slideUp();
 			        });
 			    }
-			});
+			} );
 
 			$( ".widget.mod-video > a", $container ).magnificPopup({
 			      type: "iframe"
@@ -37,8 +37,8 @@
 			            </div>
 			        </div>"
 			    }
-			    , closeMarkup: "<button type='button' class='mfp-close'>Close <span class='font-icon font-icon-close'></span></button>"
-			});
+			    , closeMarkup: "<button type='button' class='mfp-close font-icon font-icon-close'></button>"
+			} );
 
 		}
 
@@ -46,4 +46,4 @@
 
 	} );
 
-})( jQuery );
+} )( jQuery );
