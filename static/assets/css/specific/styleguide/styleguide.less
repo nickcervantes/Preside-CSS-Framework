@@ -65,7 +65,7 @@ body {
 	.style-caption {
 		font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 		font-size: 14px;
-		margin: 5px 0 6px;
+		margin: 5px 0 15px;
 		color: #969696;
 		a {
 			color: #969696;
@@ -241,8 +241,8 @@ body {
 
 .styleguide-menu-area {
 	background: #fff;
-	border-top: 2px solid #979797;
-	border-bottom: 2px solid #979797;
+	border-top: 1px solid #979797;
+	border-bottom: 1px solid #979797;
 	position: relative;
 
 	&-button {
@@ -255,14 +255,14 @@ body {
 		font-weight: bold;
 
 		&:after {
-			.font-icon();
-			content: "\f078";
-			font-size: 16px;
-			font-size: 1.6rem;
+			border-top: 8px solid #4a4a4a;
+			border-left: 8px solid transparent;
+			border-right: 8px solid transparent;
+			content: "";
 			position: absolute;
 			right: 40px;
 			top: 50%;
-			margin-top: -8px;
+			margin-top: -4px;
 		}
 
 		&:hover {
@@ -272,7 +272,8 @@ body {
 		&.is-active {
 
 			&:after {
-				content: "\f077";
+				border-bottom: 8px solid #4a4a4a;
+				border-top: none;
 			}
 
 		}
@@ -290,6 +291,12 @@ body {
 
 		li {
 			margin: 0;
+			padding: 0;
+
+			&:before {
+				display: none;
+			}
+
 		}
 
 		a {

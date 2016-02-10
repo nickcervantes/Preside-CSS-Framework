@@ -1,5 +1,5 @@
 <cfscript>
-	body_class = "styleguide-page";
+	body_class = "styleguide-page main-styleguide";
 	sticker.include( "/css/specific/styleguide/" )
 		   .include( "/js/specific/maginific-popup/" )
 		   .include( "/js/specific/tooltipster/" );

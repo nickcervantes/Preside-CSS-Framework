@@ -1,1 +1,1 @@
-box start force=true name="frameworkstatic" port=8889
+box start force=true name="frameworkstatic" port=2220

@@ -36,8 +36,10 @@
 				} else {
 					$( ".styleguide-iframe-contents" ).width( "100%" );
 				}
-				styleguideIframe.height("");
-				setIframeHeight( styleguideIframe.get(0) );
+				setTimeout( function() {
+					styleguideIframe.height("");
+					setIframeHeight( styleguideIframe.get(0) );
+				}, 600 );
 				$( this ).closest( "li" ).toggleClass( "is-active" ).siblings().removeClass( "is-active" );
 			} );
 
