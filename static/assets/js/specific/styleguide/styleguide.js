@@ -39,7 +39,7 @@
 				setTimeout( function() {
 					styleguideIframe.height("");
 					setIframeHeight( styleguideIframe.get(0) );
-				}, 600 );
+				}, 800 );
 				$( this ).closest( "li" ).toggleClass( "is-active" ).siblings().removeClass( "is-active" );
 			} );
 
@@ -58,6 +58,14 @@
 				styleguideIframe.attr( "src", $( this ).attr( "href" ) );
 				$( ".js-show-pages" ).removeClass( "is-active" )
 				$( ".styleguide-menu-area-list" ).hide();
+
+				var checkLoad = setInterval(function() {
+					if (styleguideIframe.get(0).contentWindow.document.readyState === "complete") {
+						clearInterval(checkLoad);
+						setIframeHeight( styleguideIframe.get(0) );
+					}
+				}, 100);
+
 			} );
 
 			$( window ).load( function() {

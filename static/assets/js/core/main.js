@@ -228,7 +228,7 @@ var FRAMEWORK = function() {
 
 	$(document).ready(function() {
 
-		HELLO = FRAMEWORK.init();
+		FRAMEWORK.init();
 
 	});
 
