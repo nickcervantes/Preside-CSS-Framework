@@ -1,4 +1,4 @@
-function styleguideHandler( $container ) {
+function styleguideHandler() {
 
 	function getScrollBarWidth () {
 		var $outer = $('<div>').css({visibility: 'hidden', width: 100, overflow: 'scroll'} ).appendTo('body'),
