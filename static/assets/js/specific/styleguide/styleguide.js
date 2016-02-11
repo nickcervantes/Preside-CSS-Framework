@@ -58,7 +58,9 @@ function styleguideHandler() {
 		var checkLoad = setInterval(function() {
 			if (styleguideIframe.get(0).contentWindow.document.readyState === "complete") {
 				clearInterval(checkLoad);
-				setIframeHeight( styleguideIframe.get(0) );
+				setTimeout( function() {
+					setIframeHeight( styleguideIframe.get(0) );
+				}, 800 );
 			}
 		}, 100);
 
