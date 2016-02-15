@@ -650,12 +650,7 @@ input[type="radio"] {
 
 		.radio,
 		.checkbox {
-			margin-left: 20px;
-
-			&:first-child {
-				margin-left: 0;
-			}
-
+			margin-right: 20px;
 		}
 
 	}
@@ -667,6 +662,21 @@ input[type="radio"] {
 			margin-left: 0;
 		}
 
+	}
+
+	.checkbox,
+	.checkbox-inline {
+
+		input[type="checkbox"] {
+			margin-left: 0;
+		}
+
+	}
+
+	.radio-inline + .radio-inline,
+	.checkbox-inline + .checkbox-inline {
+		margin-left: 0;
+		padding-left: 0
 	}
 
 }

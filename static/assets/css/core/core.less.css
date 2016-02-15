@@ -831,15 +831,20 @@ input[type="radio"]:checked + label:before {
 }
 .form-group .form-inline .radio,
 .form-group .form-inline .checkbox {
-  margin-left: 20px;
-}
-.form-group .form-inline .radio:first-child,
-.form-group .form-inline .checkbox:first-child {
-  margin-left: 0;
+  margin-right: 20px;
 }
 .form-group .radio input[type="radio"],
 .form-group .radio-inline input[type="radio"] {
   margin-left: 0;
+}
+.form-group .checkbox input[type="checkbox"],
+.form-group .checkbox-inline input[type="checkbox"] {
+  margin-left: 0;
+}
+.form-group .radio-inline + .radio-inline,
+.form-group .checkbox-inline + .checkbox-inline {
+  margin-left: 0;
+  padding-left: 0;
 }
 .alert {
   -webkit-border-radius: 0;
