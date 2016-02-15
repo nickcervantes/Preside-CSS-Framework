@@ -20,9 +20,7 @@
 				.reset-list();
 
 				li {
-					font-size: 2.0rem;
-					font-size: 20px;
-					border-top: 1px solid @grey-2;
+					border-top: 1px solid @grey-light;
 					margin-bottom: 0;
 					font-weight: 700;
 
@@ -32,8 +30,9 @@
 
 					a {
 						.transition(all 200ms ease-in);
+						color: @base-color;
 						display: block;
-						padding: 10px 21px;
+						padding: 10px 20px;
 						text-decoration: none;
 					}
 
@@ -42,8 +41,7 @@
 
 						> a {
 							position: relative;
-							background: @red;
-							color: @white;
+							background: @grey-light;
 						}
 
 					}
@@ -52,27 +50,15 @@
 
 						> a {
 							position: relative;
+							padding-right: 45px;
 
 							&:after {
-								.sprite-icon(11px, 8px, -160px -193px);
-								content: "v";
+								.font-icon();
+							    content: "\f078";
+								margin-top: -12px;
 								position: absolute;
-								right: 21px;
 								top: 50%;
-								margin-top: -4px;
-							}
-
-						}
-
-						&:hover,
-						&.is-active {
-
-							> a {
-
-								&:after {
-									background-position: -129px -193px;
-								}
-
+								right: 15px;
 							}
 
 						}
@@ -80,7 +66,7 @@
 					}
 
 					.submenu {
-						background: darken(@red, 10%);
+						background: darken(@grey-light, 10%);
 						display: none;
 
 						li {
@@ -89,14 +75,14 @@
 							border-top: none;
 
 							a {
-								color: @white;
+								color: @base-color;
 							}
 
 							&:hover,
 							&.is-active {
 
 								> a {
-									background: darken(@red, 20%);
+									background: darken(@grey-light, 20%);
 								}
 
 							}
@@ -148,6 +134,8 @@
 
 			&-title{
 				display: table;
+				font-size: 24px;
+				font-size: 2.4rem;
 				margin-bottom: 0;
 
 				.arrow {
@@ -160,8 +148,8 @@
 					.icon-arrow {
 						background: @video-arrow;
 						display: block;
-					    font-size: 20px;
-					    font-size: 2.0rem;
+						font-size: 20px;
+						font-size: 2.0rem;
 						width: 43px;
 						height: 43px;
 						line-height: 43px;
@@ -218,21 +206,22 @@
 			display: block;
 			text-transform: uppercase;
 			font-weight: 700;
-			background: @grey-2;
+			background: @grey-light;
 
 			> a {
 				color: @black;
 				position: relative;
 				display: block;
-				padding: 20px 20px 20px 45px;
+				padding: 20px 20px 20px 50px;
 				text-decoration: none;
 
 				&:before {
-					.sprite-icon(12px, 18px, -100px -185px);
+					.font-icon();
+					content: "\f054";
+				    margin-top: -12px;
 					position: absolute;
 					left: 22px;
 					top: 50%;
-					margin-top: -9px;
 				}
 
 			}
@@ -244,9 +233,7 @@
 			> .collapsible-item-header {
 
 				> a:before {
-					.sprite-icon(18px, 12px, -66px -190px);
-					content: ",";
-					margin-top: -6px;
+				    content: "\f078";
 					left: 20px;
 				}
 
@@ -257,7 +244,7 @@
 		&-content {
 			display: none;
 			padding: 5px 20px;
-			background: @grey-2;
+			background: @grey-light;
 		}
 
 	}
@@ -323,7 +310,7 @@
 			.reset-list();
 			.clearfix();
 			display: table;
-			border-bottom: 1px solid @grey;
+			border-bottom: 1px solid @grey-light;
 			width: 100%;
 
 			> li {
@@ -334,7 +321,6 @@
 				margin-bottom: 0;
 				padding-left: 0;
 				position: relative;
-				padding-right: 20px;
 
 				a {
 					background: transparent;
@@ -349,7 +335,7 @@
 				&.is-active {
 
 					a {
-						background: @grey;
+						background: @grey-light;
 						cursor: default;
 					}
 
@@ -420,7 +406,7 @@
 					display: none;
 					font-size: 16px;
 					font-size: 1.6rem;
-				    font-weight: 700;
+					font-weight: 700;
 					padding: 10px 0;
 					text-decoration: none;
 

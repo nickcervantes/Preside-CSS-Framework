@@ -14,6 +14,7 @@ component output=false {
 		bundle.addAsset( id="css-tooltipster"       , path="/css/lib/tooltipster.css"                               );
 		bundle.addAsset( id="css-magnific-popup"    , path="/css/lib/magnific-popup.css"                            );
 		bundle.addAsset( id="css-ie8"               , path="/css/lib/ie8.css"                                       );
+		bundle.addAsset( id="css-google-font"       , url="//fonts.googleapis.com/css?family=Open+Sans:300,400,700|Quicksand:700,400",  type="css"  );
 
 		bundle.addAssets(
 			  directory   = "/js/"
@@ -35,6 +36,7 @@ component output=false {
 		bundle.asset( "js-respond" ).setIE( "lte IE 8" );
 		bundle.asset( "/js/core/" ).after( "jq-*" );
 
+		bundle.asset( "css-google-font" ).before( "*" );
 		bundle.asset( "css-bootstrap" ).before( "css-*" );
 		bundle.asset( "/css/core/" ).after( "css-*" ).dependents( "/css/specific/*" );
 		bundle.asset( "css-ie8" ).after( "css-*", "/css/core/" ).setIE( "lte IE 8" );

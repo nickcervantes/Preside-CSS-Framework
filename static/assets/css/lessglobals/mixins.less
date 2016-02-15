@@ -91,14 +91,15 @@
 
 .button() {
 	.border-radius(0);
-	.transition(background-color 250ms ease-in);
+	.transition(all 400ms ease-in);
 	border: none;
 	cursor: pointer;
 	display: inline-block;
-	font-size: 18px;
-	font-size: 1.8rem;
-	font-weight: 300;
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-weight: 700;
 	max-width: 100%;
+	min-width: 138px;
 	padding: 12px 20px;
 	text-align: center;
 	text-decoration: none;
@@ -126,7 +127,7 @@
 
 	&:hover {
 		color: @color;
-		background-color: lighten(@bg-color, 10%);
+		background-color: darken(@bg-color, 20%);
 	}
 
 	&.disabled,
@@ -137,6 +138,15 @@
 			color: @color;
 		}
 
+	}
+
+}
+
+.button-color-hover(@color: #fff, @bg-color: #000) {
+
+	&:hover {
+		color: @color;
+		background-color: @bg-color;
 	}
 
 }

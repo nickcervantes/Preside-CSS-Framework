@@ -7,6 +7,38 @@
 
 	<section class="contents">
 
+		<div class="guide-block">
+
+			<header id="masthead" class="site-head" >
+
+				<div class="container">
+
+					<div class="row">
+
+						<div class="col-xs-12 col-sm-4 col-md-3">
+							<h1 class="site-head-logo"><a href="/index.cfm"><img src="/assets/img/logo.png" alt=""></a></h1>
+						</div>
+
+						<div class="col-xs-12 col-sm-8 col-md-9">
+							<nav class="site-head-nav">
+								<ul>
+									<li class="site-head-nav-dropdown"><a href="/index.cfm">Home</a></li>
+									<li class="site-head-nav-dropdown"><a href="##">Menu 1</a></li>
+									<li class="site-head-nav-dropdown"><a href="##">Menu 2</a></li>
+									<li class="site-head-nav-dropdown"><a href="##">Menu 3</a></li>
+									<li class="site-head-nav-dropdown"><a href="##">Menu 4</a></li>
+								</ul>
+							</nav>
+						</div>
+
+					</div>
+
+				</div>
+
+			</header>
+
+		</div>
+
 		<div class="container">
 
 			<div class="row">
@@ -18,6 +50,7 @@
 					<div class="guide-block">
 
 						<div class="row">
+
 							<div class="col-sm-4">
 
 								<div class="widget mod-sub-navigation">

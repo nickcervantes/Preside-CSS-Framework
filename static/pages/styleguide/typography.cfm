@@ -11,21 +11,23 @@
 
 			<div class="row">
 
-				<div class="col-xs-12 col-md-8">
+				<div class="col-xs-12 col-md-7">
 
-					<h3 class="style-heading" id="typography">Typography</h3>
+					<h3 class="style-heading">Typography</h3>
 
 					<div class="guide-block">
 						<p class="style-caption">Fonts</p>
-						<p>Primary font - Lato, Google font</p>
+						<h5>Heading font: Quicksand</h5>
+						<p>Paragraph font: Open Sans</p>
 					</div>
 
 					<div class="guide-block">
-						<p class="style-caption">Headings</p>
-						<h1>Heading 1 (40px)</h1>
-						<h2>Heading 2 (30px)</h2>
-						<h3>Heading 3 (24px)</h3>
-						<h4>Heading 4 (20px)</h4>
+						<h3 class="style-heading">Headings</h3>
+						<h1>Heading 1 (48px)</h1>
+						<h2>Heading 2 (40px)</h2>
+						<h3>Heading 3 (36px)</h3>
+						<h4>Heading 4 (24px)</h4>
+						<h5>Heading 5 (18px)</h5>
 					</div>
 
 					<div class="guide-block">
@@ -56,7 +58,7 @@
 
 				</div>
 
-				<div class="col-xs-12 col-md-4">
+				<div class="col-xs-12 col-md-5">
 
 					<div class="guide-block">
 
@@ -118,38 +120,38 @@
 
 						<div class="row">
 
-							<div class="col-sm-4 col-md-2">
-								<div class="bg-red color-block">&nbsp;</div>
-								<p class="style-caption">Red #A01F12</p>
+							<div class="col-xs-12 col-md-2">
+								<div class="bg-red color-block u-perfect-round">&nbsp;</div>
+								<p class="style-caption">Red #ef4136</p>
 								<p><code>.bg-red</code></p>
 							</div>
 
-							<div class="col-sm-4 col-md-2">
-								<div class="bg-grey color-block">&nbsp;</div>
-								<p class="style-caption">Grey #F1EFEE</p>
-								<p><code>.bg-grey</code></p>
-							</div>
-
-							<div class="col-sm-4 col-md-2">
-								<div class="bg-black color-block">&nbsp;</div>
-								<p class="style-caption">Black #191818</p>
+							<div class="col-xs-12 col-md-2">
+								<div class="bg-black color-block u-perfect-round">&nbsp;</div>
+								<p class="style-caption">Black #000000</p>
 								<p><code>.bg-black</code></p>
 							</div>
 
-							<div class="col-sm-4 col-md-2">
-								<div class="color-block">&nbsp;</div>
+							<div class="col-xs-12 col-md-2">
+								<div class="bg-grey color-block u-perfect-round">&nbsp;</div>
+								<p class="style-caption">Grey #525252</p>
+								<p><code>.bg-grey</code></p>
+							</div>
+
+							<div class="col-xs-12 col-md-2">
+								<div class="bg-grey-light color-block u-perfect-round">&nbsp;</div>
+								<p class="style-caption">Color name #f9f9f9</p>
+								<p><code>.bg-grey-light</code></p>
+							</div>
+
+							<div class="col-xs-12 col-md-2">
+								<div class="color-block u-perfect-round">&nbsp;</div>
 								<p class="style-caption">Color name #hexcode</p>
 								<p><code>.class-name</code></p>
 							</div>
 
-							<div class="col-sm-4 col-md-2">
-								<div class="color-block">&nbsp;</div>
-								<p class="style-caption">Color name #hexcode</p>
-								<p><code>.class-name</code></p>
-							</div>
-
-							<div class="col-sm-4 col-md-2">
-								<div class="color-block">&nbsp;</div>
+							<div class="col-xs-12 col-md-2">
+								<div class="color-block u-perfect-round">&nbsp;</div>
 								<p class="style-caption">Color name #hexcode</p>
 								<p><code>.class-name</code></p>
 							</div>
@@ -177,42 +179,47 @@
 
 					<div class="guide-block">
 
-						<div class="icons-area">
+						<div class="row">
 
-							<div class="icon-holder">
+							<div class="col-xs-12 col-sm-3 icon-holder">
 								<span class="font-icon font-icon-file-pdf-o"></span>
 								<p class="style-caption"><code>.font-icon.font-icon-file-pdf-o</code></p>
 							</div>
 
-							<div class="icon-holder">
+							<div class="col-xs-12 col-sm-3 icon-holder">
 								<span class="font-icon font-icon-file-excel-o"></span>
 								<p class="style-caption"><code>.font-icon.font-icon-file-excel-o</code></p>
 							</div>
 
-							<div class="icon-holder">
+							<div class="col-xs-12 col-sm-3 icon-holder">
 								<span class="font-icon font-icon-file-word-o"></span>
 								<p class="style-caption"><code>.font-icon.font-icon-file-word-o</code></p>
 							</div>
 
-							<div class="icon-holder">
+							<div class="col-xs-12 col-sm-3 icon-holder">
 								<span class="font-icon font-icon-file-zip-o"></span>
 								<p class="style-caption"><code>.font-icon.font-icon-file-zip-o</code></p>
 							</div>
 
-							<div class="icon-holder">
+						</div>
+
+						<div class="row">
+
+							<div class="col-xs-12 col-sm-3 icon-holder">
 								<span class="font-icon font-icon-file-powerpoint-o"></span>
 								<p class="style-caption"><code>.font-icon.font-iconicon-file-powerpoint-o</code></p>
 							</div>
 
-							<div class="icon-holder">
+							<div class="col-xs-12 col-sm-3 icon-holder">
 								<span class="font-icon font-icon-file-video-o"></span>
 								<p class="style-caption"><code>.font-icon.font-icon-file-video-o</code></p>
 							</div>
 
-							<div class="icon-holder">
+							<div class="col-xs-12 col-sm-3 icon-holder">
 								<span class="font-icon font-icon-file-o"></span>
 								<p class="style-caption"><code>.font-icon.font-icon-file-o</code></p>
 							</div>
+
 						</div>
 
 					</div>
@@ -254,25 +261,25 @@
 					<div class="guide-block">
 						<p class="style-caption">Sizes</p>
 
-						<div class="icons-area">
+						<div class="row">
 
-							<div class="icon-holder">
+							<div class="col-xs-12 col-sm-3 icon-holder">
 								<span class="font-icon font-icon-search sm"></span>
 								<p class="style-caption"><code>.font-icon.font-icon-search.sm</code></p>
 							</div>
 
-							<div class="icon-holder">
+							<div class="col-xs-12 col-sm-3 icon-holder">
 								<span class="font-icon font-icon-search md"></span>
 								<p class="style-caption"><code>.font-icon.font-icon-search.md</code></p>
 								<p class="style-caption">(default size)</p>
 							</div>
 
-							<div class="icon-holder">
+							<div class="col-xs-12 col-sm-3 icon-holder">
 								<span class="font-icon font-icon-search lg"></span>
 								<p class="style-caption"><code>.font-icon.font-icon-search.lg</code></p>
 							</div>
 
-							<div class="icon-holder">
+							<div class="col-xs-12 col-sm-3 icon-holder">
 								<span class="font-icon font-icon-search xl"></span>
 								<p class="style-caption"><code>.font-icon.font-icon-search.xl</code></p>
 							</div>
@@ -285,8 +292,7 @@
 						<p class="style-caption">Image Sprite Icons</p>
 
 						<div class="icon-list">
-							<span class="icon icon-lock"></span>
-							<span class="icon icon-tooltip"></span>
+							List the image icons here
 						</div>
 
 					</div>
@@ -324,31 +330,35 @@
 					<h3 class="style-heading" id="buttons">Buttons</h3>
 
 					<div class="row">
-						<div class="col-sm-4 col-md-2">
-							<button class="btn">Button</button>
+
+						<div class="col-xs-12 col-md-3">
+							<p><button class="btn">Button</button></p>
 							<p class="style-caption">Default button</p>
 							<p><code>.btn</code></p>
 						</div>
 
-						<div class="col-sm-4 col-md-2">
-							<button class="btn" disabled>Button</button>
+						<div class="col-xs-12 col-md-3">
+							<p><button class="btn" disabled>Button</button></p>
 							<p class="style-caption">Disabled; add class "disabled" or attribute for input</p>
 							<p><code>.disabled</code></p>
 						</div>
 
-						<div class="col-sm-4 col-md-2">
-							<a class="btn bg-black">Button</a>
+						<div class="col-xs-12 col-md-3">
+							<p><a class="btn bg-black">Button</a></p>
 							<p class="style-caption">Black Button</p>
 							<p><code>.btn.bg-black</code></p>
 						</div>
 
-						<div class="col-sm-4 col-md-2">
-							<a class="btn bg-grey">Button</a>
-							<p class="style-caption">Grey Button</p>
-							<p><code>.btn.bg-grey</code></p>
+						<div class="col-xs-12 col-md-3">
+							<p><a class="btn"><span class="font-icon font-icon-play"></span> Media button</a></p>
+							<p class="style-caption">Button with icon</p>
 						</div>
 
-						<div class="col-sm-4 col-md-2">
+					</div>
+
+					<div class="row">
+
+						<div class="col-xs-12 col-md-3">
 							<a class="btn btn-lg">Button</a>
 							<p class="style-caption">large button</p>
 							<p><code>.btn.btn-lg</code></p>

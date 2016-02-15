@@ -1,6 +1,7 @@
 <cfscript>
 	body_class = "styleguide-page";
-	sticker.include( "/css/specific/styleguide/" );
+	sticker.include( "/css/specific/styleguide/" )
+		   .include( "/js/specific/tooltipster/" );
 </cfscript>
 
 <cfinclude template="header-styleguide.cfm" />
@@ -11,7 +12,7 @@
 
 			<div class="row">
 
-				<div class="col-xs-12 col-md-8">
+				<div class="col-xs-12 col-md-6">
 
 					<div class="guide-block">
 
@@ -60,6 +61,15 @@
 									<label for="txt-sample">Input label</label>
 									<div class="form-field">
 										<input type="text" name="txt-sample" id="txt-sample" class="form-control">
+									</div>
+								</div>
+
+								<div class="form-group has-error">
+									<div class="form-field">
+										<input type="email" name="txt-email" id="txt-email" class="form-control" value="email.com">
+										<div class="alert alert-danger error">
+											Please enter a valid email address
+										</div>
 									</div>
 								</div>
 
@@ -164,6 +174,25 @@
 						</form>
 
 						<p class="style-caption">Basic form fields and labels</p>
+
+					</div>
+
+					<div class="guide-block">
+
+						<h3 class="style-heading">Tooltip</h3>
+
+						<div class="tooltip-wrapper">
+							<a href="#" class="font-icon font-icon-info-circle information-icon js-show-tooltip" title="Example tooltip information mattis elementum ligula id, commodo molestie neque" data-position="left" ></a>
+						</div>
+						<div class="tooltip-wrapper">
+							<a href="#" class="font-icon font-icon-info-circle information-icon js-show-tooltip" title="Example tooltip information mattis elementum ligula id, commodo molestie neque" data-position="top" ></a>
+						</div>
+						<div class="tooltip-wrapper">
+							<a href="#" class="font-icon font-icon-info-circle information-icon js-show-tooltip" title="Example tooltip information mattis elementum ligula id, commodo molestie neque" data-position="bottom" ></a>
+						</div>
+						<div class="tooltip-wrapper">
+							<a href="#" class="font-icon font-icon-info-circle information-icon js-show-tooltip" title="Example tooltip information mattis elementum ligula id, commodo molestie neque" data-position="right" ></a>
+						</div>
 
 					</div>
 

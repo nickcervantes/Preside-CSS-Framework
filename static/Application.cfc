@@ -11,6 +11,7 @@ component output=false {
 		sticker.include( assetId="jq-core-jquery"                   )
 			   .include( assetId="jq-core-placeholders"             )
 			   .include( assetId="/js/core/"                        )
+			   .include( assetId="css-google-font"                  )
 			   .include( assetId="css-bootstrap"                    )
 			   .include( assetId="css-icomoon"                      )
 			   .include( assetId="/css/core/"                       )

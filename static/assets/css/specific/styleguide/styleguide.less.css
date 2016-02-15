@@ -18,7 +18,7 @@ body.main-styleguide {
 .contents .divider {
   display: block;
   width: 100%;
-  height: 2px;
+  height: 1px;
   background: #979797;
   margin: 30px 0;
 }
@@ -46,21 +46,20 @@ body.main-styleguide {
 .contents .style-guide-link-contents ul li a {
   font-size: 14px;
   font-weight: 400;
-  color: #111111;
+  color: #252b34;
 }
 .contents .heading {
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   color: #000000;
-  margin-bottom: 20px;
   font-size: 44px;
-  line-height: normal;
   font-weight: normal;
+  line-height: normal;
+  margin-bottom: 20px;
   text-transform: none;
 }
 .contents .style-caption {
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 14px;
-  margin: 5px 0 15px;
+  font-weight: 700;
+  margin: 5px 0 20px;
   color: #969696;
 }
 .contents .style-caption a {
@@ -74,9 +73,10 @@ body.main-styleguide {
   height: 154px;
 }
 .contents .color-block {
-  border: 1px solid #979797;
-  height: 124px;
+  height: 71px;
+  width: 71px;
   margin-bottom: 5px;
+  max-width: 100%;
 }
 .contents .button-row .btn {
   margin-right: 12px;
@@ -145,7 +145,7 @@ body.main-styleguide {
 .top-header .logo {
   font-size: 16px;
   font-size: 1.6rem;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   margin: 0;
 }
 .top-header p {
@@ -199,7 +199,7 @@ body.main-styleguide {
   text-align: center;
   font-size: 14px;
   font-size: 1.4rem;
-  color: #111111;
+  color: #252b34;
   border-left: 2px solid #fff;
   line-height: normal;
 }
@@ -216,7 +216,7 @@ body.main-styleguide {
   margin-bottom: 15px;
 }
 .viewport-navigation-list-item-link:hover {
-  color: #111111;
+  color: #252b34;
   text-decoration: none;
 }
 .styleguide-menu-area {
@@ -229,7 +229,7 @@ body.main-styleguide {
   display: block;
   position: relative;
   padding: 22px 40px;
-  color: #4a4a4a;
+  color: #4a4a4a !important;
   font-size: 14px;
   font-size: 1.4rem;
   font-weight: bold;
@@ -277,21 +277,9 @@ body.main-styleguide {
   font-weight: bold;
   padding: 10px 40px;
 }
-.icons-area:before,
-.icons-area:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */
-}
-.icons-area:after {
-  clear: both;
-}
-.icons-area .icon-holder {
-  float: left;
-  width: 100px;
+.icon-holder {
   text-align: center;
-  margin: 0px 20px 10px;
+  margin-bottom: 20px;
 }
 .styleguide-iframe {
   background: #dddddd;

@@ -18,10 +18,8 @@
 
 						<ol>
 							<li><a href="/pages/styleguide/">Styleguide</a></li>
-							<li><a href="/pages/test-pages/widgets-page.cfm">Widgets page</a></li>
 							<li><a href="/pages/test-pages/sample-page.cfm">Sample page</a></li>
 							<li><a href="/pages/test-pages/tab-page-1.cfm">Navigation Tabs - Separate Tab Pages</a></li>
-							<li><a href="/pages/test-pages/video.cfm">Video Widget</a></li>
 						</ol>
 
 					</div>
