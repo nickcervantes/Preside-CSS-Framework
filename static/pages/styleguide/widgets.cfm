@@ -1,8 +1,6 @@
 <cfscript>
 	body_class = "styleguide-page";
-	sticker.include( "/css/specific/styleguide/" )
-		   .include( "/js/specific/maginific-popup/" )
-		   .include( "/js/specific/widget-video/" );
+	sticker.include( "/css/specific/styleguide/" );
 </cfscript>
 
 <cfinclude template="header-styleguide.cfm" />

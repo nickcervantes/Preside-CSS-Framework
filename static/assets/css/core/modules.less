@@ -380,7 +380,7 @@
 
 	&.mod-mobile-accordion {
 
-		.toggle-tabs-nav {
+		> .toggle-tabs-nav {
 
 			@media @xs {
 				display: none;
@@ -388,9 +388,9 @@
 
 		}
 
-		.toggle-tabs-panel {
+		> .toggle-tabs-panel {
 
-			&-item {
+			> .toggle-tabs-panel-item {
 
 				@media @xs {
 					border-bottom: 1px solid @grey;
@@ -400,7 +400,7 @@
 					}
 				}
 
-				&-header {
+				> .toggle-tabs-panel-item-header {
 					.transition(all 300ms);
 					background: transparent;
 					display: none;
@@ -416,7 +416,7 @@
 
 				}
 
-				&-content {
+				> .toggle-tabs-panel-item-content {
 
 					@media @xs {
 						display: none;
@@ -434,14 +434,14 @@
 
 		}
 
-		&.mod-tab-links {
+	}
 
-			.toggle-tabs-panel .toggle-tabs-panel-item.is-active {
+	&.mod-tab-links {
 
-				.toggle-tabs-panel-item-content {
-					display: block !important;
-				}
+		> .toggle-tabs-panel > .toggle-tabs-panel-item.is-active {
 
+			> .toggle-tabs-panel-item-content {
+				display: block !important;
 			}
 
 		}
