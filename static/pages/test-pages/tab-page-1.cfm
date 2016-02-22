@@ -36,48 +36,17 @@
 
 									<div class="toggle-tabs-panel-item-content">
 
-										<p>Inside tabs:</p>
+                                        <h4>Tab page 1</h4>
 
-										<div class="toggle-tabs mod-mobile-accordion">
-											<div class="toggle-tabs-nav">
-												<ul>
-													<li class="is-active"><a href="#tab-accordion-1" role="tab" >Accordion Tab 1</a></li>
-													<li><a href="#tab-accordion-2" role="tab" >Accordion Tab 2</a></li>
-													<li><a href="#tab-accordion-3" role="tab" >Accordion Tab 3</a></li>
-												</ul>
-											</div>
+                                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
 
-											<div class="toggle-tabs-panel">
-												<div class="toggle-tabs-panel-item is-active" id="tab-accordion-1">
-													<a href="#" class="toggle-tabs-panel-item-header">Accordion Tab 1</a>
+                                        <ul>
+                                           <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                                           <li>Aliquam tincidunt mauris eu risus.</li>
+                                           <li>Vestibulum auctor dapibus neque.</li>
+                                        </ul>
 
-													<div class="toggle-tabs-panel-item-content">
-														<h5>Accordion Tab 1</h5>
-														<p>Contents here.</p>
-													</div>
-												</div>
-
-												<div class="toggle-tabs-panel-item is-active" id="tab-accordion-2">
-													<a href="#" class="toggle-tabs-panel-item-header">Accordion Tab 2</a>
-
-													<div class="toggle-tabs-panel-item-content">
-														<h5>Accordion Tab 2</h5>
-														<p>Contents here.</p>
-													</div>
-												</div>
-
-												<div class="toggle-tabs-panel-item is-active" id="tab-accordion-3">
-													<a href="#" class="toggle-tabs-panel-item-header">Accordion Tab 3</a>
-
-													<div class="toggle-tabs-panel-item-content">
-														<h5>Accordion Tab 3</h5>
-														<p>Contents here.</p>
-													</div>
-												</div>
-											</div>
-										</div> <!-- /.toggle-tabs -->
-
-									</div>
+                                    </div>
 
 								</div>
 

@@ -27,18 +27,26 @@
 
 				<div class="row">
 
-					<div class="col-xs-12 col-sm-4 col-md-3">
+					<div class="col-xs-8 col-md-3">
 						<h1 class="site-head-logo"><a href="/index.cfm"><img src="/assets/img/logo.png" alt=""></a></h1>
 					</div>
 
-					<div class="col-xs-12 col-sm-8 col-md-9">
+					<div class="col-xs-4 visible-sm visible-xs">
+						<a class="js-menu-trigger menu-trigger">
+							<span class="hamburger">
+							</span>
+						</a>
+					</div>
+
+					<div class="col-xs-12 col-md-9">
 						<nav class="site-head-nav">
 							<ul>
-								<li class="site-head-nav-dropdown"><a href="/index.cfm">Home</a></li>
+								<li class="site-head-nav-dropdown is-active"><a href="/index.cfm">Home</a></li>
 								<li class="site-head-nav-dropdown"><a href="##">Menu 1</a></li>
 								<li class="site-head-nav-dropdown"><a href="##">Menu 2</a></li>
 								<li class="site-head-nav-dropdown"><a href="##">Menu 3</a></li>
 								<li class="site-head-nav-dropdown"><a href="##">Menu 4</a></li>
+								<li class="site-head-nav-dropdown mod-button"><a href="##" class="btn">Button</a></li>
 							</ul>
 						</nav>
 					</div>

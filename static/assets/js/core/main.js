@@ -2,6 +2,12 @@ var FRAMEWORK = function() {
 
 	var menuHandler = function () {
 
+		$( ".js-menu-trigger" ).click( function( e ) {
+			e.preventDefault();
+			$( ".site-head-nav" ).stop().slideToggle();
+			$( this ).find( ".hamburger" ).toggleClass( "is-active" );
+		} );
+
 	}
 
 	var formHandler = function () {
