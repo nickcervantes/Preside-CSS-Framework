@@ -1,5 +1,4 @@
 <cfscript>
-	body_class = "";
 </cfscript>
 
 <cfinclude template="/header.cfm" />

@@ -1,5 +1,4 @@
 <cfscript>
-	body_class = "sitemap-page";
 </cfscript>
 
 <cfinclude template="/header.cfm" />

@@ -419,34 +419,6 @@ table > tbody > tr:nth-child(even) > td,
 .table > tbody > tr:nth-child(even) > td {
   background: #f5f5f5;
 }
-.line-break {
-  border-top: 1px solid #ef4136;
-  margin-top: 23px;
-  margin-bottom: 16px;
-  width: 100%;
-  clear: both;
-}
-.line-break.dashed {
-  border-top-style: dashed;
-}
-.line-bold {
-  border-top: 1px solid #ef4136;
-  margin-top: 23px;
-  margin-bottom: 16px;
-  width: 100%;
-  clear: both;
-  border-top: 3px solid #ef4136;
-}
-.line-bold.dashed {
-  border-top-style: dashed;
-}
-.intro {
-  font-size: 18px;
-  font-size: 1.8rem;
-  font-weight: 400;
-  line-height: 1.33;
-  margin-bottom: 20px;
-}
 .bg-red {
   background: #ef4136;
 }
@@ -483,6 +455,40 @@ table > tbody > tr:nth-child(even) > td,
   text-indent: -999em;
   display: inline-block;
 }
+/*******************************************
+	Start - Your custom classes / styles
+*******************************************/
+.line-break {
+  border-top: 1px solid #ef4136;
+  margin-top: 23px;
+  margin-bottom: 16px;
+  width: 100%;
+  clear: both;
+}
+.line-break.dashed {
+  border-top-style: dashed;
+}
+.line-bold {
+  border-top: 1px solid #ef4136;
+  margin-top: 23px;
+  margin-bottom: 16px;
+  width: 100%;
+  clear: both;
+  border-top: 3px solid #ef4136;
+}
+.line-bold.dashed {
+  border-top-style: dashed;
+}
+.intro {
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.33;
+  margin-bottom: 20px;
+}
+/*******************************************
+	End - Your custom classes / styles
+*******************************************/
 @media print {
   * {
     box-shadow: none !important;
@@ -1253,7 +1259,7 @@ input[type="radio"]:checked + label:before {
   vertical-align: baseline;
 }
 /*****************************************************************
-	Contains widgets styles
+	Contains widgets styles, plugin override styles
 *****************************************************************/
 /*****************************************************************
 	Widget - Sub Navigation
