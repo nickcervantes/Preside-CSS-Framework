@@ -2,7 +2,7 @@
 
 	$( document ).ready( function() {
 
-		FRAMEWORK.styleguideHandler = function( $container ) {
+		PIXL8.styleguideHandler = function( $container ) {
 
 			function getScrollBarWidth () {
 				var $outer = $('<div>').css({visibility: 'hidden', width: 100, overflow: 'scroll'} ).appendTo('body'),
@@ -56,7 +56,7 @@
 			$( ".styleguide-menu-area-list a" ).click( function( e ) {
 				e.preventDefault();
 				styleguideIframe.attr( "src", $( this ).attr( "href" ) );
-				$( ".js-show-pages" ).removeClass( "is-active" )
+				$( ".js-show-pages" ).removeClass( "is-active" ).text( $( this ).text() );
 				$( ".styleguide-menu-area-list" ).hide();
 
 				var checkLoad = setInterval(function() {
@@ -81,7 +81,7 @@
 
 		}
 
-		FRAMEWORK.styleguideHandler();
+		PIXL8.styleguideHandler();
 
 	} );
 

@@ -1,4 +1,4 @@
-var FRAMEWORK = function() {
+var PIXL8 = function() {
 
 	var menuHandler = function () {
 
@@ -12,13 +12,13 @@ var FRAMEWORK = function() {
 
 	var formHandler = function () {
 
-		//Collapsible alert
+		// Collapsible alert
 		$( ".js-close-alert" ).click(function(e) {
 			e.preventDefault();
 			$( this ).closest( ".alert" ).slideUp();
 		});
 
-		//File upload
+		// File upload
 		$( "input[type='file']" ).on("change", function(e) {
 			var $me = $( this ),
 				fileName = $me.val().split('\\').pop();
@@ -112,8 +112,8 @@ var FRAMEWORK = function() {
 			}
 		});
 
-		FRAMEWORK.fn.addDebounceResize( function() {
-			if ( FRAMEWORK.fn.viewport().width <= FRAMEWORK.mediaWidth.XS ) {
+		PIXL8.fn.addDebounceResize( function() {
+			if ( PIXL8.fn.viewport().width <= PIXL8.mediaWidth.XS ) {
 				$( ".mod-mobile-accordion .toggle-tabs-panel .toggle-tabs-panel-item" ).show();
 			} else {
 				$( ".mod-mobile-accordion .toggle-tabs-panel .toggle-tabs-panel-item" ).not( ".is-active" ).hide();
@@ -125,13 +125,13 @@ var FRAMEWORK = function() {
 	// Subnavigation Widget
 	var subnavigationWidgetHandler = function() {
 
-		$( ".widget.mod-sub-navigation .has-submenu > a" ).click(function(e) {
+		$( ".widget-sub-navigation .has-submenu > a" ).click(function(e) {
 			if (! $( this ).parent().hasClass( "is-active" ) ) {
 				e.preventDefault();
 				$( this ).next(".submenu").slideToggle().parent().toggleClass( "is-active" );
 			}
 		});
-		$( ".widget.mod-sub-navigation .has-submenu.is-active > a" ).next( ".submenu" ).slideDown();
+		$( ".widget-sub-navigation .has-submenu.is-active > a" ).next( ".submenu" ).slideDown();
 
 	}
 
@@ -169,8 +169,8 @@ var FRAMEWORK = function() {
 		} /* End media queries breakpoints */
 
 		/*
-			General public functions, can be accessed from js/specific/ scripts
-			FRAMEWORK.fn.addCustomFunction = function() {};
+			Public functions, can be accessed from js/specific/ scripts
+			PIXL8.fn.addCustomFunction = function() {};
 		*/
 		, fn: {
 			viewport : function() {
@@ -181,14 +181,13 @@ var FRAMEWORK = function() {
 				}
 				return { width : e[ a+'Width' ] , height : e[ a+'Height' ] }
 			}
-			/* debounce window resize */
 			, addDebounceResize: function( funct ) {
-				var _afterResized = FRAMEWORK.afterResized;
-				FRAMEWORK.afterResized = function() {
+				var _afterResized = PIXL8.afterResized;
+				PIXL8.afterResized = function() {
 					_afterResized();
 					funct();
 				}
-			} /* end debounce window resize function */
+			}
 			, attachCollapsible : function( $container ) {
 				collapsibleHandler( $container );
 			}
@@ -216,7 +215,7 @@ var FRAMEWORK = function() {
 
 			$(window).on( "resize", function() {
 				clearTimeout( afterResize );
-				afterResize = setTimeout( FRAMEWORK.afterResized, 250 );
+				afterResize = setTimeout( PIXL8.afterResized, 250 );
 			});
 
 			// Trigger resize onload to make the other plugin works properly eg. masonry
@@ -236,7 +235,7 @@ var FRAMEWORK = function() {
 
 	$(document).ready(function() {
 
-		FRAMEWORK.init();
+		PIXL8.init();
 
 	});
 

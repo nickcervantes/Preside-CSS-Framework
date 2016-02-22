@@ -53,7 +53,7 @@
 
 							<div class="col-sm-4">
 
-								<div class="widget mod-sub-navigation">
+								<div class="widget-sub-navigation">
 
 									<div class="widget-content">
 										<ul>
@@ -64,13 +64,13 @@
 										</ul>
 									</div> <!-- /.widget-content -->
 
-								</div> <!-- /.mod-sub-navigation -->
+								</div> <!-- /.widget-sub-navigation -->
 
 							</div>
 
 							<div class="col-sm-4">
 
-								<div class="widget mod-sub-navigation">
+								<div class="widget-sub-navigation">
 
 									<div class="widget-content">
 										<ul>
@@ -94,13 +94,13 @@
 										</ul>
 									</div> <!-- /.widget-content -->
 
-								</div> <!-- /.mod-sub-navigation -->
+								</div> <!-- /.widget-sub-navigation -->
 
 							</div>
 
 							<div class="col-sm-4">
 
-								<div class="widget mod-sub-navigation">
+								<div class="widget-sub-navigation">
 
 									<div class="widget-content">
 										<ul>
@@ -124,7 +124,7 @@
 										</ul>
 									</div> <!-- /.widget-content -->
 
-								</div> <!-- /.mod-sub-navigation -->
+								</div> <!-- /.widget-sub-navigation -->
 
 							</div>
 

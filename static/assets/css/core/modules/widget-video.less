@@ -1,0 +1,85 @@
+/*****************************************************************
+	Widget - Video
+*****************************************************************/
+
+.widget-video {
+	margin-bottom: 30px;
+	position: relative;
+
+	> a {
+		display: block;
+	}
+
+	.video-details {
+		color: @white;
+		width: 100%;
+		padding-left: 25px;
+		padding-right: 25px;
+		position: absolute;
+		z-index: 3;
+		bottom: 25px;
+		left: 0;
+
+		a {
+			color: @white;
+		}
+
+		&-title{
+			display: table;
+			font-size: 24px;
+			font-size: 2.4rem;
+			margin-bottom: 0;
+
+			.arrow {
+				display: table-cell;
+				width: 44px;
+				position: relative;
+				z-index: 1;
+				vertical-align: top;
+
+				.icon-arrow {
+					background: @video-arrow;
+					display: block;
+					font-size: 20px;
+					font-size: 2.0rem;
+					width: 43px;
+					height: 43px;
+					line-height: 43px;
+					padding: 0;
+					text-align: center;
+
+					&:before {
+						.font-icon();
+						content: "\f04b";
+						font-size: 20px;
+						font-size: 2.0rem;
+					}
+
+				}
+
+			}
+
+			.title {
+				display: table-cell;
+				background: @video-title;
+				padding: 7px 12px;
+			}
+
+		}
+
+		&-description {
+			.transition(max-height 300ms padding 200ms);
+			background: @video-arrow;
+			padding: 15px;
+			display: none;
+			overflow: hidden;
+
+			@media @xs {
+				display: none !important;
+			}
+
+		}
+
+	}
+
+}

@@ -2,7 +2,7 @@
 
 	$( document ).ready( function() {
 
-		FRAMEWORK.attachtooltipster = function( $container ) {
+		PIXL8.attachtooltipster = function( $container ) {
 
 			$( ".js-show-tooltip", $container ).each(function() {
 				var $me = $( this ),
@@ -12,13 +12,13 @@
 				} );
 			} );
 
-					if ( FRAMEWORK.fn.viewport().width <= FRAMEWORK.mediaWidth.xs ) {
+					if ( PIXL8.fn.viewport().width <= PIXL8.mediaWidth.xs ) {
 				$( ".js-show-tooltip", $container ).tooltipster( 'option', 'position', 'top' );
 			}
 
 		}
 
-		FRAMEWORK.attachtooltipster( $("body") );
+		PIXL8.attachtooltipster( $("body") );
 
 	} );
 

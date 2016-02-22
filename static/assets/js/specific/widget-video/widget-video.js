@@ -2,9 +2,9 @@
 
 	$( document ).ready( function() {
 
-		FRAMEWORK.widgetVideoHandler = function( $container ) {
+		PIXL8.widgetVideoHandler = function( $container ) {
 
-			$( ".widget.mod-video", $container ).each(function() {
+			$( ".widget-video", $container ).each(function() {
 				var $me = $( this );
 				if ( $me.find( ".video-details-description" ).length ) {
 					$me.on( "mouseenter", function() {
@@ -15,7 +15,7 @@
 				}
 			} );
 
-			$( ".widget.mod-video > a", $container ).magnificPopup({
+			$( ".widget-video > a", $container ).magnificPopup({
 				  type: "iframe"
 				, callbacks: {
 					markupParse: function( template, values, item ) {
@@ -42,7 +42,7 @@
 
 		}
 
-		FRAMEWORK.widgetVideoHandler( $("body") );
+		PIXL8.widgetVideoHandler( $("body") );
 
 	} );
 

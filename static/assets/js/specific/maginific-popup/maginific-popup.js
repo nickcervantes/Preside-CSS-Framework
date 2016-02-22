@@ -2,7 +2,7 @@
 
 	$( document ).ready( function() {
 
-		FRAMEWORK.attachMagnificPopup = function( $container ) {
+		PIXL8.attachMagnificPopup = function( $container ) {
 
 			$( ".js-video-popup", $container ).magnificPopup({
 				  type: "iframe"
@@ -25,7 +25,7 @@
 
 		}
 
-		FRAMEWORK.attachMagnificPopup( $("body") );
+		PIXL8.attachMagnificPopup( $("body") );
 
 	} );
 

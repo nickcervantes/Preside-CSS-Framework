@@ -25,7 +25,7 @@
 
 							<div class="col-xs-12 col-md-8">
 
-								<div class="widget mod-video">
+								<div class="widget-video">
 									<a href="https://vimeo.com/133693532" data-video-title="Video Title">
 										<img src="/assets/img/img-video.jpg" alt="">
 										<div class="video-details">
@@ -44,7 +44,7 @@
 
 							<aside class="col-xs-12 col-md-4 sidebar">
 
-								<div class="widget mod-video">
+								<div class="widget-video">
 									<a href="https://vimeo.com/133693532" data-video-title="A really long example video title">
 										<img src="/assets/img/img-video.jpg" alt="">
 										<div class="video-details">
