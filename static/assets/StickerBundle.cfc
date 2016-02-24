@@ -9,12 +9,12 @@ component output=false {
 		bundle.addAsset( id="js-modernizr"          , path="/js/lib/modernizr-2.6.2.min.js"                         );
 		bundle.addAsset( id="js-respond"            , path="/js/lib/respond.js"                                     );
 
-		bundle.addAsset( id="css-bootstrap"         , path="/css/lib/bootstrap.min.css"                             );
-		bundle.addAsset( id="css-icomoon"           , path="/css/lib/icomoon.css"                                   );
+		bundle.addAsset( id="css-core-google-font"  , url="//fonts.googleapis.com/css?family=Open+Sans:300,400,700|Quicksand:700,400",  type="css"  );
+		bundle.addAsset( id="css-core-bootstrap"    , path="/css/lib/bootstrap.min.css"                             );
+		bundle.addAsset( id="css-core-icomoon"      , path="/css/lib/icomoon.css"                                   );
 		bundle.addAsset( id="css-tooltipster"       , path="/css/lib/tooltipster.css"                               );
 		bundle.addAsset( id="css-magnific-popup"    , path="/css/lib/magnific-popup.css"                            );
 		bundle.addAsset( id="css-ie8"               , path="/css/lib/ie8.css"                                       );
-		bundle.addAsset( id="css-google-font"       , url="//fonts.googleapis.com/css?family=Open+Sans:300,400,700|Quicksand:700,400",  type="css"  );
 
 		bundle.addAssets(
 			  directory   = "/js/"
@@ -37,10 +37,10 @@ component output=false {
 		bundle.asset( "js-respond" ).setIE( "lte IE 8" );
 		bundle.asset( "/js/core/" ).after( "jq-*", "js-*" );
 
-		bundle.asset( "css-google-font" ).before( "*" );
-		bundle.asset( "css-bootstrap" ).before( "css-*" );
+		bundle.asset( "css-core-google-font" ).dependents( "css-*" );
+		bundle.asset( "css-core-bootstrap" ).before( "css-*" );
 		bundle.asset( "/css/core/" ).after( "css-*" ).dependents( "/css/specific/*" );
-		bundle.asset( "css-ie8" ).after( "css-*", "/css/core/" ).setIE( "lte IE 8" );
+		bundle.asset( "css-ie8" ).after( "/css/core/" ).setIE( "lte IE 8" );
 
 		// maginific-popup bundle -- just include "/js/specific/maginific-popup/"" on specific pages
 		bundle.asset( "jq-magnific-popup" ).dependsOn( "css-magnific-popup" );
