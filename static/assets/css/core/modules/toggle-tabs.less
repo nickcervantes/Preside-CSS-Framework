@@ -1,0 +1,158 @@
+/*****************************************************************
+	Widget - Toggle Tabs
+*****************************************************************/
+
+// Toggle Tabs
+.toggle-tabs {
+	margin-bottom: 30px;
+
+	@media @xs {
+		margin-bottom: 20px;
+	}
+
+	&-nav {
+		position: relative;
+
+		ul {
+			.reset-list();
+			.clearfix();
+			display: table;
+			border-bottom: 1px solid @grey-light;
+			width: 100%;
+
+			> li {
+				display: table-cell;
+				font-size: 16px;
+				font-size: 1.6rem;
+				font-weight: 700;
+				margin-bottom: 0;
+				padding-left: 0;
+				position: relative;
+
+				a {
+					background: transparent;
+					color: @base-color;
+					display: block;
+					padding: 12px 28px;
+					position: relative;
+					text-align: left;
+					text-decoration: none;
+				}
+
+				&.is-active {
+
+					a {
+						background: @grey-light;
+						cursor: default;
+					}
+
+				}
+
+			}
+
+		}
+
+		&.mod-float-left {
+
+			ul {
+				display: block;
+
+				> li {
+					float: left;
+				}
+
+			}
+
+		}
+
+	}
+
+	&-panel {
+		background: transparent;
+
+		&-item {
+
+			&-header {
+				display: none;
+			}
+
+			&-content {
+				padding-top: 30px;
+				padding-bottom: 10px;
+			}
+
+		}
+
+	}
+
+	&.mod-mobile-accordion {
+
+		> .toggle-tabs-nav {
+
+			@media @xs {
+				display: none;
+			}
+
+		}
+
+		> .toggle-tabs-panel {
+
+			> .toggle-tabs-panel-item {
+
+				@media @xs {
+					border-bottom: 1px solid @grey;
+
+					&:first-child {
+						border-top: 1px solid @grey;
+					}
+				}
+
+				> .toggle-tabs-panel-item-header {
+					.transition(all 300ms);
+					background: transparent;
+					display: none;
+					font-size: 16px;
+					font-size: 1.6rem;
+					font-weight: 700;
+					padding: 10px 0;
+					text-decoration: none;
+
+					@media @xs {
+						display: block;
+					}
+
+				}
+
+				> .toggle-tabs-panel-item-content {
+
+					@media @xs {
+						display: none;
+						padding-bottom: 10px;
+						padding-top: 10px;
+					}
+
+					@media @sm-min {
+						display: block !important;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	&.mod-tab-links {
+
+		> .toggle-tabs-panel > .toggle-tabs-panel-item.is-active {
+
+			> .toggle-tabs-panel-item-content {
+				display: block !important;
+			}
+
+		}
+
+	}
+
+}

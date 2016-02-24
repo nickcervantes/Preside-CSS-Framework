@@ -8,14 +8,16 @@ component output=false {
 		sticker.addBundle( "/assets", "/assets" );
 		sticker.load();
 
-		sticker.include( assetId="jq-jquery"                        )
-			   .include( assetId="jq-tooltipster"                   )
-		       .include( assetId="/js/core/"                  		)
-		       .include( assetId="css-bootstrap"                    )
-		       .include( assetId="/css/core/"                       )
-		       .include( assetId="css-ie8"                       	)
-		       .include( assetId="js-modernizr"       , group="top" )
-		       .include( assetId="js-respond"         , group="top" );
+		sticker.include( assetId="jq-core-jquery"                   )
+			   .include( assetId="jq-core-placeholders"             )
+			   .include( assetId="/js/core/"                        )
+			   .include( assetId="css-core-google-font"             )
+			   .include( assetId="css-core-bootstrap"               )
+			   .include( assetId="css-core-icomoon"                 )
+			   .include( assetId="/css/core/"                       )
+			   .include( assetId="css-ie8"                          )
+			   .include( assetId="js-modernizr"                     )
+			   .include( assetId="js-respond"         , group="top" );
 
 		include template=arguments.requestedTemplate;
 	}

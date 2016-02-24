@@ -2,198 +2,181 @@
 	Contains header and main navigation styles
 *****************************************************************/
 
-#masthead {
+.site-head {
+	.box-shadow( 0 1px 4px rgba( 0, 0, 0, 0.07 ) );
 	background: @header-bg;
 	color: @white;
-	height: 120px;
+	font-size: 16px;
+	font-size: 1.6rem;
+	padding-top: 24px;
 	width: 100%;
 	position: relative;
 	z-index: 10;
 
-	a {
-		color: @white;
-	}
-
 	@media @sm {
-		height: auto;
+		.box-shadow( none );
+		position: relative;
+	    padding-bottom: 23px;
 	}
 
 	@media @xs {
-		max-height: 100%;
-		overflow: auto;
+	    padding-top: 20px;
+	    padding-bottom: 13px;
 	}
 
-	.site-logo {
-		padding-top: 26px;
+	&:before {
+
+		@media @sm {
+			.box-shadow( 0 1px 4px rgba( 0, 0, 0, 0.07 ) );
+			content: "";
+			display: block;
+			height: 94px;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		@media @xs {
+			height: 71px;
+		}
+
+	}
+
+	a {
+		color: @white;
+		font-weight: 400;
+	}
+
+	.btn {
+		color: @white;
+	}
+
+	.menu-trigger {
+		cursor: pointer;
+		display: block;
+		float: right;
+		text-align: center;
+		position: relative;
+	}
+
+	&-logo {
 		margin-bottom: 0;
 
 		@media @xs {
-			padding-top: 20px;
-			padding-bottom: 20px;
+			width: 162px;
+		}
+
+		a,
+		img {
+			display: block;
 		}
 
 	}
 
-	.site-nav-wrapper {
-		position: static;
-	}
-
-	.site-nav {
-		margin-left: -85px;
-
-		@media @md {
-			margin-left: -30px;
-		}
+	&-nav {
+		.clearfix();
 
 		@media @sm {
-			margin-left: 0;
-			padding-top: 5px;
+			display: none;
+			padding-bottom: 5px;
+			position: relative;
+			top: 23px;
 		}
 
 		@media @xs {
-			display: none;
+			top: 17px;
 		}
 
-		@media @sm-min {
+		@media @md-min {
 			display: block !important;
+			height: auto !important;
+			padding: 0 !important;
 		}
 
 		> ul {
 			.clearfix();
 			.reset-list();
-			font-size: 0;
+			float: right;
+			margin: 0 -15px;
 			text-align: center;
 
-			li {
-			    font-size: 18px;
-			    font-size: 1.8rem;
-				display: inline-block;
-				height: 120px;
-				margin: 0 15px;
-				padding-top: 48px;
-				max-width: 120px;
-				vertical-align: top;
+			@media @sm {
+				float: none;
+				margin: 0;
+				text-align: left;
+			}
+
+		}
+
+		&-dropdown {
+			float: left;
+			margin: 0 15px;
+			padding-top: 12px;
+			padding-bottom: 36px;
+			line-height: 1.38;
+
+			@media @sm {
+				float: none;
+				margin: 0;
+				padding: 0;
+			}
+
+			&:first-child {
+				border-top: none;
+			}
+
+			a {
+				.transition(all 400ms);
+				color: @white;
+				display: block;
+
+				@media @sm {
+			    	padding: 15px 0;
+			    	border-top: 1px solid @grey-light;
+				}
+
+			}
+
+			&.mod-button {
+				padding-top: 0;
+				padding-bottom: 0;
 
 				a {
 					color: @white;
-					
-					&:hover {
-						text-decoration: none;
+					font-weight: 700;
+
+					@media @sm {
+						.border-radius( 0 );
+						background: transparent;
+						color: @white;
+						text-align: left;
 					}
 
 				}
 
-				.dropdown-trigger {
-					.sprite-icon(14px, 14px, -158px -129px);
-					display: none;
-					position: absolute;
-					right: 20px;
-					top: 15px;
+			}
 
-					@media @xs {
-						display: inline-block;
-					}
+			&.is-active {
 
-				}
-
-				@media @md {
-					margin: 0 7px;
-				}
-
-				@media @sm-min {
-
-					&:hover {
-
-						ul {
-							visibility: visible;
-							opacity: 1;
-						}
-
-					}
-					
-				}
-
-				@media @sm {
-					height: auto;
-					padding-top: 10px;
-					padding-bottom: 10px;
-					margin: 0 10px;
-				}
-
-				@media @xs {
-					padding: 10px 15px;
+				a {
 					position: relative;
-					max-width: 100%;
-					margin: 0;
 
-					&.active {
+					&:after {
+						background: @white;
+						content: "";
+						pointer-events: none;
+						height: 3px;
+						width: 100%;
+						position: absolute;
+						bottom: -36px;
+						left: 0;
 
-						.dropdown-trigger {
-							background-position: -158px -158px;
+						@media @sm {
+							display: none;
 						}
 
 					}
-				}
-
-			}
-
-			.dropdown-menu {
-				.reset-list();
-				.transition(all 200ms);
-				border-top: 1px solid @grey;
-				background: @header-bg;
-				width: 100%;
-				padding-right: 100px;
-				position: absolute;
-				left: 0;
-				top: 100%;
-				visibility: hidden;
-				opacity: 0;
-
-				li {
-					padding-top: 10px;
-					padding-bottom: 10px;
-					height: auto;
-				}
-
-				@media @sm-min {
-					display: block !important;
-				}
-
-				@media @sm {
-					padding-right: 0;
-				}
-
-				@media @xs {
-					.transition(none);
-					background: transparent;
-					border-top: none;
-					display: none;
-					padding-top: 10px;
-					position: static;
-					opacity: 1;
-					visibility: visible;
-
-					li {
-						padding: 10px 0;
-						margin: 0;
-					}
-					
-				}
-
-			}
-
-			@media @xs {
-				text-align: left;
-				margin: 0 -15px;
-
-				li {
-					display: block;
-					margin-bottom: 0;
-
-					a {
-						display: block;
-					}
 
 				}
 
@@ -203,72 +186,48 @@
 
 	}
 
-	.header-buttons {
-		font-size: 0;
-		margin-left: -45px;
-		padding-top: 36px;
+}
 
-		.btn {
-			font-size: 18px;
-			font-size: 1.8rem;
-			margin: 0 15px;
-			min-width: 105px;
-		}
+.hamburger {
+	.transition( all 400ms );
+	background-color: @white;
+	display: block;
+    margin: 14px 0 14px auto;
+    height: 4px;
+    width: 30px;
+	position: relative;
 
-		@media @md {
-			text-align: right;
-
-			.btn {
-				min-width: 100px;
-				margin: 0 5px;
-			}
-
-		}
-
-		@media @xs {
-			text-align: center;
-			margin-left: 0;
-			padding-top: 10px;
-			padding-bottom: 20px;
-
-			.btn {
-				margin: 0 10px;
-			}
-			
-		}
-
+	&:before,
+	&:after {
+		.transition( all 400ms );
+		content: '';
+		display: block;
+		background-color: @white;
+		height: 4px;
+    	width: 30px;
+		position: absolute;
+		left: 0;
 	}
 
-	.menu-trigger {
-		padding-top: 20px;
-		text-align: right;
+	&:before {
+    	top: -8px;
+	}
 
-		a {
-			color: @white;
-			text-align: center;
-			display: inline-block;
-			text-decoration: none;
-			
-			span {
-				display: block;
-				font-size: 10px;
-				font-size: 1.0rem;
-				letter-spacing: 0.5px;
-				text-transform: uppercase;
-			}
+	&:after {
+	    top: 8px;
+	}
 
+	&.is-active {
+		background-color: transparent;
+
+		&:before {
+			.transform( rotate( -30deg ) );
+			top: 0;
 		}
 
-		&.active {
-
-			a {
-
-				span {
-					display: none;
-				}
-
-			}
-
+		&:after {
+			.transform( rotate( 30deg ) );
+		    top: 0;
 		}
 
 	}

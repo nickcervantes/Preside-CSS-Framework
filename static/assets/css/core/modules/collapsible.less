@@ -1,0 +1,104 @@
+/*****************************************************************
+	Widget - Collapsibles
+*****************************************************************/
+
+// Collapsible
+.collapsible {
+	margin-bottom: 30px;
+
+	&-item {
+		margin-bottom: 10px;
+
+		> .collapsible-item-header {
+			margin: 0;
+			display: block;
+			text-transform: uppercase;
+			font-weight: 700;
+			background: @grey-light;
+
+			> a {
+				color: @black;
+				position: relative;
+				display: block;
+				padding: 20px 20px 20px 50px;
+				text-decoration: none;
+
+				&:before {
+					.font-icon();
+					content: "\f054";
+				    margin-top: -12px;
+					position: absolute;
+					left: 22px;
+					top: 50%;
+				}
+
+			}
+
+		}
+
+		&.is-open {
+
+			> .collapsible-item-header {
+
+				> a:before {
+				    content: "\f078";
+					left: 20px;
+				}
+
+			}
+
+		}
+
+		&-content {
+			display: none;
+			padding: 5px 20px;
+			background: @grey-light;
+		}
+
+	}
+
+	&.arrow-on-right {
+
+		.collapsible-item {
+
+			> .collapsible-item-header {
+
+				a {
+					padding: 25px 45px 20px 20px;
+
+					&:before {
+						display: none !important;
+					}
+
+					&:after {
+						.sprite-icon(12px, 18px, -100px -185px);
+						content: ".";
+						position: absolute;
+						right: 29px;
+						top: 50%;
+						margin-top: -9px;
+					}
+
+				}
+
+			}
+
+			&.is-open {
+
+				> .collapsible-item-header {
+
+					a:after {
+						.sprite-icon(18px, 12px, -66px -190px);
+						content: ",";
+						margin-top: -6px;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}

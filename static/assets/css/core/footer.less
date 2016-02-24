@@ -2,8 +2,8 @@
 	Contains footer styles
 *****************************************************************/
 
-#subhead {
-	border-top: 1px solid @grey;
+.site-footer {
+	border-top: 1px solid @grey-light;
 	padding-top: 30px;
 	padding-bottom: 20px;
 
@@ -11,28 +11,23 @@
 		color: @base-color;
 	}
 
-	.footer-nav {
+	&-nav {
+		.clearfix();
 
 		ul {
+			.clearfix();
 			.reset-list();
 
 			li {
 				float: left;
 				margin-left: 20px;
 				margin-bottom: 0;
-				border-left: 1px solid @grey;
+				border-left: 1px solid @grey-light;
 				padding-left: 20px;
 
 				&:first-child {
 					border-left: none;
 					margin-left: 0;
-					padding-left: 0;
-				}
-
-				@media @sm {
-					float: none;
-					margin-left: 0;
-					border-left: none;
 					padding-left: 0;
 				}
 
@@ -42,7 +37,7 @@
 
 	}
 
-	.developer {
+	&-developer {
 		text-align: right;
 
 		p {
@@ -51,11 +46,6 @@
 
 		img {
 			vertical-align: baseline;
-		}
-
-		@media @xs {
-			text-align: left;
-			margin-top: 20px;
 		}
 
 	}

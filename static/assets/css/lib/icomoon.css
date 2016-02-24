@@ -1,0 +1,120 @@
+[class^="font-icon-"], [class*=" font-icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.font-icon-search:before {
+    content: "\f002";
+}
+.font-icon-close:before {
+    content: "\f00d";
+}
+.font-icon-remove:before {
+    content: "\f00d";
+}
+.font-icon-times:before {
+    content: "\f00d";
+}
+.font-icon-file-o:before {
+    content: "\f016";
+}
+.font-icon-print:before {
+    content: "\f02f";
+}
+.font-icon-check-square-o:before {
+    content: "\f046";
+}
+.font-icon-play:before {
+    content: "\f04b";
+}
+.font-icon-chevron-left:before {
+    content: "\f053";
+}
+.font-icon-chevron-right:before {
+    content: "\f054";
+}
+.font-icon-info-circle:before {
+    content: "\f05a";
+}
+.font-icon-chevron-up:before {
+    content: "\f077";
+}
+.font-icon-chevron-down:before {
+    content: "\f078";
+}
+.font-icon-square-o:before {
+    content: "\f096";
+}
+.font-icon-file-text-o:before {
+    content: "\f0f6";
+}
+.font-icon-desktop:before {
+    content: "\f108";
+}
+.font-icon-laptop:before {
+    content: "\f109";
+}
+.font-icon-mobile:before {
+    content: "\f10b";
+}
+.font-icon-mobile-phone:before {
+    content: "\f10b";
+}
+.font-icon-circle-o:before {
+    content: "\f10c";
+}
+.font-icon-dot-circle-o:before {
+    content: "\f192";
+}
+.font-icon-file-pdf-o:before {
+    content: "\f1c1";
+}
+.font-icon-file-word-o:before {
+    content: "\f1c2";
+}
+.font-icon-file-excel-o:before {
+    content: "\f1c3";
+}
+.font-icon-file-powerpoint-o:before {
+    content: "\f1c4";
+}
+.font-icon-file-image-o:before {
+    content: "\f1c5";
+}
+.font-icon-file-photo-o:before {
+    content: "\f1c5";
+}
+.font-icon-file-picture-o:before {
+    content: "\f1c5";
+}
+.font-icon-file-archive-o:before {
+    content: "\f1c6";
+}
+.font-icon-file-zip-o:before {
+    content: "\f1c6";
+}
+.font-icon-file-audio-o:before {
+    content: "\f1c7";
+}
+.font-icon-file-sound-o:before {
+    content: "\f1c7";
+}
+.font-icon-file-movie-o:before {
+    content: "\f1c8";
+}
+.font-icon-file-video-o:before {
+    content: "\f1c8";
+}
+.font-icon-file-code-o:before {
+    content: "\f1c9";
+}

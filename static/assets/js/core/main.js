@@ -1,288 +1,242 @@
-var FRAMEWORK = function() {
+var PIXL8 = function() {
 
-    var viewport = function() {
-        var e = window, a = 'inner';
-        if ( !( 'innerWidth' in window ) ) {
-            a = 'client';
-            e = document.documentElement || document.body;
-        }
-        return { width : e[ a+'Width' ] , height : e[ a+'Height' ] }
-    }
+	var menuHandler = function () {
 
-    var menuHandler = function () {
+		$( ".js-menu-trigger" ).click( function( e ) {
+			e.preventDefault();
+			$( ".site-head-nav" ).stop().slideToggle();
+			$( this ).find( ".hamburger" ).toggleClass( "is-active" );
+		} );
 
-        $(".site-nav .dropdown").append("<a href='#' class='dropdown-trigger'></a>")
+	}
 
-        $(".menu-trigger a").click(function(e) {
-            e.preventDefault();
-            $(".site-nav").stop().slideToggle();
-            $(this).toggleClass("close").parent().toggleClass("active");
-            $("#masthead").toggleClass("submenu-open");
-        });
+	var formHandler = function () {
 
-        $(".dropdown-trigger").click(function(e) {
-            e.preventDefault();
-            $(this).siblings(".dropdown-menu").stop().slideToggle();
-            $(this).parent().toggleClass("active");
-        });
+		// Collapsible alert
+		$( ".js-close-alert" ).click(function(e) {
+			e.preventDefault();
+			$( this ).closest( ".alert" ).slideUp();
+		});
 
-    }
+		// File upload
+		$( "input[type='file']" ).on("change", function(e) {
+			var $me = $( this ),
+				fileName = $me.val().split('\\').pop();
+			if ( $me.siblings( ".file-name" ).is( "input" ) ) {
+				$me.siblings( ".file-name" ).val( fileName );
+			} else {
+				$me.siblings( ".file-name" ).text( fileName );
+			}
+		});
 
-    var contentHandler = function () {
+	}
 
-        // Magnific Popup
-        $(".video-popup").magnificPopup({
-            type: 'iframe',
-            closeMarkup: '<button title="%title%" type="button" class="mfp-close"></button>',
-            zoom: {
-                enabled: true,
-                duration: 300 // don't forget to change the duration also in CSS
-            }
-        });
+	// Collapsible, add class .accordion to .collapsible to make it accordion.
+	var collapsibleHandler = function( $container ) {
 
-        $(".show-popover").magnificPopup({
-            type: 'inline',
-            closeMarkup: '<button title="%title%" type="button" class="mfp-close">&times;</button>'
-        });
+		$( ".collapsible", $container ).each(function() {
+			var $me = $( this ),
+				isAccordion = $me.hasClass( "accordion" );
+			$me.find( "> .collapsible-item > .collapsible-item-header > a" ).click( function( e ) {
+				e.preventDefault();
+				var collapsible_item = $( this ).closest( ".collapsible-item" );
+				if ( isAccordion ) {
+					collapsible_item.addClass( "is-open" ).find( "> .collapsible-item-content:first" ).slideDown();
+					collapsible_item.siblings().removeClass( "is-open" ).find( "> .collapsible-item-content" ).stop().slideUp();
+				} else {
+					collapsible_item.toggleClass( "is-open" ).find( "> .collapsible-item-content" ).stop().slideToggle();
+				}
+			});
+			if ( isAccordion ) {
+				$me.find( "> .collapsible-item.is-open > .collapsible-item-header > a" ).trigger( "click" );
+			} else {
+				$me.find( "> .collapsible-item.is-open > .collapsible-item-content" ).slideDown();
+			}
+		});
 
-        $(".magnific-popup").on("click", ".close", function(e) {
-            e.preventDefault();
-            $.magnificPopup.close();
-        });
+	}
 
-    }
+	// Toggle tabs
+	var toggleTabsHandler = function( $container ) {
 
-    var formHandler = function () {
+		var animateTab = function( currentObject ){
+			$( currentObject.attr( "href" ) ).fadeIn().addClass( "is-active" ).siblings().hide().removeClass( "is-active" );
+			currentObject.parent().addClass( "is-active" ).siblings().removeClass( "is-active" );
+			$( currentObject.attr( "href" ) ).find( "> .toggle-tabs-panel-item-header" ).addClass( "is-active" )
+				.next( ".toggle-tabs-panel-item-content" ).css( "display", "block" )
+				.parent().siblings().find( "> .toggle-tabs-panel-item-header" ).removeClass( "is-active" )
+				.next( ".toggle-tabs-panel-item-content" ).hide();
+			if ( currentObject.closest( ".toggle-tabs" ).hasClass( "mod-mobile-accordion" ) ) {
+				currentObject.closest( ".toggle-tabs" ).find( "> .toggle-tabs-panel > .toggle-tabs-panel-item.is-active > .toggle-tabs-panel-item-header" ).addClass( "is-active" );
+			}
+		}
 
-        //Tooltip
-        $(".show-tooltip").each(function() {
-            var tooltip_position = ($(this).data("position") === undefined) ? "top" : $(this).data("position");
-            $(this).tooltipster({ position: tooltip_position }).click(function(e) {
-                e.preventDefault();
-            });
-        });
+		$( ".toggle-tabs-nav a", $container ).click(function(e) {
+			var $me = $( this );
+			if ( ! $me.closest( ".toggle-tabs" ).hasClass( "mod-tab-links" ) ) {
+				e.preventDefault();
+				animateTab( $me );
+			}
+			if ( $me.parent().hasClass( "is-active" ) ) {
+				e.preventDefault();
+			}
+		});
 
-        if ( viewport().width < 768 ) {
-            $(".show-tooltip").tooltipster('option', 'position', 'top');
-        }
+		$( ".toggle-tabs", $container ).each(function() {
+			var $me = $( this );
+			if ( $me.hasClass( "mod-tab-links" ) ) {
+				var isBeforeCurrent = true,
+					mobileHeaderBefore = "",
+					mobileHeaderAfter = "";
+				$me.find( "> .toggle-tabs-panel > .toggle-tabs-panel-item" ).show().addClass( "is-active" ).find( "> .toggle-tabs-panel-item-header" ).addClass( "is-active" );
+				$me.find( "> .toggle-tabs-nav li a" ).each( function( i ) {
+					if ( $(this).parent().hasClass( "is-active" ) ) {
+						isBeforeCurrent = false;
+					} else {
+						if( isBeforeCurrent ) {
+							mobileHeaderBefore += '<div class="toggle-tabs-panel-item"><a href="' + $(this).attr( "href" ) + '" class="toggle-tabs-panel-item-header">' + $(this).text() + '</a></div>';
+						} else {
+							mobileHeaderAfter += '<div class="toggle-tabs-panel-item"><a href="' + $(this).attr( "href" ) + '" class="toggle-tabs-panel-item-header">' + $(this).text() + '</a></div>';
+						}
+					}
+				});
+				$me.find( "> .toggle-tabs-panel" ).prepend( mobileHeaderBefore ).append( mobileHeaderAfter );
+			} else {
+				animateTab( $me.find( "> .toggle-tabs-nav li.is-active a" ) );
+				$me.find( "> .toggle-tabs-panel > .toggle-tabs-panel-item > .toggle-tabs-panel-item-header" ).click( function( e ) {
+					e.preventDefault();
+					$( this ).addClass( "is-active" ).next( ".toggle-tabs-panel-item-content" ).slideDown()
+						.parent().siblings().find( "> .toggle-tabs-panel-item-header.is-active" )
+						.removeClass( "is-active" ).next( ".toggle-tabs-panel-item-content" ).slideUp();
+				});
+			}
+		});
 
-        //Collapsible alert
-        $(".alert-close").click(function(e) {
+		PIXL8.fn.addDebounceResize( function() {
+			if ( PIXL8.fn.viewport().width <= PIXL8.mediaWidth.XS ) {
+				$( ".mod-mobile-accordion .toggle-tabs-panel .toggle-tabs-panel-item" ).show();
+			} else {
+				$( ".mod-mobile-accordion .toggle-tabs-panel .toggle-tabs-panel-item" ).not( ".is-active" ).hide();
+			}
+		});
 
-            e.preventDefault();
-            $(this).closest(".alert").slideUp();
+	}
 
-        });
+	// Subnavigation Widget
+	var subnavigationWidgetHandler = function() {
 
-        //File upload
-        $("input[type='file']").on("change", function(e) {
-            $(this).siblings(".file-name").val($(this).val().split('\\').pop())
-        });
+		$( ".widget-sub-navigation .has-submenu > a" ).click(function(e) {
+			if (! $( this ).parent().hasClass( "is-active" ) ) {
+				e.preventDefault();
+				$( this ).next(".submenu").slideToggle().parent().toggleClass( "is-active" );
+			}
+		});
+		$( ".widget-sub-navigation .has-submenu.is-active > a" ).next( ".submenu" ).slideDown();
 
-    }
+	}
 
-    // Collapsible, add class .accordion to .collapsible to make it accordion.
-    var collapsibleHandler = function() {
+	var ie8Handler = function () {
 
-        var afterSlideCallback = function() {
-            $(window).trigger("resize");
-        }
+		$( "input[type='radio'], input[type='checkbox']" ).each(function() {
+			if ( $(this).is( ":checked" ) ) {
+				$( this ).next( "label" ).toggleClass( "checked" );
+			}
+		});
 
-        $(".collapsible").each(function() {
-            var isAccordion = $(this).hasClass("accordion");
-            $(this).find("> .collapsible-item > .collapsible-header > a").click(function(e) {
-                e.preventDefault();
-                var collapsible_item = $(this).closest(".collapsible-item");
-                if (isAccordion) {
-                    collapsible_item.addClass("open").find("> .collapsible-content:first").slideDown(afterSlideCallback);
-                    collapsible_item.siblings().removeClass("open").find("> .collapsible-content").stop().slideUp(afterSlideCallback);
-                } else {
-                    collapsible_item.toggleClass("open").find("> .collapsible-content").stop().slideToggle(afterSlideCallback);
-                }
-            });
-            if (isAccordion) {
-                $(this).find("> .collapsible-item.open > .collapsible-header > a").trigger("click");
-            } else {
-                $(this).find("> .collapsible-item.open > .collapsible-content").slideDown(afterSlideCallback);
-            }
-        });
+		$( "body" ).on( "change", "input[type='checkbox']", function() {
+			$(this).next("label").toggleClass("checked");
+		});
 
-    }
+		$( "body" ).on( "change", "input[type='radio']", function() {
+			if ( $( this ).is( ":checked" ) ) {
+				$( "input[name='" + $(this).attr( "name" ) + "']" ).next( "label" ).removeClass( "checked" );
+				$( this ).next( "label" ).addClass( "checked" );
+			}
+		});
 
-    // Toggle tabs
-    var toggleTabsHandler = function () {
+	}
 
-        var animateTab = function( currentObject ){
-            $(currentObject.attr("href")).fadeIn().addClass("active").siblings().hide().removeClass("active");
-            currentObject.parent().addClass("active").siblings().removeClass("active");
-            $(currentObject.attr("href")).find(".mobile-accordion-header").addClass("active").next(".mobile-accordion-content").css("display", "block").parent().siblings().find(".mobile-accordion-header").removeClass("active").next(".mobile-accordion-content").hide();
-            $(".mobile-accordion .tab-pane.active .mobile-accordion-header").addClass("active");
-        }
+	return {
 
-        $(".nav-tabs a").click(function(e) {
-            if ( $(this).closest(".tabs-wrapper.tab-links").length == 0 ) {
-                e.preventDefault();
-                animateTab($(this));
-            }
-            if ( $(this).parent().hasClass("active") ) {
-                e.preventDefault();
-            }
-        });
+		  isIE8: $( "html" ).hasClass( "lt-ie9" )
 
-        $(".tabs-wrapper").each(function() {
-            var $this = $(this);
-            if ($this.hasClass("tab-links")) {
-                var isBeforeCurrent = true,
-                    mobileHeaderBefore = "",
-                    mobileHeaderAfter = "";
-                $this.find(".tab-content .tab-pane").show().addClass("active").find(".mobile-accordion-header").addClass("active");
-                $this.find(".nav-tabs li a").each(function(i) {
-                    if ( $(this).parent().hasClass("active") ) {
-                        isBeforeCurrent = false;
-                    } else {
-                        if(isBeforeCurrent) {
-                            mobileHeaderBefore += '<div class="tab-pane"><a href="' + $(this).attr("href") + '" class="mobile-accordion-header">' + $(this).text() + '</a></div>';
-                        } else {
-                            mobileHeaderAfter += '<div class="tab-pane"><a href="' + $(this).attr("href") + '" class="mobile-accordion-header">' + $(this).text() + '</a></div>';
-                        }
-                    }
-                });
-                $this.find(".tab-content").prepend(mobileHeaderBefore).append(mobileHeaderAfter);
-            } else {
-                animateTab($this.find(".nav-tabs li.active a"));
-            }
-        });
+		, isIE7: $( "html" ).hasClass( "lt-ie8" )
 
-        $("#contents").on('click','.mobile-accordion-header',function(e) {
-            if ( $(this).closest(".tabs-wrapper.tab-links").length == 0 ) {
-                e.preventDefault();
-                $(this).addClass("active").next(".mobile-accordion-content").slideDown().parent().siblings().find(".mobile-accordion-header.active").removeClass("active").next(".mobile-accordion-content").slideUp();
-            }
-        });
+		/* Media queries breakpoints */
+		, mediaWidth: {
+			  SM: 991
+			, XS: 767
+		} /* End media queries breakpoints */
 
-        $(window).on("resize", function() {
-            if (viewport().width < 768) {
-                $(".mobile-accordion .tab-content .tab-pane").show();
-            } else {
-                $(".mobile-accordion .tab-content .tab-pane").not(".active").hide();
-            }
-        }).on("load", function() {
-            $(window).trigger("resize");
-        });
+		/*
+			Public functions, can be accessed from js/specific/ scripts
+			PIXL8.fn.addCustomFunction = function() {};
+		*/
+		, fn: {
+			viewport : function() {
+				var e = window, a = 'inner';
+				if ( ! ( 'innerWidth' in window ) ) {
+					a = 'client';
+					e = document.documentElement || document.body;
+				}
+				return { width : e[ a+'Width' ] , height : e[ a+'Height' ] }
+			}
+			, addDebounceResize: function( funct ) {
+				var _afterResized = PIXL8.afterResized;
+				PIXL8.afterResized = function() {
+					_afterResized();
+					funct();
+				}
+			}
+			, attachCollapsible : function( $container ) {
+				collapsibleHandler( $container );
+			}
+			, attachToggleTabs : function( $container ) {
+				toggleTabsHandler( $container );
+			}
+		} /* End general public functions */
 
-    }
+		, afterResized: function() {}
 
-    // Subnavigation Widget
-    var subnavigationWidgetHandler = function() {
+		/* Initiate handlers */
+		, init: function() {
 
-        $(".sub-navigation .has-submenu > a").click(function(e) {
-            if (! $(this).parent().hasClass("active")) {
-                e.preventDefault();
-                $(this).next(".submenu").slideToggle().parent().toggleClass("active");
-            }
-        });
-        $(".sub-navigation .has-submenu.active > a").next(".submenu").slideDown();
+			var afterResize  = 0;
 
-    }
+			menuHandler();
+			formHandler();
+			subnavigationWidgetHandler();
+			collapsibleHandler( $("body") );
+			toggleTabsHandler( $("body") );
 
-    // Video Widget
-    var videoWidgetHandler = function() {
-        $(".widget-video").each(function() {
-            if ($(this).find(".video-description").length) {
-                $(this).on("mouseenter", function() {
-                    $(this).find(".video-description").stop().slideDown();
-                }).on("mouseleave", function() {
-                    $(this).find(".video-description").stop().slideUp();
-                });
-            }
-        });
+			if ( this.isIE8 ) {
+				ie8Handler();
+			}
 
-        $("body").on("click", ".mfp-video-popup .mfp-close .icon", function() {
-            $.magnificPopup.close();
-        });
+			$(window).on( "resize", function() {
+				clearTimeout( afterResize );
+				afterResize = setTimeout( PIXL8.afterResized, 250 );
+			});
 
-        $(".widget-video > a").magnificPopup({
-            type: 'iframe',
-            callbacks: {
-                markupParse: function(template, values, item) {
-                    $(template).find("header h3").text($(item.el).attr("data-video-title"));
-                }
-            },
-            iframe: {
-                markup: '<div class="magnific-popup mfp-video-popup">
-                    <div class="white-popup-content">
-                        <header>
-                            <button type="button" class="mfp-close">Close &times;</button>
-                            <h3></h3>
-                        </header>
-                        <section class="body">
-                            <div class="mfp-iframe-scaler">
-                                <iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                        </section>
-                    </div>
-                </div>'
-            },
-            closeMarkup: '<button type="button" class="mfp-close">Close <span class="icon icon-close"></span></button>'
-        });
-    }
+			// Trigger resize onload to make the other plugin works properly eg. masonry
+			$(window).on( "load", function() {
+				$(window).trigger( "resize" );
+			});
 
-    var ie8Handler = function () {
+			return this;
 
-        $("input[type='radio'], input[type='checkbox']").each(function() {
-            if ($(this).is(":checked")) {
-                $(this).next("label").toggleClass("checked");
-            }
-        });
+		} /* End initiate handlers */
 
-        $("body").on("change", "input[type='checkbox']", function() {
-            $(this).next("label").toggleClass("checked");
-        });
-
-        $("body").on("change", "input[type='radio']", function() {
-            if ($(this).is(":checked")) {
-                $("input[name='" + $(this).attr("name") + "']").next("label").removeClass("checked");
-                $(this).next("label").addClass("checked");
-            }
-        });
-
-    }
-
-    return {
-
-        isIE8: $("html").hasClass("lt-ie9"),
-
-        //main function to initiate scripts
-        init: function() {
-
-            menuHandler();
-            contentHandler();
-            formHandler();
-            collapsibleHandler();
-            toggleTabsHandler();
-            subnavigationWidgetHandler();
-            videoWidgetHandler();
-
-            if ( this.isIE8 ) {
-
-                ie8Handler();
-
-            }
-
-        }
-
-    };
+	};
 
 }();
 
-(function($) {
+( function( $ ) {
 
-    $(document).ready(function() {
+	$( document ).ready( function() {
 
-        FRAMEWORK.init();
+		PIXL8.init();
 
-    });
+	} );
 
-})(jQuery);
-
-
+} )( jQuery );
