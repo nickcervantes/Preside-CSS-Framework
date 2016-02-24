@@ -44,7 +44,7 @@ component output=false {
 
 		// maginific-popup bundle -- just include "/js/specific/maginific-popup/"" on specific pages
 		bundle.asset( "jq-magnific-popup" ).dependsOn( "css-magnific-popup" );
-		bundle.asset( "/js/specific/maginific-popup/" ).dependsOn( "jq-magnific-popup" );
+		bundle.asset( "/js/specific/magnific-popup/" ).dependsOn( "jq-magnific-popup" );
 
 		// tooltipster bundle -- just include "/js/specific/tooltipster/"" on specific pages
 		bundle.asset( "jq-tooltipster" ).dependsOn( "css-tooltipster" );

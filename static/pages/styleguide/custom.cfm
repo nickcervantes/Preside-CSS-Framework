@@ -1,7 +1,7 @@
 <cfscript>
 	body_class = "styleguide-page";
 	sticker.include( "/css/specific/styleguide/" )
-		   .include( "/js/specific/maginific-popup/" )
+		   .include( "/js/specific/magnific-popup/" )
 		   .include( "/js/specific/widget-video/" );
 </cfscript>
 
