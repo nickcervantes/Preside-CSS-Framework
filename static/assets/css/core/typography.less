@@ -104,12 +104,10 @@ h5 {
 }
 
 ul {
-	// list-style-image: url("/assets/img/icon-list-style.png");
 	padding-left: 30px;
 	margin-bottom: 20px;
 
 	ul {
-		// list-style-image: url("/assets/img/icon-sub-list-style.png");
 		margin-top: 8px;
 		padding-left: 30px;
 	}
@@ -355,39 +353,3 @@ table,
 /*******************************************
 	End - Your custom classes / styles
 *******************************************/
-
-// Default print styles
-@media print {
-
-	* {
-		box-shadow:none !important;
-		text-shadow: none !important;
-		-ms-filter: none !important;
-		filter:none !important;
-	} /* Black prints faster: h5bp.com/s */
-
-	input,
-	textarea,
-	select {
-		page-break-inside: avoid;
-	}
-
-	a,
-	a:visited { text-decoration: underline; }
-	a[href]:after { content: ""; }
-	abbr[title]:after { content: ""; }
-	.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
-
-	pre,
-	blockquote {
-		border: 1px solid #999;
-		page-break-inside: avoid;
-	}
-
-	thead { display: table-header-group; } /* h5bp.com/t */
-	tr, img { page-break-inside: avoid; }
-	img { max-width: 100% !important; }
-	@page { margin: 0.5cm; }
-	p, h2, h3 { orphans: 3; widows: 3; }
-	h2, h3 { page-break-after: avoid; }
-}

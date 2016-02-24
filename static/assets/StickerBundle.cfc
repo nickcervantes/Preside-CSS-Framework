@@ -23,6 +23,7 @@ component output=false {
 				return ListDeleteAt( path, ListLen( path, "/" ), "/" ) & "/";
 			}
 		);
+
 		bundle.addAssets(
 			  directory   = "/css/"
 			, match       = function( path ){ return ReFindNoCase( "_[0-9a-f]{8}\..*?\.min.css$", arguments.path ); }
@@ -34,7 +35,7 @@ component output=false {
 		bundle.asset( "jq-core-jquery" ).dependents( "jq-*" );
 		bundle.asset( "jq-core-placeholders" ).setIE( "lte IE 9" );
 		bundle.asset( "js-respond" ).setIE( "lte IE 8" );
-		bundle.asset( "/js/core/" ).after( "jq-*" );
+		bundle.asset( "/js/core/" ).after( "jq-*", "js-*" );
 
 		bundle.asset( "css-google-font" ).before( "*" );
 		bundle.asset( "css-bootstrap" ).before( "css-*" );

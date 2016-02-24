@@ -231,12 +231,12 @@ var PIXL8 = function() {
 
 }();
 
-(function($) {
+( function( $ ) {
 
-	$(document).ready(function() {
+	$( document ).ready( function() {
 
 		PIXL8.init();
 
-	});
+	} );
 
-})(jQuery);
+} )( jQuery );

@@ -16,7 +16,7 @@ component output=false {
 			   .include( assetId="css-icomoon"                      )
 			   .include( assetId="/css/core/"                       )
 			   .include( assetId="css-ie8"                          )
-			   .include( assetId="js-modernizr"       , group="top" )
+			   .include( assetId="js-modernizr"                     )
 			   .include( assetId="js-respond"         , group="top" );
 
 		include template=arguments.requestedTemplate;
