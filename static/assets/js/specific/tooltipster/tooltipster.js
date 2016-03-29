@@ -8,7 +8,7 @@ PIXL8.attachtooltipster = function( $container ) {
 		} );
 	} );
 
-			if ( PIXL8.fn.viewport().width <= PIXL8.mediaWidth.xs ) {
+	if ( PIXL8.fn.viewport().width <= PIXL8.mediaWidth.xs ) {
 		$( ".js-show-tooltip", $container ).tooltipster( 'option', 'position', 'top' );
 	}
 
