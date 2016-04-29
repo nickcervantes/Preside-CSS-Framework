@@ -4,12 +4,12 @@
 
 	&:before,
 	&:after {
-		content: " "; /* 1 */
-		display: table; /* 2 */
+		content : " "; /* 1 */
+		display : table; /* 2 */
 	}
 
 	&:after {
-		clear: both;
+		clear : both;
 	}
 
 }
@@ -21,70 +21,70 @@
 }
 
 .rgba(@colour, @alpha) {
-	@alphaColour: hsla(hue(@colour), saturation(@colour), lightness(@colour), @alpha);
-	@ieAlphaColour: argb(@alphaColour);
+	@alphaColour   : hsla(hue(@colour), saturation(@colour), lightness(@colour), @alpha);
+	@ieAlphaColour : argb(@alphaColour);
 
-	background-color: @colour; // Fallback for older browsers
-	background-color: @alphaColour;
+	background-color : @colour; // Fallback for older browsers
+	background-color : @alphaColour;
 
 	.lt-ie9 & {
 
-		background-color: transparent;
+		background-color : transparent;
 		// IE hacks
-		zoom: 1; // hasLayout
-		background-color: transparent\9;
-		filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr=@{ieAlphaColour}, endColorstr=@{ieAlphaColour})"; // IE 6 & 7
+		zoom             : 1; // hasLayout
+		background-color : transparent\9;
+		filter           : ~"progid:DXImageTransform.Microsoft.gradient(startColorstr=@{ieAlphaColour}, endColorstr=@{ieAlphaColour})"; // IE 6 & 7
 
 	}
 
 }
 
 .hardware-accelerate() {
-	-webkit-transform: translateX(0);
-	-moz-transform:    translateX(0);
-	-ms-transform:     translateX(0);
-	-o-transform:      translateX(0);
-	transform:         translateX(0);
+	-webkit-transform : translateX(0);
+	-moz-transform    : translateX(0);
+	-ms-transform     : translateX(0);
+	-o-transform      : translateX(0);
+	transform         : translateX(0);
 }
 
 .reset-list() {
-	padding: 0;
-	margin: 0;
-	list-style: none;
+	padding    : 0;
+	margin     : 0;
+	list-style : none;
 }
 
 .font-icon() {
-	font-family: 'icomoon';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
+	font-family    : 'icomoon';
+	speak          : none;
+	font-style     : normal;
+	font-weight    : normal;
+	font-variant   : normal;
+	text-transform : none;
+	line-height    : 1;
 
 	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing  : antialiased;
+	-moz-osx-font-smoothing : grayscale;
 }
 
 .sprite-icon(@width, @height, @bg-position) {
-	background-image: url("/assets/img/icons.png");
-	background-repeat: no-repeat;
-	background-position: @bg-position;
-	width: @width;
-	height: @height;
-	content: "";
-	display: inline-block;
-	text-indent: -999em;
+	background-image    : url("/assets/img/icons.png");
+	background-repeat   : no-repeat;
+	background-position : @bg-position;
+	width               : @width;
+	height              : @height;
+	content             : "";
+	display             : inline-block;
+	text-indent         : -999em;
 }
 
 .retina-icon(@width, @height, @bg-position) {
 	.sprite-icon(@width, @height, @bg-position);
 
-	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-		background-image: url("/assets/img/icons@2x.png");
-		background-size: 270px 165px; // Adjust the dimension depending on your retina sprite
-		background-position: @bg-position;
+	@media (-webkit-min-device-pixel-ratio : 2), (min-resolution: 192dpi) {
+		background-image                   : url("/assets/img/icons@2x.png");
+		background-size                    : 270px 165px; // Adjust the dimension depending on your retina sprite
+		background-position                : @bg-position;
 	}
 
 }
@@ -92,50 +92,50 @@
 .button() {
 	.border-radius(0);
 	.transition(all 400ms ease-in);
-	border: none;
-	cursor: pointer;
-	display: inline-block;
-	font-size: 16px;
-	font-size: 1.6rem;
-	font-weight: 700;
-	max-width: 100%;
-	min-width: 138px;
-	padding: 12px 20px;
-	text-align: center;
-	text-decoration: none;
+	border          : none;
+	cursor          : pointer;
+	display         : inline-block;
+	font-size       : 16px;
+	font-size       : 1.6rem;
+	font-weight     : 700;
+	max-width       : 100%;
+	min-width       : 138px;
+	padding         : 12px 20px;
+	text-align      : center;
+	text-decoration : none;
 
 	&:hover {
-		text-decoration: none;
+		text-decoration : none;
 	}
 
 	&.disabled,
 	&[disabled] {
-		opacity: 0.5;
-		filter: alpha(opacity=50);
-		pointer-events: none;
+		opacity        : 0.5;
+		filter         : alpha(opacity=50);
+		pointer-events : none;
 	}
 
 }
 
 .button-color(@color: #fff, @bg-color: #000) {
-	background-color: @bg-color;
-	color: @color;
+	background-color : @bg-color;
+	color            : @color;
 
 	&:focus {
-		color: @color;
+		color : @color;
 	}
 
 	&:hover {
-		color: @color;
-		background-color: darken(@bg-color, 20%);
+		color            : @color;
+		background-color : darken(@bg-color, 20%);
 	}
 
 	&.disabled,
 	&[disabled] {
 
 		&:hover {
-			background-color: @bg-color;
-			color: @color;
+			background-color : @bg-color;
+			color            : @color;
 		}
 
 	}
@@ -145,32 +145,32 @@
 .button-color-hover(@color: #fff, @bg-color: #000) {
 
 	&:hover {
-		color: @color;
-		background-color: @bg-color;
+		color            : @color;
+		background-color : @bg-color;
 	}
 
 }
 
 .custom-select(@dropdown-icon: '/assets/img/icon-dropdown.png', @padding-right: 15px) {
 	& {
-		-webkit-appearance: none;  /*Removes default chrome and safari style*/
-		-moz-appearance: none;  /*Removes default style Firefox*/
-		-ms-appearance: none;  /*Removes default style IE*/
-		 appearance: none;  /*Removes default style*/
-		 background: url(@dropdown-icon)  no-repeat;
-		 background-position: right center;
-		 text-indent: 0.01px;
-		 text-overflow: "";
-		 padding-right: @padding-right;
+		-webkit-appearance  : none;  /*Removes default chrome and safari style*/
+		-moz-appearance     : none;  /*Removes default style Firefox*/
+		-ms-appearance      : none;  /*Removes default style IE*/
+		appearance          : none;  /*Removes default style*/
+		background          : url(@dropdown-icon)  no-repeat;
+		background-position : right center;
+		text-indent         : 0.01px;
+		text-overflow       : "";
+		padding-right       : @padding-right;
 	}
 
 	&::-ms-expand {
-		display: none;
+		display : none;
 	}
 
 	.lt-ie10 & {
-		background-image: none;
-		padding-right: 0;
+		background-image : none;
+		padding-right    : 0;
 	}
 
 }

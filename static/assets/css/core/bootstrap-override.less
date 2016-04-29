@@ -6,51 +6,51 @@
 .breadcrumb {
 	.reset-list();
 	.clearfix();
-	background-color: transparent;
-	font-size: 13px;
-	font-size: 1.3rem;
-	font-weight: 300;
-	margin-bottom: 0;
+	background-color : transparent;
+	font-size        : 13px;
+	font-size        : 1.3rem;
+	font-weight      : 300;
+	margin-bottom    : 0;
 
 	li {
-		margin-bottom: 0;
-		float: left;
+		margin-bottom : 0;
+		float         : left;
 
 		&.active {
-			color: @base-color;
+			color : @base-color;
 		}
 
 		&:first-child:before {
-			display: none;
+			display : none;
 		}
 
 	}
 
 	> li + li:before {
-		content: '>';
-		color: @base-color;
+		content : '>';
+		color   : @base-color;
 	}
 
 	@media @xs {
 
 		> li {
-			display: none;
+			display : none;
 
 			a {
-				vertical-align: middle;
+				vertical-align : middle;
 			}
 
 			&:before {
-				display: none;
+				display : none;
 			}
 
 			&:nth-last-child(2) {
-				display: inline-block;
+				display : inline-block;
 				&:before {
-					content: '<';
-					display: inline-block;
-					padding: 0 5px;
-					vertical-align: middle;
+					content        : '<';
+					display        : inline-block;
+					padding        : 0 5px;
+					vertical-align : middle;
 				}
 			}
 
@@ -66,10 +66,10 @@
 	.button-color(@white, @red);
 
 	.font-icon {
-		font-size: 14px;
-		font-size: 1.4rem;
-		margin-right: 3px;
-		margin-left: 3px;
+		font-size    : 14px;
+		font-size    : 1.4rem;
+		margin-right : 3px;
+		margin-left  : 3px;
 	}
 
 	&.bg-black {
@@ -77,7 +77,7 @@
 	}
 
 	&.btn-lg {
-		padding: 15px 30px;
+		padding : 15px 30px;
 	}
 
 }
@@ -85,32 +85,32 @@
 // Alerts
 .alert {
 	.border-radius(0);
-	border: none;
-	position: relative;
-	padding: 13px;
-	padding-left: 20px;
+	border       : none;
+	position     : relative;
+	padding      : 13px;
+	padding-left : 20px;
 
 	&.collapsible {
-		padding-right: 70px;
+		padding-right : 70px;
 	}
 
 	.alert-close {
-		border-left: 1px solid transparent;
-		font-size: 32px;
-		font-size: 3.2rem;
-		line-height: 48px;
-		text-align: center;
-		text-decoration: none;
-		width: 50px;
-		position: absolute;
-		top: 0;
-		right: 0;
+		border-left     : 1px solid transparent;
+		font-size       : 32px;
+		font-size       : 3.2rem;
+		line-height     : 48px;
+		text-align      : center;
+		text-decoration : none;
+		width           : 50px;
+		position        : absolute;
+		top             : 0;
+		right           : 0;
 	}
 
 	&.alert-success {
 
 		.alert-close {
-			color: darken(#dff0d8, 50%)
+			color : darken(#dff0d8, 50%)
 		}
 
 	}
@@ -118,7 +118,7 @@
 	&.alert-warning {
 
 		.alert-close {
-			color: darken(#fcf8e3, 50%)
+			color : darken(#fcf8e3, 50%)
 		}
 
 	}
@@ -133,37 +133,38 @@ textarea,
 }
 
 textarea {
-	resize: vertical;
+	resize : vertical;
 }
 
 fieldset + fieldset {
-	margin-top: 20px;
+	margin-top : 20px;
 }
 
 input[type="radio"],
 input[type="checkbox"] {
-	position: absolute !important;
-	left: -999em;
+	.opacity(0);
+	margin   : 0 !important;
+	position : absolute !important;
 
 	+ label {
-		cursor: pointer;
-		display: inline;
-		font-family: @primary-font;
-		font-size: 14px;
-		font-size: 1.4rem;
-		margin-bottom: 0;
-		padding-left: 30px !important;
-		position: relative;
-		text-transform: none;
-		vertical-align: middle;
+		cursor         : pointer;
+		display        : inline;
+		font-family    : @primary-font;
+		font-size      : 14px;
+		font-size      : 1.4rem;
+		margin-bottom  : 0;
+		padding-left   : 30px !important;
+		position       : relative;
+		text-transform : none;
+		vertical-align : middle;
 
 		&:before {
 			.sprite-icon(20px, 20px, -5px -4px);
-			margin-right: 10px;
-			position: absolute;
-			vertical-align: middle;
-			top: 0;
-			left: 0;
+			margin-right   : 10px;
+			position       : absolute;
+			vertical-align : middle;
+			top            : 0;
+			left           : 0;
 		}
 
 	}
@@ -171,8 +172,8 @@ input[type="checkbox"] {
 	&:checked {
 
 		+ label:before {
-			content: ","; // IE8 Fix, force repaint of before
-			background-position: -35px -4px;
+			content             : ","; // IE8 Fix, force repaint of before
+			background-position : -35px -4px;
 		}
 
 	}
@@ -192,7 +193,7 @@ input[type="radio"] {
 	&:checked {
 
 		+ label:before {
-			background-position: -35px -35px;
+			background-position : -35px -35px;
 		}
 
 	}
@@ -201,53 +202,53 @@ input[type="radio"] {
 
 .radio + .radio,
 .checkbox + .checkbox {
-	margin-top: 0;
+	margin-top : 0;
 }
 
 .form-control {
 	.border-radius(0);
 	.box-shadow(none);
-	background: @white;
-	border: 1px solid @grey;
-	border-color: fade(@grey, 60);
-	color: @black;
-	font-size: 18px;
-	font-size: 1.8rem;
-	height: 45px;
+	background   : @white;
+	border       : 1px solid @grey;
+	border-color : fade(@grey, 60);
+	color        : @black;
+	font-size    : 18px;
+	font-size    : 1.8rem;
+	height       : 45px;
 }
 
 .asterisk {
-	color: @red;
+	color : @red;
 }
 
 .information-icon {
-	font-size: 30px;
-	font-size: 3.0rem;
+	font-size : 30px;
+	font-size : 3.0rem;
 }
 
 .form-group {
-	margin-bottom: 30px;
+	margin-bottom : 30px;
 
 	&.has-error {
 
 		.form-field {
-			position: relative;
+			position : relative;
 
 			&:after {
 				.font-icon();
-				content: "\f071";
-				color: @red;
-				font-size: 20px;
-				font-size: 2.0rem;
-				position: absolute;
-				top: 14px;
-				right: 19px;
+				content   : "\f071";
+				color     : @red;
+				font-size : 20px;
+				font-size : 2.0rem;
+				position  : absolute;
+				top       : 14px;
+				right     : 19px;
 			}
 
 		}
 
 		.form-control {
-			border-color: @red;
+			border-color : @red;
 		}
 
 	}
@@ -257,10 +258,10 @@ input[type="radio"] {
 		@media @xs {
 
 			.row > div {
-				margin-top: 20px;
+				margin-top : 20px;
 
 				&:first-child {
-					margin-top: 0;
+					margin-top : 0;
 				}
 
 			}
@@ -270,50 +271,50 @@ input[type="radio"] {
 	}
 
 	label {
-		font-size: 18px;
-		font-size: 1.8rem;
-		font-weight: 300;
-		line-height: 1.33;
-		margin-bottom: 20px;
+		font-size     : 18px;
+		font-size     : 1.8rem;
+		font-weight   : 300;
+		line-height   : 1.33;
+		margin-bottom : 20px;
 	}
 
 	.form-field {
-		position: relative;
+		position : relative;
 
 		input[type="file"] {
-			position: absolute;
-			left: -999em;
+			position : absolute;
+			left     : -999em;
 		}
 
 		input.file-name {
-			vertical-align: middle;
-			max-width: 250px;
-			width: 68%;
-			margin-right: 10px;
+			vertical-align : middle;
+			max-width      : 250px;
+			width          : 68%;
+			margin-right   : 10px;
 
 			@media @xs-portrait {
-				max-width: 140px;
+				max-width : 140px;
 			}
 
 		}
 
 		.btn-browse {
-			margin: 0;
-			vertical-align: middle;
+			margin         : 0;
+			vertical-align : middle;
 		}
 
 		.alert.alert-danger {
-			margin-top: 10px;
-			position: relative;
+			margin-top : 10px;
+			position   : relative;
 
 			&:before {
-				content: "";
-				border-bottom: 10px solid #f2dede;
-				border-left: 7px solid transparent;
-				border-right: 7px solid transparent;
-				position: absolute;
-				top: -10px;
-				left: 20px;
+				content       : "";
+				border-bottom : 10px solid #f2dede;
+				border-left   : 7px solid transparent;
+				border-right  : 7px solid transparent;
+				position      : absolute;
+				top           : -10px;
+				left          : 20px;
 			}
 
 		}
@@ -324,7 +325,7 @@ input[type="radio"] {
 
 		.radio,
 		.checkbox {
-			margin-right: 20px;
+			margin-right : 20px;
 		}
 
 	}
@@ -333,7 +334,7 @@ input[type="radio"] {
 	.radio-inline {
 
 		input[type="radio"] {
-			margin-left: 0;
+			margin-left : 0;
 		}
 
 	}
@@ -342,15 +343,15 @@ input[type="radio"] {
 	.checkbox-inline {
 
 		input[type="checkbox"] {
-			margin-left: 0;
+			margin-left : 0;
 		}
 
 	}
 
 	.radio-inline + .radio-inline,
 	.checkbox-inline + .checkbox-inline {
-		margin-left: 0;
-		padding-left: 0
+		margin-left  : 0;
+		padding-left : 0
 	}
 
 }

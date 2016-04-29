@@ -1,0 +1,99 @@
+/*****************************************************************
+	Widget - Gallery
+*****************************************************************/
+
+// Royal Slider Gallery
+.gallery-carousel-wrap {
+
+	img.rsImg {
+		width        : 100%;
+	}
+
+	.royalSlider {
+		margin-bottom : 30px;
+	}
+
+	.rsContent {
+		padding-bottom : 20px;
+
+		.caption {
+			padding-top : 10px;
+
+			.title {
+				margin : 0 0 5px;
+
+				.count {
+					margin-right : 10px;
+				}
+
+				.thin {
+					font-weight : 400;
+				}
+
+			}
+
+		}
+
+	}
+
+	.rsThumbsHor {
+		width : 100%;
+	}
+
+
+	.rsDefault .rsArrow {
+		.transition( top 250ms ease-in );
+		width      : 50px;
+		height     : 50px;
+		top        : 50%;
+		margin-top :-25px;
+		position   : absolute;
+		display    : block;
+		cursor     : pointer;
+		z-index    : 21;
+	}
+
+	.rsDefault.rsHor .rsArrowLeft { left: 15px; }
+	.rsDefault.rsHor .rsArrowRight { right: 15px; }
+
+	.rsDefault .rsArrowIcn {
+		.font-icon();
+		color       : @white;
+		cursor      : pointer;
+		font-size   : 34px;
+		font-size   : 3.4rem;
+		line-height : 50px;
+		width       : 50px;
+		height      : 50px;
+		text-align  : center;
+	}
+
+	.rsDefault.rsHor .rsArrowRight .rsArrowIcn {
+
+		&:before {
+			content : "\f054";
+		}
+
+	}
+	.rsDefault.rsHor .rsArrowLeft .rsArrowIcn {
+
+		&:before {
+			content : "\f053";
+		}
+
+	}
+
+	.rsDefault .rsArrowDisabled .rsArrowIcn {
+		opacity  : 0.2;
+		filter   : alpha(opacity=20);
+		*display : none;
+	}
+
+	.rsSlideCount {
+		float      : right;
+		font-size  : 12px;
+		font-size  : 1.2rem;
+		margin-top : 5px;
+	}
+
+}

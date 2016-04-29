@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'icomoon';
+    src:    url('/assets/css/fonts/icomoon/icomoon.eot?3888m');
+    src:    url('/assets/css/fonts/icomoon/icomoon.eot?3888m#iefix') format('embedded-opentype'),
+        url('/assets/css/fonts/icomoon/icomoon.ttf?3888m') format('truetype'),
+        url('/assets/css/fonts/icomoon/icomoon.woff?3888m') format('woff'),
+        url('/assets/css/fonts/icomoon/icomoon.svg?3888m#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 [class^="font-icon-"], [class*=" font-icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'icomoon' !important;
@@ -27,6 +38,9 @@
 }
 .font-icon-file-o:before {
     content: "\f016";
+}
+.font-icon-clock-o:before {
+    content: "\f017";
 }
 .font-icon-print:before {
     content: "\f02f";
@@ -73,6 +87,9 @@
 .font-icon-circle-o:before {
     content: "\f10c";
 }
+.font-icon-calendar-o:before {
+    content: "\f133";
+}
 .font-icon-dot-circle-o:before {
     content: "\f192";
 }
@@ -118,3 +135,4 @@
 .font-icon-file-code-o:before {
     content: "\f1c9";
 }
+

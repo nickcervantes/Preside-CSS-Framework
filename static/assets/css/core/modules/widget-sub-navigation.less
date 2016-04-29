@@ -3,10 +3,10 @@
 *****************************************************************/
 
 .widget-sub-navigation {
-	margin-bottom: 30px;
+	margin-bottom : 30px;
 
 	.widget-title {
-		padding: 18px 18px 14px;
+		padding : 18px 18px 14px;
 	}
 
 	.widget-content {
@@ -16,28 +16,28 @@
 			.reset-list();
 
 			li {
-				border-top: 1px solid @grey-light;
-				margin-bottom: 0;
-				font-weight: 700;
+				border-top    : 1px solid @grey-light;
+				margin-bottom : 0;
+				font-weight   : 700;
 
 				&:first-child {
-					border-top: none;
+					border-top : none;
 				}
 
 				a {
 					.transition(all 200ms ease-in);
-					color: @base-color;
-					display: block;
-					padding: 10px 20px;
-					text-decoration: none;
+					color           : @base-color;
+					display         : block;
+					padding         : 10px 20px;
+					text-decoration : none;
 				}
 
 				&:hover,
 				&.is-active {
 
 					> a {
-						position: relative;
-						background: @grey-light;
+						position   : relative;
+						background : @grey-light;
 					}
 
 				}
@@ -45,16 +45,16 @@
 				&.has-submenu {
 
 					> a {
-						position: relative;
-						padding-right: 45px;
+						position      : relative;
+						padding-right : 45px;
 
 						&:after {
 							.font-icon();
-						    content: "\f078";
-							margin-top: -12px;
-							position: absolute;
-							top: 50%;
-							right: 15px;
+						    content    : "\f078";
+							margin-top : -12px;
+							position   : absolute;
+							top        : 50%;
+							right      : 15px;
 						}
 
 					}
@@ -62,23 +62,23 @@
 				}
 
 				.submenu {
-					background: darken(@grey-light, 10%);
-					display: none;
+					background : darken(@grey-light, 10%);
+					display    : none;
 
 					li {
-						font-size: 1em;
-						font-weight: 400;
-						border-top: none;
+						font-size   : 1em;
+						font-weight : 400;
+						border-top  : none;
 
 						a {
-							color: @base-color;
+							color : @base-color;
 						}
 
 						&:hover,
 						&.is-active {
 
 							> a {
-								background: darken(@grey-light, 20%);
+								background : darken(@grey-light, 20%);
 							}
 
 						}
@@ -88,7 +88,7 @@
 							> a {
 
 								&:after {
-									background-position: -129px -193px;
+									background-position : -129px -193px;
 								}
 
 							}

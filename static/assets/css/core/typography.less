@@ -3,58 +3,58 @@
 ****************************************************************************************************/
 
 html {
-	height: 100%;
-	-webkit-text-size-adjust: none;
-	font-size: 10px;
+	height                   : 100%;
+	-webkit-text-size-adjust : none;
+	font-size                : 10px;
 }
 
 body {
-	font-family: @primary-font;
-	font-size: 16px;
-	font-size: 1.6rem;
-	font-weight: 300;
-	color: @base-color;
-	min-height: 100%;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	font-family             : @primary-font;
+	font-size               : 16px;
+	font-size               : 1.6rem;
+	font-weight             : 300;
+	color                   : @base-color;
+	min-height              : 100%;
+	-webkit-font-smoothing  : antialiased;
+	-moz-osx-font-smoothing : grayscale;
 }
 
 a {
-	color: @link-color;
-	cursor: pointer;
+	color  : @link-color;
+	cursor : pointer;
 
 	&:hover {
-		color: @link-color;
-		text-decoration: none;
+		color           : @link-color;
+		text-decoration : none;
 	}
 
 	&:focus {
-		color: @link-color;
-		text-decoration: none;
-		outline: none;
+		color           : @link-color;
+		text-decoration : none;
+		outline         : none;
 	}
 
 }
 
 code {
 	.border-radius();
-	color: @code-color;
-	background: @code-bg;
-	padding: 2px 9px;
+	color      : @code-color;
+	background : @code-bg;
+	padding    : 2px 9px;
 }
 
 p {
-	margin: 0 0 20px;
-	line-height: 1.4;
+	margin      : 0 0 20px;
+	line-height : 1.4;
 }
 
 blockquote {
-	border-left-color: @red;
+	border-left-color : @red;
 }
 
 img,
 iframe {
-	max-width: 100%;
+	max-width : 100%;
 }
 
 h1,
@@ -62,105 +62,105 @@ h2,
 h3,
 h4,
 h5 {
-	font-family: @heading-font;
-	font-weight: 700;
-	margin-top: 0;
+	font-family : @heading-font;
+	font-weight : 700;
+	margin-top  : 0;
 }
 
 h1 {
-	font-size: 48px;
-	font-size: 4.8rem;
-	line-height: 1.13;
-	margin-bottom: 20px;
+	font-size     : 48px;
+	font-size     : 4.8rem;
+	line-height   : 1.13;
+	margin-bottom : 20px;
 }
 
 h2 {
-	font-size: 40px;
-	font-size: 4.0rem;
-	line-height: 1.13;
-	margin-bottom: 20px;
+	font-size     : 40px;
+	font-size     : 4.0rem;
+	line-height   : 1.13;
+	margin-bottom : 20px;
 }
 
 h3 {
-	font-size: 36px;
-	font-size: 3.6rem;
-	letter-spacing: 0.3px;
-	line-height: 1.17;
-	margin-bottom: 20px;
+	font-size      : 36px;
+	font-size      : 3.6rem;
+	letter-spacing : 0.3px;
+	line-height    : 1.17;
+	margin-bottom  : 20px;
 }
 
 h4 {
-	font-size: 24px;
-	font-size: 2.4rem;
-	line-height: 1.25;
-	margin-bottom: 20px;
+	font-size     : 24px;
+	font-size     : 2.4rem;
+	line-height   : 1.25;
+	margin-bottom : 20px;
 }
 
 h5 {
-	font-size: 18px;
-	font-size: 1.8rem;
-	line-height: 1.33;
-	margin-bottom: 20px;
+	font-size     : 18px;
+	font-size     : 1.8rem;
+	line-height   : 1.33;
+	margin-bottom : 20px;
 }
 
 ul {
-	padding-left: 30px;
-	margin-bottom: 20px;
+	padding-left  : 30px;
+	margin-bottom : 20px;
 
 	ul {
-		margin-top: 8px;
-		padding-left: 30px;
+		margin-top   : 8px;
+		padding-left : 30px;
 	}
 
 	li {
-		margin-bottom: 18px;
+		margin-bottom : 18px;
 	}
 
 }
 
 ol {
-	list-style: none;
-	padding-left: 16px;
-	counter-reset: item;
-	margin-bottom: 24px;
+	list-style    : none;
+	padding-left  : 16px;
+	counter-reset : item;
+	margin-bottom : 24px;
 
 	ol {
-		margin-top: 8px;
-		padding-left: 31px;
+		margin-top   : 8px;
+		padding-left : 31px;
 	}
 
 	li {
-		margin-bottom: 8px;
+		margin-bottom : 8px;
 	}
 
 	> li {
 
 		&:before {
-			content: counters(item, ".") ". ";
-			counter-increment: item;
-			margin-right: 0px;
+			content           : counters(item, ".") ". ";
+			counter-increment : item;
+			margin-right      : 0px;
 		}
 
 		> ol {
-			counter-reset: item2;
-			padding-left: 30px;
+			counter-reset : item2;
+			padding-left  : 30px;
 
 			> li {
 
 				&:before {
-					content: counters(item, ".") "." counters(item2, ".") " ";
-					counter-increment: item2;
+					content           : counters(item, ".") "." counters(item2, ".") " ";
+					counter-increment : item2;
 				}
 
 				> ol {
-					counter-reset: item3;
-					padding-left: 40px;
+					counter-reset : item3;
+					padding-left  : 40px;
 
 					> li {
 
 						&:before {
-							content: counters(item, ".") "." counters(item2, ".") "." counters(item3, ".") " ";
-							counter-increment: item3;
+							content           : counters(item, ".") "." counters(item2, ".") "." counters(item3, ".") " ";
+							counter-increment : item3;
 						}
 
 					}
@@ -176,13 +176,13 @@ ol {
 
 	&.alphabet-list {
 		.reset-list();
-		margin-bottom: 25px;
+		margin-bottom : 25px;
 
 		> li {
 
 			&:before {
-				content: "(" counter(item, lower-alpha) ") ";
-				margin-right: 0;
+				content      : "(" counter(item, lower-alpha) ") ";
+				margin-right : 0;
 			}
 
 		}
@@ -191,24 +191,23 @@ ol {
 
 }
 
-table,
 .table {
-	font-weight: 300;
-	border: 1px solid #ddd;
-	width: 100%;
-	max-width: 100%;
-	margin-bottom: 20px;
+	font-weight   : 300;
+	border        : 1px solid #ddd;
+	width         : 100%;
+	max-width     : 100%;
+	margin-bottom : 20px;
 
 	> thead {
 
 		> tr {
-			background: @table-header-bg;
+			background : @table-header-bg;
 
 			> th {
-				font-weight: 500;
-				color: @base-color;
-				border-bottom: none;
-				text-transform: uppercase;
+				font-weight    : 500;
+				color          : @base-color;
+				border-bottom  : none;
+				text-transform : uppercase;
 			}
 
 		}
@@ -223,17 +222,17 @@ table,
 
 			> th,
 			> td {
-				padding: 7px 19px;
-				border: 1px solid #ddd;
+				padding : 7px 19px;
+				border  : 1px solid #ddd;
 			}
 
 			&.total {
-				background-color: @table-stripe-bg;
+				background-color : @table-stripe-bg;
 
 				> th,
 				> td {
-					text-transform: uppercase;
-					font-weight: 500;
+					text-transform : uppercase;
+					font-weight    : 500;
 				}
 
 			}
@@ -250,7 +249,7 @@ table,
 			&:nth-child(odd) {
 
 				> td {
-					background: none;
+					background : none;
 				}
 
 			}
@@ -258,7 +257,7 @@ table,
 			&:nth-child(even) {
 
 				> td {
-					background: @table-stripe-bg;
+					background : @table-stripe-bg;
 				}
 
 			}
@@ -271,52 +270,52 @@ table,
 
 // Background colours
 .bg-red {
-	background: @red;
+	background : @red;
 }
 
 .bg-grey {
-	background: @grey;
+	background : @grey;
 }
 
 .bg-grey-light {
-	background: @grey-light;
+	background : @grey-light;
 }
 
 .bg-black {
-	background: @black;
+	background : @black;
 }
 
 // Font icon
 .font-icon {
-	font-size: 24px;
-	font-size: 2.4rem;
+	font-size : 24px;
+	font-size : 2.4rem;
 
 	&.sm {
-		font-size: 16px;
-		font-size: 1.6rem;
+		font-size : 16px;
+		font-size : 1.6rem;
 	}
 
 	&.md {
-		font-size: 24px;
-		font-size: 2.4rem;
+		font-size : 24px;
+		font-size : 2.4rem;
 	}
 
 	&.lg {
-		font-size: 35px;
-		font-size: 3.5rem;
+		font-size : 35px;
+		font-size : 3.5rem;
 	}
 
 	&.xl {
-		font-size: 46px;
-		font-size: 4.6rem;
+		font-size : 46px;
+		font-size : 4.6rem;
 	}
 
 }
 
 // Icon classes for sprite icons
 .icon {
-	text-indent: -999em;
-	display: inline-block;
+	text-indent : -999em;
+	display     : inline-block;
 }
 
 
@@ -325,29 +324,29 @@ table,
 *******************************************/
 
 .line-break {
-	border-top: 1px solid @red;
-	margin-top: 23px;
-	margin-bottom: 16px;
-	width: 100%;
-	clear: both;
+	border-top    : 1px solid @red;
+	margin-top    : 23px;
+	margin-bottom : 16px;
+	width         : 100%;
+	clear         : both;
 
 	&.dashed {
-		border-top-style: dashed;
+		border-top-style : dashed;
 	}
 
 }
 
 .line-bold {
 	.line-break;
-	border-top: 3px solid @red;
+	border-top : 3px solid @red;
 }
 
 .intro {
-	font-size: 18px;
-	font-size: 1.8rem;
-	font-weight: 400;
-	line-height: 1.33;
-	margin-bottom: 20px;
+	font-size     : 18px;
+	font-size     : 1.8rem;
+	font-weight   : 400;
+	line-height   : 1.33;
+	margin-bottom : 20px;
 }
 
 /*******************************************

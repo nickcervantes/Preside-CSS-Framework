@@ -201,7 +201,7 @@
 						<h3 class="style-heading" id="tables">Tables</h3>
 
 						<div class="table-responsive">
-							<table>
+							<table class="table">
 								<thead>
 									<tr>
 										<th>Column</th>
