@@ -19,7 +19,7 @@ PIXL8.attachMagnificPopup = function( $container ) {
 		$.magnificPopup.close();
 	} );
 
-}
+};
 
 ( function( $ ) {
 

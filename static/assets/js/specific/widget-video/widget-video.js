@@ -19,24 +19,12 @@ PIXL8.widgetVideoHandler = function( $container ) {
 			}
 		}
 		, iframe: {
-			markup: "<div class='magnific-popup mfp-video-popup'>
-				<div class='white-popup-content'>
-					<header>
-						<button type='button' class='mfp-close'>Close &times;</button>
-						<h3></h3>
-					</header>
-					<section class='body'>
-						<div class='mfp-iframe-scaler'>
-							<iframe class='mfp-iframe' frameborder='0' allowfullscreen></iframe>
-						</div>
-					</section>
-				</div>
-			</div>"
+			markup: "<div class='magnific-popup mfp-video-popup'><div class='white-popup-content'><header><button type='button' class='mfp-close'>Close &times;</button><h3></h3></header><section class='body'><div class='mfp-iframe-scaler'><iframe class='mfp-iframe' frameborder='0' allowfullscreen></iframe></div></section></div></div>"
 		}
 		, closeMarkup: "<button type='button' class='mfp-close font-icon font-icon-close'></button>"
 	} );
 
-}
+};
 
 ( function( $ ) {
 

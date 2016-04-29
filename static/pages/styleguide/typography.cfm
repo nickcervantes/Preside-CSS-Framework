@@ -255,6 +255,8 @@
 							<span class="font-icon font-icon-file-audio-o"></span>
 							<span class="font-icon font-icon-file-video-o"></span>
 							<span class="font-icon font-icon-file-code-o"></span>
+							<span class="font-icon font-icon-calendar-o"></span>
+							<span class="font-icon font-icon-clock-o"></span>
 						</div>
 					</div>
 

@@ -75,7 +75,7 @@ PIXL8.styleguideHandler = function() {
 		setIframeHeight( styleguideIframe.get(0) );
 	} );
 
-}
+};
 
 ( function( $ ) {
 

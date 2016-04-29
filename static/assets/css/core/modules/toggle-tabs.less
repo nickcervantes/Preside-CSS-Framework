@@ -4,46 +4,46 @@
 
 // Toggle Tabs
 .toggle-tabs {
-	margin-bottom: 30px;
+	margin-bottom : 30px;
 
 	@media @xs {
-		margin-bottom: 20px;
+		margin-bottom : 20px;
 	}
 
 	&-nav {
-		position: relative;
+		position : relative;
 
 		ul {
 			.reset-list();
 			.clearfix();
-			display: table;
-			border-bottom: 1px solid @grey-light;
-			width: 100%;
+			display       : table;
+			border-bottom : 1px solid @grey-light;
+			width         : 100%;
 
 			> li {
-				display: table-cell;
-				font-size: 16px;
-				font-size: 1.6rem;
-				font-weight: 700;
-				margin-bottom: 0;
-				padding-left: 0;
-				position: relative;
+				display       : table-cell;
+				font-size     : 16px;
+				font-size     : 1.6rem;
+				font-weight   : 700;
+				margin-bottom : 0;
+				padding-left  : 0;
+				position      : relative;
 
 				a {
-					background: transparent;
-					color: @base-color;
-					display: block;
-					padding: 12px 28px;
-					position: relative;
-					text-align: left;
-					text-decoration: none;
+					background      : transparent;
+					color           : @base-color;
+					display         : block;
+					padding         : 12px 28px;
+					position        : relative;
+					text-align      : left;
+					text-decoration : none;
 				}
 
 				&.is-active {
 
 					a {
-						background: @grey-light;
-						cursor: default;
+						background : @grey-light;
+						cursor     : default;
 					}
 
 				}
@@ -55,10 +55,10 @@
 		&.mod-float-left {
 
 			ul {
-				display: block;
+				display : block;
 
 				> li {
-					float: left;
+					float : left;
 				}
 
 			}
@@ -68,17 +68,17 @@
 	}
 
 	&-panel {
-		background: transparent;
+		background : transparent;
 
 		&-item {
 
 			&-header {
-				display: none;
+				display : none;
 			}
 
 			&-content {
-				padding-top: 30px;
-				padding-bottom: 10px;
+				padding-top    : 30px;
+				padding-bottom : 10px;
 			}
 
 		}
@@ -90,7 +90,7 @@
 		> .toggle-tabs-nav {
 
 			@media @xs {
-				display: none;
+				display : none;
 			}
 
 		}
@@ -100,25 +100,25 @@
 			> .toggle-tabs-panel-item {
 
 				@media @xs {
-					border-bottom: 1px solid @grey;
+					border-bottom : 1px solid @grey;
 
 					&:first-child {
-						border-top: 1px solid @grey;
+						border-top : 1px solid @grey;
 					}
 				}
 
 				> .toggle-tabs-panel-item-header {
 					.transition(all 300ms);
-					background: transparent;
-					display: none;
-					font-size: 16px;
-					font-size: 1.6rem;
-					font-weight: 700;
-					padding: 10px 0;
-					text-decoration: none;
+					background      : transparent;
+					display         : none;
+					font-size       : 16px;
+					font-size       : 1.6rem;
+					font-weight     : 700;
+					padding         : 10px 0;
+					text-decoration : none;
 
 					@media @xs {
-						display: block;
+						display : block;
 					}
 
 				}
@@ -126,13 +126,13 @@
 				> .toggle-tabs-panel-item-content {
 
 					@media @xs {
-						display: none;
-						padding-bottom: 10px;
-						padding-top: 10px;
+						display        : none;
+						padding-bottom : 10px;
+						padding-top    : 10px;
 					}
 
 					@media @sm-min {
-						display: block !important;
+						display : block !important;
 					}
 
 				}
@@ -148,7 +148,7 @@
 		> .toggle-tabs-panel > .toggle-tabs-panel-item.is-active {
 
 			> .toggle-tabs-panel-item-content {
-				display: block !important;
+				display : block !important;
 			}
 
 		}
