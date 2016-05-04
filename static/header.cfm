@@ -29,7 +29,7 @@
 				<div class="row">
 
 					<div class="col-xs-8 col-md-3">
-						<h1 class="site-head-logo"><a href="/index.cfm"><img src="/assets/img/logo.png" alt=""></a></h1>
+						<div class="site-head-logo"><a href="/index.cfm"><img src="/assets/img/logo.png" alt=""></a></div>
 					</div>
 
 					<div class="col-xs-4 visible-sm visible-xs">
