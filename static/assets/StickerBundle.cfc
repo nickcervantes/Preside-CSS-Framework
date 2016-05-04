@@ -36,6 +36,7 @@ component output=false {
 		);
 
 		bundle.asset( "jq-core-jquery" ).dependents( "jq-*" );
+		bundle.asset( "js-modernizr" ).dependents( "jq-*" );
 		bundle.asset( "jq-core-placeholders" ).setIE( "lte IE 9" );
 		bundle.asset( "js-respond" ).setIE( "lte IE 8" );
 		bundle.asset( "/js/core/" ).after( "jq-*", "js-*" );
