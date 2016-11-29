@@ -11,7 +11,7 @@ component output=false {
 		bundle.addAsset( id="js-respond"            , path="/js/lib/respond.js"                                     );
 		bundle.addAsset( id="js-google-map"         , url="//maps.googleapis.com/maps/api/js?key=AIzaSyC05gzL8jYsFFvhw0Hwl_mEvQkErkrsBV8", type="js" ); // Map Widget
 
-		bundle.addAsset( id="css-core-google-font"  , url="//fonts.googleapis.com/css?family=Open+Sans:300,400,700|Quicksand:700,400",  type="css"  );
+		bundle.addAsset( id="css-core-google-font"  , url="//fonts.googleapis.com/css?family=Open+Sans:300,400,700%7CQuicksand:700,400",  type="css"  );
 		bundle.addAsset( id="css-core-bootstrap"    , path="/css/lib/bootstrap.min.css"                             );
 		bundle.addAsset( id="css-core-icomoon"      , path="/css/lib/icomoon.css"                                   );
 		bundle.addAsset( id="css-tooltipster"       , path="/css/lib/tooltipster.css"                               );
@@ -36,6 +36,7 @@ component output=false {
 		);
 
 		bundle.asset( "jq-core-jquery" ).dependents( "jq-*" );
+		bundle.asset( "js-modernizr" ).dependents( "jq-*" );
 		bundle.asset( "jq-core-placeholders" ).setIE( "lte IE 9" );
 		bundle.asset( "js-respond" ).setIE( "lte IE 8" );
 		bundle.asset( "/js/core/" ).after( "jq-*", "js-*" );

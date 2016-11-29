@@ -1,8 +1,9 @@
 <cfoutput><!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10 gt-ie8"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js gt-ie8"> <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
 		<!--[if IE]> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <![endif]-->
@@ -28,7 +29,7 @@
 				<div class="row">
 
 					<div class="col-xs-8 col-md-3">
-						<h1 class="site-head-logo"><a href="/index.cfm"><img src="/assets/img/logo.png" alt=""></a></h1>
+						<div class="site-head-logo"><a href="/index.cfm"><img src="/assets/img/logo.png" alt=""></a></div>
 					</div>
 
 					<div class="col-xs-4 visible-sm visible-xs">

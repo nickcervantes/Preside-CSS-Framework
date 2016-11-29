@@ -3,7 +3,7 @@
 
 <cfinclude template="/header.cfm" />
 
-	<section class="contents" >
+	<div class="contents" >
 
 		<div class="main-content">
 
@@ -60,6 +60,6 @@
 
 		</div>
 
-	</section>
+	</div>
 
 <cfinclude template="/footer.cfm" />

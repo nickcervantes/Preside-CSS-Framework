@@ -3,7 +3,7 @@
 
 <cfinclude template="/header.cfm" />
 
-	<section class="contents" >
+	<div class="contents" >
 
 		<div class="main-content">
 
@@ -20,9 +20,9 @@
 							<div class="toggle-tabs-nav">
 
 								<ul>
-									<li class="is-active"><a href="/pages/test-pages/tab-page-1.cfm" role="tab" >Tab Page 1</a></li>
-									<li><a href="/pages/test-pages/tab-page-2.cfm" role="tab" >Tab Page 2</a></li>
-									<li><a href="/pages/test-pages/tab-page-3.cfm" role="tab" >Tab Page 3</a></li>
+									<li class="is-active"><a href="/pages/test-pages/tab-page-1.cfm" >Tab Page 1</a></li>
+									<li><a href="/pages/test-pages/tab-page-2.cfm" >Tab Page 2</a></li>
+									<li><a href="/pages/test-pages/tab-page-3.cfm" >Tab Page 3</a></li>
 								</ul>
 
 							</div>
@@ -66,6 +66,6 @@
 
 		</div>
 
-	</section>
+	</div>
 
 <cfinclude template="/footer.cfm" />
