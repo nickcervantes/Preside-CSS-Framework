@@ -16,7 +16,7 @@
 		ul {
 			.reset-list();
 			.clearfix();
-			display       : table;
+			display       : block;
 			border-bottom : 1px solid @grey-light;
 			width         : 100%;
 
@@ -27,6 +27,7 @@
 				font-weight   : 700;
 				margin-bottom : 0;
 				padding-left  : 0;
+				width         : 1%;
 				position      : relative;
 
 				a {
@@ -58,7 +59,9 @@
 				display : block;
 
 				> li {
-					float : left;
+					display : block;
+					float   : left;
+					width   : auto;
 				}
 
 			}

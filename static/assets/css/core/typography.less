@@ -1,4 +1,4 @@
-/****************************************************************************************************
+/***************************************************************************************************
 	Contains typography, base styles of tags, and styles from styleguide
 ****************************************************************************************************/
 
@@ -19,220 +19,257 @@ body {
 	-moz-osx-font-smoothing : grayscale;
 }
 
-a {
-	color  : @link-color;
-	cursor : pointer;
+.page-wrapper {
 
-	&:hover {
-		color           : @link-color;
-		text-decoration : none;
+	a {
+		color  : @link-color;
+		cursor : pointer;
+
+		&:hover {
+			color           : @link-color;
+			text-decoration : none;
+		}
+
+		&:focus {
+			color           : @link-color;
+			text-decoration : none;
+			outline         : none;
+		}
+
 	}
 
-	&:focus {
-		color           : @link-color;
-		text-decoration : none;
-		outline         : none;
+	code {
+		.border-radius();
+		color      : @code-color;
+		background : @code-bg;
+		padding    : 2px 9px;
 	}
 
-}
+	p {
+		margin      : 0 0 20px;
+		line-height : 1.4;
+	}
 
-code {
-	.border-radius();
-	color      : @code-color;
-	background : @code-bg;
-	padding    : 2px 9px;
-}
+	blockquote {
+		border-left-color : @red;
+	}
 
-p {
-	margin      : 0 0 20px;
-	line-height : 1.4;
-}
+	img,
+	iframe {
+		max-width : 100%;
+	}
 
-blockquote {
-	border-left-color : @red;
-}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		font-family : @heading-font;
+		font-weight : 700;
+		margin-top  : 0;
+	}
 
-img,
-iframe {
-	max-width : 100%;
-}
+	h1 {
+		font-size     : 48px;
+		font-size     : 4.8rem;
+		line-height   : 1.13;
+		margin-bottom : 20px;
+	}
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-	font-family : @heading-font;
-	font-weight : 700;
-	margin-top  : 0;
-}
+	h2 {
+		font-size     : 40px;
+		font-size     : 4.0rem;
+		line-height   : 1.13;
+		margin-bottom : 20px;
+	}
 
-h1 {
-	font-size     : 48px;
-	font-size     : 4.8rem;
-	line-height   : 1.13;
-	margin-bottom : 20px;
-}
+	h3 {
+		font-size      : 36px;
+		font-size      : 3.6rem;
+		letter-spacing : 0.3px;
+		line-height    : 1.17;
+		margin-bottom  : 20px;
+	}
 
-h2 {
-	font-size     : 40px;
-	font-size     : 4.0rem;
-	line-height   : 1.13;
-	margin-bottom : 20px;
-}
+	h4 {
+		font-size     : 24px;
+		font-size     : 2.4rem;
+		line-height   : 1.25;
+		margin-bottom : 20px;
+	}
 
-h3 {
-	font-size      : 36px;
-	font-size      : 3.6rem;
-	letter-spacing : 0.3px;
-	line-height    : 1.17;
-	margin-bottom  : 20px;
-}
-
-h4 {
-	font-size     : 24px;
-	font-size     : 2.4rem;
-	line-height   : 1.25;
-	margin-bottom : 20px;
-}
-
-h5 {
-	font-size     : 18px;
-	font-size     : 1.8rem;
-	line-height   : 1.33;
-	margin-bottom : 20px;
-}
-
-ul {
-	padding-left  : 30px;
-	margin-bottom : 20px;
+	h5 {
+		font-size     : 18px;
+		font-size     : 1.8rem;
+		line-height   : 1.33;
+		margin-bottom : 20px;
+	}
 
 	ul {
-		margin-top   : 8px;
-		padding-left : 30px;
+		padding-left  : 30px;
+		margin-bottom : 20px;
+
+		ul {
+			margin-top   : 10px;
+			padding-left : 30px;
+		}
+
+		li {
+			margin-bottom : 10px;
+		}
+
 	}
-
-	li {
-		margin-bottom : 18px;
-	}
-
-}
-
-ol {
-	list-style    : none;
-	padding-left  : 16px;
-	counter-reset : item;
-	margin-bottom : 24px;
 
 	ol {
-		margin-top   : 8px;
-		padding-left : 31px;
-	}
+		list-style    : none;
+		counter-reset : item;
+		padding-left  : 10px;
+		margin-bottom : 20px;
 
-	li {
-		margin-bottom : 8px;
-	}
-
-	> li {
-
-		&:before {
-			content           : counters(item, ".") ". ";
-			counter-increment : item;
-			margin-right      : 0px;
+		ol {
+			margin-top   : 10px;
+			padding-left : 0px;
 		}
 
-		> ol {
-			counter-reset : item2;
-			padding-left  : 30px;
-
-			> li {
-
-				&:before {
-					content           : counters(item, ".") "." counters(item2, ".") " ";
-					counter-increment : item2;
-				}
-
-				> ol {
-					counter-reset : item3;
-					padding-left  : 40px;
-
-					> li {
-
-						&:before {
-							content           : counters(item, ".") "." counters(item2, ".") "." counters(item3, ".") " ";
-							counter-increment : item3;
-						}
-
-					}
-
-
-				}
-
-			}
-
+		li {
+			padding-left  : 25px;
+			margin-bottom : 10px;
+			position      : relative;
 		}
-
-	}
-
-	&.alphabet-list {
-		.reset-list();
-		margin-bottom : 25px;
 
 		> li {
 
 			&:before {
-				content      : "(" counter(item, lower-alpha) ") ";
-				margin-right : 0;
+				content           : counters(item, ".") ". ";
+				counter-increment : item;
+				margin-right      : 0px;
+				position          : absolute;
+				left              : 0;
+			}
+
+			> ol {
+				counter-reset : item2;
+
+				> li {
+
+					position: relative;
+					padding-left: 40px;
+
+					&:before {
+						content           : counters(item, ".") "." counters(item2, ".") " ";
+						counter-increment : item2;
+						position          : absolute;
+						left              : 0;
+					}
+
+					> ol {
+						counter-reset : item3;
+
+						> li {
+							position     : relative;
+							padding-left : 55px;
+
+							&:before {
+								content           : counters(item, ".") "." counters(item2, ".") "." counters(item3, ".") " ";
+								counter-increment : item3;
+							}
+
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+		&.alphabet-list {
+			.reset-list();
+			margin-bottom : 20px;
+
+			> li {
+
+				&:before {
+					content      : "(" counter(item, lower-alpha) ") ";
+					margin-right : 0;
+				}
+
 			}
 
 		}
 
 	}
 
-}
+	.table {
+		font-weight   : 300;
+		border        : 1px solid #ddd;
+		width         : 100%;
+		max-width     : 100%;
+		margin-bottom : 20px;
 
-.table {
-	font-weight   : 300;
-	border        : 1px solid #ddd;
-	width         : 100%;
-	max-width     : 100%;
-	margin-bottom : 20px;
+		> thead {
 
-	> thead {
+			> tr {
+				background : @table-header-bg;
 
-		> tr {
-			background : @table-header-bg;
+				> th {
+					font-weight    : 500;
+					color          : @base-color;
+					border-bottom  : none;
+					text-transform : uppercase;
+				}
 
-			> th {
-				font-weight    : 500;
-				color          : @base-color;
-				border-bottom  : none;
-				text-transform : uppercase;
 			}
 
 		}
 
-	}
+		> thead,
+		> tbody,
+		> tfoot {
 
-	> thead,
-	> tbody,
-	> tfoot {
-
-		> tr {
-
-			> th,
-			> td {
-				padding : 7px 19px;
-				border  : 1px solid #ddd;
-			}
-
-			&.total {
-				background-color : @table-stripe-bg;
+			> tr {
 
 				> th,
 				> td {
-					text-transform : uppercase;
-					font-weight    : 500;
+					padding : 7px 19px;
+					border  : 1px solid #ddd;
+				}
+
+				&.total {
+					background-color : @table-stripe-bg;
+
+					> th,
+					> td {
+						text-transform : uppercase;
+						font-weight    : 500;
+					}
+
+				}
+
+			}
+
+		}
+
+		// striped table
+		> tbody {
+
+			> tr {
+
+				&:nth-child(odd) {
+
+					> td {
+						background : none;
+					}
+
+				}
+
+				&:nth-child(even) {
+
+					> td {
+						background : @table-stripe-bg;
+					}
+
 				}
 
 			}
@@ -241,114 +278,89 @@ ol {
 
 	}
 
-	// striped table
-	> tbody {
-
-		> tr {
-
-			&:nth-child(odd) {
-
-				> td {
-					background : none;
-				}
-
-			}
-
-			&:nth-child(even) {
-
-				> td {
-					background : @table-stripe-bg;
-				}
-
-			}
-
-		}
-
+	// Background colours
+	.bg-red {
+		background : @red;
 	}
 
-}
-
-// Background colours
-.bg-red {
-	background : @red;
-}
-
-.bg-grey {
-	background : @grey;
-}
-
-.bg-grey-light {
-	background : @grey-light;
-}
-
-.bg-black {
-	background : @black;
-}
-
-// Font icon
-.font-icon {
-	font-size : 24px;
-	font-size : 2.4rem;
-
-	&.sm {
-		font-size : 16px;
-		font-size : 1.6rem;
+	.bg-grey {
+		background : @grey;
 	}
 
-	&.md {
+	.bg-grey-light {
+		background : @grey-light;
+	}
+
+	.bg-black {
+		background : @black;
+	}
+
+	// Font icon
+	.font-icon {
 		font-size : 24px;
 		font-size : 2.4rem;
+
+		&.sm {
+			font-size : 16px;
+			font-size : 1.6rem;
+		}
+
+		&.md {
+			font-size : 24px;
+			font-size : 2.4rem;
+		}
+
+		&.lg {
+			font-size : 35px;
+			font-size : 3.5rem;
+		}
+
+		&.xl {
+			font-size : 46px;
+			font-size : 4.6rem;
+		}
+
 	}
 
-	&.lg {
-		font-size : 35px;
-		font-size : 3.5rem;
+	// Icon classes for sprite icons
+	.icon {
+		text-indent : -999em;
+		display     : inline-block;
 	}
 
-	&.xl {
-		font-size : 46px;
-		font-size : 4.6rem;
+
+	/*******************************************
+		Start - Your custom classes / styles
+	*******************************************/
+
+	.line-break {
+		border-top    : 1px solid @red;
+		margin-top    : 23px;
+		margin-bottom : 16px;
+		width         : 100%;
+		clear         : both;
+
+		&.dashed {
+			border-top-style : dashed;
+		}
+
 	}
 
-}
-
-// Icon classes for sprite icons
-.icon {
-	text-indent : -999em;
-	display     : inline-block;
-}
-
-
-/*******************************************
-	Start - Your custom classes / styles
-*******************************************/
-
-.line-break {
-	border-top    : 1px solid @red;
-	margin-top    : 23px;
-	margin-bottom : 16px;
-	width         : 100%;
-	clear         : both;
-
-	&.dashed {
-		border-top-style : dashed;
+	.line-bold {
+		.line-break;
+		border-top : 3px solid @red;
 	}
 
-}
+	.intro {
+		font-size     : 18px;
+		font-size     : 1.8rem;
+		font-weight   : 400;
+		line-height   : 1.33;
+		margin-bottom : 20px;
+	}
 
-.line-bold {
-	.line-break;
-	border-top : 3px solid @red;
-}
+	/*******************************************
+		End - Your custom classes / styles
+	*******************************************/
 
-.intro {
-	font-size     : 18px;
-	font-size     : 1.8rem;
-	font-weight   : 400;
-	line-height   : 1.33;
-	margin-bottom : 20px;
 }
-
-/*******************************************
-	End - Your custom classes / styles
-*******************************************/

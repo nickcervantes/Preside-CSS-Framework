@@ -1,0 +1,11 @@
+Need to support IE8?
+
+Add this script before the head close tag.
+
+<!--[if IE 8]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js" integrity="sha384-RPXhaTf22QktT8KTwZ6bUz/C+7CnccaIw5W/y/t0FW5WSDGj3wc3YtRIJC0w47in" crossorigin="anonymous"></script><![endif]-->
+
+On StickerBundle.cfc
+Uncomment the the libraries with "//* IE8 Lib" at the end of the line.
+
+On Application.cfc
+Includes the IE8 assets.

@@ -18,6 +18,8 @@
 	</head>
 	<body class="#( body_class ?: '' )#">
 
-		<div class="main-wrapper">
+		<div class="page-wrapper">
+
+			<div class="main-wrapper">
 
 </cfoutput>

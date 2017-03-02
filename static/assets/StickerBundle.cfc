@@ -8,7 +8,7 @@ component output=false {
 		bundle.addAsset( id="jq-magnific-popup"     , path="/js/lib/jquery.magnific-popup.min.js"                   );
 		bundle.addAsset( id="jq-royalslider"        , path="/js/lib/jquery.royalslider.min.js"                      ); // Image Gallery Widget
 		bundle.addAsset( id="js-modernizr"          , path="/js/lib/modernizr-2.6.2.min.js"                         );
-		bundle.addAsset( id="js-respond"            , path="/js/lib/respond.js"                                     );
+		// bundle.addAsset( id="js-respond"            , path="/js/lib/respond.js"                                     ); //* IE8 Lib
 		bundle.addAsset( id="js-google-map"         , url="//maps.googleapis.com/maps/api/js?key=AIzaSyC05gzL8jYsFFvhw0Hwl_mEvQkErkrsBV8", type="js" ); // Map Widget
 
 		bundle.addAsset( id="css-core-google-font"  , url="//fonts.googleapis.com/css?family=Open+Sans:300,400,700%7CQuicksand:700,400",  type="css"  );
@@ -17,7 +17,7 @@ component output=false {
 		bundle.addAsset( id="css-tooltipster"       , path="/css/lib/tooltipster.css"                               );
 		bundle.addAsset( id="css-magnific-popup"    , path="/css/lib/magnific-popup.css"                            );
 		bundle.addAsset( id="css-royalslider"       , path="/css/lib/royalslider.css"                               ); // Image Gallery Widget
-		bundle.addAsset( id="css-ie8"               , path="/css/lib/ie8.css"                                       );
+		// bundle.addAsset( id="css-ie8"               , path="/css/lib/ie8.css"                                       ); //* IE8 Lib
 
 		bundle.addAssets(
 			  directory   = "/js/"
@@ -38,13 +38,13 @@ component output=false {
 		bundle.asset( "jq-core-jquery" ).dependents( "jq-*" );
 		bundle.asset( "js-modernizr" ).dependents( "jq-*" );
 		bundle.asset( "jq-core-placeholders" ).setIE( "lte IE 9" );
-		bundle.asset( "js-respond" ).setIE( "lte IE 8" );
+		// bundle.asset( "js-respond" ).setIE( "lte IE 8" ); //* IE8 Lib
 		bundle.asset( "/js/core/" ).after( "jq-*", "js-*" );
 
 		bundle.asset( "css-core-google-font" ).dependents( "css-*" );
 		bundle.asset( "css-core-bootstrap" ).before( "css-*" );
 		bundle.asset( "/css/core/" ).after( "css-*" ).dependents( "/css/specific/*" );
-		bundle.asset( "css-ie8" ).after( "/css/core/" ).setIE( "lte IE 8" );
+		// bundle.asset( "css-ie8" ).after( "/css/core/" ).setIE( "lte IE 8" ); //* IE8 Lib
 
 		// maginific-popup bundle -- just include "/js/specific/maginific-popup/" on specific pages
 		bundle.asset( "jq-magnific-popup" ).dependsOn( "css-magnific-popup" );
